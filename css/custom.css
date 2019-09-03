@@ -1,0 +1,268 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?usy90z');
+  src:  url('fonts/icomoon.eot?usy90z#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?usy90z') format('truetype'),
+    url('fonts/icomoon.woff?usy90z') format('woff'),
+    url('fonts/icomoon.svg?usy90z#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cart:before {
+  content: "\e902";
+}
+.icon-truck:before {
+  content: "\e903";
+}
+.icon-info:before {
+  content: "\e900";
+}
+.icon-ingener:before {
+  content: "\e901";
+}
+
+/* Щавелев Олег =========== */
+
+
+/* Новые секции =========== */
+
+.category_form hr {
+    border-bottom: 1px solid #e6e6e6;
+    border-top: 0;
+    margin: 25px 0px;
+}
+
+.category_form span {
+    font-weight: 600;
+}
+
+.category_form .list {
+    margin-top: 20px;
+    margin-left: -2px;
+    margin-right:-2px;
+}
+
+.category_form .list-inline>li {
+    padding-right: 3px;
+    padding-left: 3px;
+}
+
+section.section {
+    margin: 40px 0px;
+    border: 2px solid #ebebeb;
+}
+
+section.section p {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+section.section.background {
+    border: 1px solid #c4e5f2;
+    background-size: cover;
+    background-position: 0 bottom;
+}
+
+.cards {
+    padding: 40px 35px;
+    border-bottom: 1px solid #efefef;
+}
+
+/* Новые секции (конец) =========== */
+
+/* Общие стили =========== */
+
+.text-decoration-none {
+    text-decoration: none;
+}
+
+.border-radius-5 {
+    border-radius: 5px;
+}
+
+.font-size-0 {
+    font-size: 14px;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.btn-blue {
+    border: 1px solid #cadbea;
+    color:#348eb7;
+    margin-bottom: 10px;
+}
+
+.btn-blue:hover {
+    border: 1px solid #2b81b4;
+    color:#fff;
+    background-color: #377092;
+
+}
+
+.btn-green  {
+    border: 2px solid #9ed670;
+    background-color: #f0fafe;
+}
+
+.mt--1 {
+    margin-top: 1em;
+}
+
+.mt--2 {
+    margin-top: 2em;
+}
+
+.mt--3 {
+    margin-top: 3em;
+}
+
+.mb--1 {
+    margin-bottom: 1em;
+}
+
+.mb--2 {
+    margin-bottom: 2em;
+}
+
+.mb--3 {
+    margin-bottom: 3em;
+}
+
+.mt--10px {
+    margin-top: 10px;
+}
+
+
+.px--0 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.bg--blue {
+  background:#3db9ff;
+}
+
+.bg--green {
+  background:#9ed670;
+}
+
+.bg--white {
+  background-color:#fff;
+}
+
+.icon--box--icon--circle {
+    margin: 0 auto 24px;
+    margin: 0 auto 1.5rem;
+    border-radius: 100%;
+    width: 130px;
+    height: 130px;
+    text-align: center;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.icon--box--icon--circle i {
+    font-size: 4rem;
+    color: #FFF;
+    margin: 0 auto;
+}
+
+.icon--box--icon--box {
+    margin-right: 16px;
+    margin-right: 1rem;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+}
+
+.icon--box--icon--box i {
+    font-size: 2rem;
+    color: #FFF;
+    margin: 0 auto;
+}
+
+
+.icon--box--icon--box.bg--blue {
+    float: left;
+    margin-right: 0px;
+    margin-left: 0;
+}
+
+.icon--box--icon--box.bg--green {
+    float: right;
+    margin-right: 0;
+    margin-left: -10px;
+    position: relative;
+    left: -10px;
+}
+
+.icon--box--icon--box.bg--blue {
+    float: left;
+    margin-right: 0px;
+    margin-left: 0;
+    position: relative;
+    z-index: 20;
+}
+
+/* Общие стили (конец) =========== */
+
+/* Оформление заказа =========== */
+
+.table-striped .remove button {
+    background: #2E82B1;
+}
+
+.table-striped .remove button:hover {
+    background: #ddd;
+}
+
+.table-striped .count input {
+  padding: 0 10px;
+}
+
+/* Оформление заказа =========== */
+
+@media only screen and (max-width: 992px){
+.category_form {
+    margin-bottom: 15px;
+    text-align:center;
+}
+
+.display-none-sm {
+    display: none;
+}
+
+}
