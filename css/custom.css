@@ -269,6 +269,120 @@ section.section.background {
 
 /* Бококовое меню =========== */
 
+.side_nav_categoryes .isparent ul {
+  display: none;
+}
+
+.side_nav .isparent.active ul {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.side_nav .submenu_1 {
+  margin: 15px 0;
+}
+
+.dropdown-down + .submenu_2 {
+  margin-bottom: -15px;
+}
+
+.side_nav .level1 > a {
+  padding: 14px 25px 14px 25px;
+  color: #000;
+}
+
+.side_nav .level1.active > a > span.dropdown,.side_nav .level1 > a > span.dropdown {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  width: 25px;
+  background-color: rgba(72, 83, 90, 0.04);
+  z-index: 2;
+}
+
+.side_nav .level1.active > a > span:hover,.side_nav .level1 > a > span.dropdown:hover {
+  background-color:rgb(40, 113, 160);
+}
+
+.side_nav .level1.active > a > span.dropdown::before, .side_nav .level1 > a > span.dropdown::before {
+  position: absolute;
+  top: calc(50% - 7px);
+  width: 0;
+  height: 0;
+  z-index: 3;
+  font: normal normal normal 14px/1 FontAwesome;
+  left: calc(50% - 2px);
+}
+
+.side_nav .level1.active > a > span.dropdown.dropdown-left::before, .side_nav .level1 > a > span.dropdown.dropdown-left::before {
+  content: '\f105';
+}
+
+.side_nav .level1.active > a > span.dropdown.dropdown-down::before, .side_nav .level1 > a > span.dropdown.dropdown-down::before {
+  content: '\f107';
+  left: calc(50% - 4px);
+}
+
+.side_nav .level1.active > a > span:hover::before, .side_nav .level1 > a > span:hover::before  {
+  border-color: transparent transparent transparent rgba(255, 255, 255, 0.82);
+}
+
+.side_nav .level2 > a {
+  position: relative;
+  width: 100%;
+}
+
+.side_nav .isparent.active ul.submenu_2 {
+  display: none;
+}
+
+.side_nav .level2.isparent.active ul.submenu_2 {
+  display: block;
+}
+
+.side_nav .level2.active > a > span.dropdown,.side_nav .level2 > a > span.dropdown {
+  position: absolute;
+  height: 25px;
+  top: calc(50% - 12px);
+  right: 6px;
+  width: 25px;
+  background-color: rgba(72, 83, 90, 0.04);
+  z-index: 2;
+  border-radius: 100%;
+}
+
+.side_nav .level2.active > a > span.dropdown::before, .side_nav .level2 > a > span.dropdown::before {
+  position: absolute;
+  top: calc(50% - 7px);
+  width: 0;
+  height: 0;
+  z-index: 3;
+  font: normal normal normal 14px/1 FontAwesome;
+  left: calc(50% - 2px);
+}
+
+.side_nav .level2.active > a > span.dropdown::hover:::before, .side_nav .level2 > a > span.dropdown::hover::::before
+{
+  color:#fff;
+}
+.side_nav .level2.active > a > span.dropdown.dropdown-left::before, .side_nav .level2 > a > span.dropdown.dropdown-left::before {
+  content: '\f105';
+}
+
+.side_nav .level2.active > a > span.dropdown.dropdown-down::before, .side_nav .level2 > a > span.dropdown.dropdown-down::before {
+  content: '\f107';
+  left: calc(50% - 5px);
+}
+
+.side_nav .level2 > a:hover span.dropdown {
+  border-bottom: unset;
+  background-color:rgb(40, 113, 160);
+  color:#fff;
+}
+
+
 
 
 /* Бококовое меню =========== */
