@@ -39,7 +39,7 @@ ul{list-style-type:none;}
 .breadcrumb_wr a{text-decoration:none;border-bottom:1px solid;}
 header{position:relative;z-index:10;margin-bottom:20px;}
 .template11 header{margin-bottom:0;}
-.btn-menu{width:48px;height:48px;background-color:#85b461;position:absolute;-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);-o-transform:rotate(0deg);transform:rotate(0deg);-webkit-transition:.5s ease-in-out;-moz-transition:.5s ease-in-out;-o-transition:.5s ease-in-out;transition:.5s ease-in-out;cursor:pointer;z-index:100;top:-11px;left:-16px;display:none;}
+.btn-menu{width:48px;height:48px;background-color:#85b461;position:absolute;-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);-o-transform:rotate(0deg);transform:rotate(0deg);-webkit-transition:.5s ease-in-out;-moz-transition:.5s ease-in-out;-o-transition:.5s ease-in-out;transition:.5s ease-in-out;cursor:pointer;z-index:100;top:-11px;left:-1px;display:none; }
 .btn-menu span{display:block;position:absolute;height:3px;width:24px;background:#fff;opacity:1;left:12px;-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);-o-transform:rotate(0deg);transform:rotate(0deg);-webkit-transition:.25s ease-in-out;-moz-transition:.25s ease-in-out;-o-transition:.25s ease-in-out;transition:.25s ease-in-out;}
 .btn-menu span:nth-child(1){top:17px;}
 .btn-menu span:nth-child(2), .btn-menu span:nth-child(3){top:23px;}
@@ -69,7 +69,6 @@ header{position:relative;z-index:10;margin-bottom:20px;}
 .header_top_line .navbar-toggle{padding:0;margin:0;display:none;}
 .header_top_line{background-color:#4086a0;text-align:right;padding:10px 0;margin-bottom:20px;}
 .header_top_line .navbar{position:relative;min-height:auto;margin-bottom:0px;border:1px solid transparent;}
-.header_top_line li{display:inline-block;padding:0 36px;}
 .header_top_line li + li{border-left:2px solid #37748a;}
 .header_top_line li:first-child{padding:0 32px 0 0;}
 .header_top_line li:last-child{padding:0 15px 0 32px;}
@@ -92,7 +91,6 @@ header{position:relative;z-index:10;margin-bottom:20px;}
 @media (min-width:992px){.header_addr{padding-right:48px;}
 .header_phones{padding-left:0;}
 }
-.header_phones{text-align:right;}
 .header_phones a{display:inline-block;text-decoration:none;white-space:nowrap;font-size:20px;font-weight:600;color:#2e82b1;}
 .header_phones a + a{margin-top:5px;}
 .header_fbf_wr{text-align:right;}
@@ -601,17 +599,12 @@ fieldset[id='mse2_ms|price'] .filter_fieldset_title{margin-bottom:21px;}
 /*new-header styles*/
 
 .new-header {}
-.new-header .navbar-right {    float: none!important;}
-.new-header .header_top_line .navbar {float:left;width:100%;max-width:800px;}
-
-.new-header .header_top_line {background:none;padding-top:11px;margin-bottom: 0;}
+.new-header .header_top_line {background:none;margin-bottom: 0;}
 .new-header .header_top_line li { padding:0 10px 0 10px;border:0;}
 .new-header .header_top_line li:first-child {    padding-left:0;}
 .new-header .header_top_line li a {font-size:14px;color:#7fb1c1;font-weight:normal;font-weight: 600;line-height:28px;padding:0 10px 0 10px;}
-.new-header .header_top_line li:hover > a {font-weight:600;color:#fff885;background:#429fbd;border-radius:6px;}
-.new-header .header_top_line li.active > a {font-weight:600;color:#fff885;background:#429fbd;border-radius:6px;}
-
-.new-header .header_nav_ms_cart_li.top_line_cart {display:inline-block;width:152px;width:auto;float:right;padding-top:4px;}
+.new-header .header_top_line li:hover > a {font-weight:600;color:#fff885;background:#429fbd;border-radius:3px; padding: 4px 10px;}
+.new-header .header_top_line li.active > a {font-weight:600;color:#fff885;background:#429fbd;border-radius:3px; padding: 4px 10px;}
 .new-header .header_nav_ms_cart_li.top_line_cart a {padding:0 0 0 38px;line-height:24px;text-decoration:none;display:inline-block;background:url(img/cart_icon1.png) no-repeat 0 center;}
 .new-header .header_nav_ms_cart_li.top_line_cart a span {display:inline-block;width: auto;font-size:14px;color:#323232;font-weight:600;position:relative;top:0;left:0;background:none;}
 .new-header .header_nav_ms_cart_li.top_line_cart a span:after {content:" ";display:block;border-bottom:1px dashed #bbbbbb;height:1px;width:100%;position:absolute;top:100%;left:0;margin-top:1px;transition:all 0.4s;}
@@ -620,17 +613,12 @@ fieldset[id='mse2_ms|price'] .filter_fieldset_title{margin-bottom:21px;}
 
 .new-header .navbar #navbar {}
 
-.new-header .header_fbf_wr { padding-top:12px;   text-align: right;    float: right;}
 .new-header .header_fbf_wr a {width:216px;height:42px;line-height:42px;background:#9cd766;font-weight:600;font-size:14px;color:#fff;text-transform:uppercase;text-indent:22px;text-align:center;padding:0;margin:0;position:relative;border-radius:18px;}
 .new-header .header_fbf_wr a:hover {background:#8cc756;}
 .new-header .header_fbf_wr a:before {content:" ";background:url(img/tel2.png) no-repeat center center;position:absolute;top:50%;left:10px;margin-top:-15px;
 width:30px;height:30px;border:1px solid #fdfefb;border-radius:100%;box-sizing:border-box;}
 
-.new-header .header_phones {  padding-top:12px;  text-align: right;    float: left;box-sizing:border-box;}
 .new-header .header_phones a {line-height:42px;font-weight:600;font-size:20px;color:#242424;box-sizing:border-box;padding-left:24px;background:url(img/tel1.png) no-repeat 0 center;}
-
-.new-header .header_logo {width:550px;max-width:100%;}
-
 .new-header .header_nav_wr {background:none;border:0;}
 .new-header .header_nav_wr > .clearafter > li {margin:0 8px;}
 .new-header .header_nav_wr > .clearafter > li:first-child {margin-left:0;}
@@ -694,6 +682,7 @@ a.ref {z-index:999;position:absolute;top:0;left:0;width:100%;height:100%;display
 .new_header_slider_wr .bx-wrapper li.bx-clone:nth-last-child(3).white .new-header-slider-div:after {opacity:1;}
 
 .header_top_block {     background: #f6f6f6;padding-top: 20px;    padding-bottom: 20px;}
+.calc_result_slider_wrap ul.flex-direction-nav {    display: none;}
 
 
 @media only screen and (max-width:1200px) {
@@ -792,6 +781,10 @@ a.ref {z-index:999;position:absolute;top:0;left:0;width:100%;height:100%;display
   .new-header_slider .new-header-slider-div .img {height:300px;height:240px;}
   .new-header_slider .new-header-slider-div .text_inner {margin-top:-20px;}
 
+  #calcResults .calc_result_form {display:none !important;}
+
+  .slick-slider {touch-action: pan-y !important;-webkit-touch-action: pan-y !important;-ms-touch-action: pan-y !important;}
+  .slick-slider * {touch-action: pan-y !important;-webkit-touch-action: pan-y !important;-ms-touch-action: pan-y !important;}
 
 }
 
