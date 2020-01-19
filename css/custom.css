@@ -241,14 +241,6 @@ section.section.background {
 
 /* Оформление заказа =========== */
 
-.table-striped .remove button {
-    background: #2E82B1;
-}
-
-.table-striped .remove button:hover {
-    background: #ddd;
-}
-
 .table-striped .count input {
   padding: 0 10px;
 }
