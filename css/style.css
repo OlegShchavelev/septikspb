@@ -4262,7 +4262,7 @@ a.ref {
     text-align: center;
   }
 
-  .header_slider_pager .row .col-xs-3 {
+  .header_slider_pager .row .col-xs-3, .header_slider_pager .row .col-xl-3 {
     width: 40px !important;
     float: none;
     display: inline-block;
