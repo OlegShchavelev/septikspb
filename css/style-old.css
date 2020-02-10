@@ -109,12 +109,6 @@ i.glyphicon-remove{background:url(/css/img/delete.png) 50% 50% no-repeat;backgro
 .callback .callback_wrapper .button{width:100%;max-width:390px;font-size:15px;margin:10px auto 0;}
 .callback .callback_wrapper .close{position:absolute;top:25px;right:25px;font-size:25px;color:#888;cursor:pointer;text-decoration:none;}
 .callback .callback_wrapper .close:hover{color:#333;}
-.breadcrumb{padding:0 0 15px;}
-.breadcrumb a{text-decoration:underline;}
-.breadcrumb a:hover{text-decoration:none;}
-.breadcrumb ul{margin:0;padding:0;list-style:none;}
-.breadcrumb ul li{display:inline;}
-.breadcrumb ul li.current a{text-decoration:underline;}
 footer{margin:25px 0 0;}
 footer .wrapper:first-child{border:5px solid #E3E3E3;border-bottom:none;}
 footer .float{max-width:250px;border-right:1px solid #DFDFDF;margin:25px 0;padding:0 25px;}

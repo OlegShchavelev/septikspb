@@ -2192,14 +2192,6 @@ fieldset[id='mse2_ms|price'] .filter_fieldset_title {
   margin-bottom: 4px;
 }
 
-.breadcrumb {
-  padding: 0 0 15px;
-  margin-bottom: 0;
-  list-style: none;
-  background-color: transparent;
-  border-radius: 0px;
-}
-
 .table-striped>tbody>tr.header {
   background-color: #2E82B1 !important;
 }
@@ -2982,7 +2974,7 @@ fieldset[id='mse2_ms|price'] .filter_fieldset_title {
   border-bottom: 3px solid #7caf65;
 }
 
-.t21_tabs_content, .tab-content {
+.t21_tabs_content, .tab-content.old-tabs {
   border: 1px solid #e8f5fb;
   border-radius: 0 0 5px 5px;
   border-top: none;
@@ -4648,19 +4640,154 @@ a.ref {
 }
 
 /*Карточка товара */
+
 section.showcase {
   margin: 3rem 0;
 }
 
-.card-tab.nav.nav-pills li.active>a {
-  color: #fff !important;
-  background-color:#2b85a9;
+.nav li.active {
+  border-bottom: unset !important;
 }
 
-.card-tab.nav.nav-pills .nav-link {
-  text-transform: uppercase;
+.section-tab {
+  border-bottom: 3px solid #fafafa;
+}
+
+.card-tab.nav li.active>a {
+  color: #fff !important;
+  background-color:#2b85a9;
+  border-color: unset !important;
+}
+
+.card-tab.nav li > a:hover {
+  background-color: #f3f6f7;
+}
+
+.card-tab.nav li.active > a:hover {
+  background-color: #2e85ab;
+  border-color: unset !important;
+}
+
+.card-tab.nav .nav-link {
+  text-transform: none;
   text-decoration: none;
   font-weight: 600;
+  font-size: 15px;
   color: #9dc8d8 !important;
-  padding: 1rem 1rem;
+  padding: 0.5rem 1.4rem;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.section-tab-content.tab-content , .section-tab-content.tab-content .t21_tabs_content  {
+  border:none !important
+}
+
+.form-group.form-list-options {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 0.3rem 1rem;
+    margin: 0;
+}
+
+.section-tab-content.bg-grey {
+    background-color:#fafafa;
+}
+
+.section-tab-content.tab-content .tab-pane p {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 10px 0px;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  border-color: unset !important;
+}
+
+.nav-tabs {
+  border-bottom: unset !important;
+}
+
+.nav-tabs .nav-link {
+  border: unset !important;
+}
+
+.form-group.form-list-options:nth-child(odd) {
+  background-color: #fff;
+}
+
+.form-group.form-list-options label {
+    font-size:13px;
+    padding: 10px 0;
+    font-weight: 400;
+    color: #7b8b90;
+}
+
+.cart .card-gallery {
+  border: 1px solid #ededed;
+  border-radius: 6px;
+  height: 100%;
+}
+
+.cart .card-gallery .thumbs .item img {
+  width: 70px;
+}
+
+.cart .card-gallery .big img {
+  width: 160px;
+}
+
+.cart .card-gallery .thumbs .item {
+  border: 1px solid #ededed;
+  border-radius: 6px;
+}
+
+.text-success {
+  color: #70a93b !important;
+}
+
+.btn-outline-success {
+  color: #000;
+  text-decoration: none;
+  font-size: 12px;
+  border-color: #c9eca8;
+}
+
+.btn-outline-success:hover {
+  background-color: #70a93b;
+  border-color: #70a93b;
+}
+
+.btn-outline-success:hover i {
+  color: #fff !important;
+}
+
+.btn-outline-success.btn-label {
+  background-color: #70a93b;
+  border-color: #70a93b;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Хлебные крошки */
+
+.sections-breadcrumb-grey {
+  background-color: #f6f6f6
+}
+
+.breadcrumb {
+  font-size: 12px;
+  background-color: transparent;
+  padding: 1rem 0;
+  margin-bottom: 0;
+}
+
+.breadcrumb li a:hover {
+  text-decoration: underline;
+  color: #23527c;
+}
+
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "»";
 }
