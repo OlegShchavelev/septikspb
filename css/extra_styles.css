@@ -493,7 +493,7 @@ font-size:15px;color:#fff;border:0;margin-bottom:30px;margin-top:0;}
 .tabs_form .ez-radio.ez-selected {background-position:0 -17px;}
 .tabs_form .form-check-inline {margin-right:18px;}
 
-.tab-form-bottom {padding:0 20px;}
+.tab-form-bottom {padding:40px;}
 .tabs_form .custom-control.custom-checkbox.mr-sm-2 {padding-left:0;}
 .tabs_form input[type="submit"], .tabs_form button[type="submit"] {margin-left:0;}
 
