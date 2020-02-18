@@ -4766,6 +4766,22 @@ section.showcase {
   border-color: #70a93b;
   color: #fff;
   font-weight: 600;
+  position: relative;
+}
+
+.btn-outline-success.btn-label::before {
+  content: "";
+  float: left;
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: 0;
+  height: 0;
+  border-color:
+  transparent transparent transparent
+  #70a93b;
+  border-style: solid;
+  border-width: 15px 10px 15px 10px;
 }
 
 /* Хлебные крошки */
