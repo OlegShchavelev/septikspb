@@ -13,6 +13,10 @@ body {
   font-size: 15px;
 }
 
+span,p {
+  font-family: 'Open sans', 'Arial', sans-serif;
+}
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -4570,6 +4574,7 @@ a.ref {
 }
 
 /* / Каталог */
+
 /* Боковой левый бар */
 .nav.flex-column .submenu.nav {
   padding-left: 15px;
@@ -4636,6 +4641,16 @@ a.ref {
 
 .navbar.navbar_left {
   border-right: 1px solid #e6f0f2;
+}
+
+.filters {
+  width: 100%;
+}
+
+.filters .filter_fieldset_title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #000;
 }
 
 /*Карточка товара */
@@ -4802,7 +4817,59 @@ section.showcase {
   color: #23527c;
 }
 
-
 .breadcrumb-item + .breadcrumb-item::before {
     content: "»";
+}
+
+/* END Хлебные крошки */
+
+/* Страница Акции */
+
+.stock-card .card-body a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.intro-title {
+  font-weight: bold;
+}
+
+.icon-shape-primary {
+  color: #fff;
+  background-color: #3fa6be;
+}
+
+.icon-circle {
+    border-radius: 50% !important;
+}
+
+.icon-shape {
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.features-sections .icon-box .section-title {
+  color: #3193aa;
+  font-size: 14px;
+  font-weight: bold;
+  padding-bottom: 0.5em;
+  display: block;
+}
+
+.features-sections .icon-box .section-title::after {
+  border-bottom: 2px solid #3193aa;
+  content: "";
+  width: 16px;
+  display: block;
+  padding-top: 10px;
+}
+
+.features-sections .icon-box p {
+  font-size: 12px;
+  line-height: 18px;
+  color: #535353;
 }
