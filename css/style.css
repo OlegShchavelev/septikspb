@@ -1,3 +1,42 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/septik.eot?72cjr9');
+  src:  url('../fonts/septik.eot?72cjr9#iefix') format('embedded-opentype'),
+    url('../fonts/septik.ttf?72cjr9') format('truetype'),
+    url('../fonts/septik.woff?72cjr9') format('woff'),
+    url('../fonts/septik.svg?72cjr9#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-kitchen:before {
+  content: "\e920";
+}
+.icon-basin:before {
+  content: "\e921";
+}
+.icon-washer:before {
+  content: "\e922";
+}
+
+
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -3005,6 +3044,22 @@ fieldset[id='mse2_ms|price'] .filter_fieldset_title {
   display: none;
 }
 
+.tab-content ul li {
+    display: flex;
+    align-items: center;
+    margin-left: 1em;
+    line-height: 20px;
+}
+
+.tab-content ul li::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "";
+    color:#72af4c;
+    font-size: 12px;
+    margin-right: 7px;
+}
+
 .t21_t_chars {
   padding: 30px 35px;
 }
@@ -4359,10 +4414,10 @@ a.ref {
   margin-bottom: 35px;
 }
 
-.form-group input[type="text"] {
+.form-group input[type="text"], .form-group input[type="email"] {
   height: 48px;
   border: 1px solid #eee;
-  border-radius: 6px;
+  border-radius: 0;
   margin-bottom: 0;
   padding: 0 20px;
   box-sizing: border-box;
@@ -4372,7 +4427,7 @@ a.ref {
 
 .form-group textarea {
   border: 1px solid #eee;
-  border-radius: 6px;
+  border-radius: 0;
   margin-bottom: 0;
   padding: 15px 0 0 20px;
   box-sizing: border-box;
@@ -4381,9 +4436,166 @@ a.ref {
   height: 100px !important;
 }
 
+.input-group-text {
+  display: flex;
+  align-items: center;
+  padding: .6rem .75rem;
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #adb5bd;
+  text-align: center;
+  white-space: nowrap;
+  background-color:#fff;
+  border: .0625rem solid #eee;
+  border-radius: .125rem;
+  border-top-right-radius: 0.125rem;
+  border-bottom-right-radius: 0.125rem;
+}
+
+.bg-primary-2 .input-group-text {
+  color: #3881ad;
+}
+
+.bg-success-2 .input-group-text {
+  color: #70a93b;
+}
+
+.input-group .form-control:focus .input-group-text{
+    color: #000;
+}
+
+.input-group .form-control:focus {
+    box-shadow: none;
+}
+
+
+.form-check-label {
+	cursor: pointer;
+	position: relative;
+	margin: auto;
+	-webkit-tap-highlight-color: transparent;
+	transform: translate3d(0, 0, 0);
+	width: 100%;
+	height: auto;
+  font-size: 13px;
+}
+
+.form-check-label:before {
+	content: "";
+	position: absolute;
+	top: -15px;
+	left: -15px;
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	background: rgba(34,50,84,0.03);
+	opacity: 0;
+	transition: opacity 0.2s ease;
+}
+
+.form-check-label svg {
+	position: relative;
+	z-index: 1;
+	fill: none;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke: #fff;
+	stroke-width: 1.5;
+	transform: translate3d(0, 0, 0);
+	transition: all 0.2s ease;
+	display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.form-check-label.text-dark svg {
+  stroke: #8edb5f;
+}
+
+.form-check-label svg path {
+	stroke-dasharray: 60;
+	stroke-dashoffset: 0;
+}
+
+.form-check-label svg polyline {
+	stroke-dasharray: 22;
+	stroke-dashoffset: 66;
+}
+
+.form-check-label:hover:before {
+	opacity: 1;
+}
+
+.form-check-label:hover svg {
+	stroke: #fff
+}
+
+.has-error .form-check-label svg {
+	stroke: #d44;
+}
+
+input[type="checkbox"]:checked + .form-check-label svg {
+	stroke: #fff;
+}
+
+input[type="checkbox"]:checked + .form-check-label.text-dark svg {
+	stroke: #8edb5f;
+}
+
+input[type="checkbox"]:checked + .form-check-label svg path {
+	stroke-dashoffset: 60;
+	transition: all 0.3s linear;
+}
+
+input[type="checkbox"]:checked + .form-check-label svg polyline {
+	stroke-dashoffset: 42;
+	transition: all 0.2s linear;
+	transition-delay: 0.15s;
+}
+
+.icon-box {
+  position: relative;
+  z-index: 1;
+}
+
+.icon-box .box-title {
+  font-weight: 600;
+}
+
+.bg-success-2 {
+  background: #61b955;
+}
+
+.bg-primary-2 {
+  background: #3881ad;
+}
+
+
+.bg-success-2.faid::before {
+  content: " ";
+  display: block;
+  background:#61b955;
+  width: 1500px;
+  height: 100%;
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.icon-box p {
+  line-height: 20px;
+}
+
+.icon-box img {
+  width: 72px;
+  height: 72px;
+}
+
 .msdom_delivery_distance {
-  color:
-    #3f82ae;
+  color:#3f82ae;
   font-size: 13px;
   margin-bottom: 20px;
 }
@@ -4496,9 +4708,11 @@ a.ref {
 }
 
 .card.product .card-body .cart-title {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 800;
   line-height: 20px;
+  color: #000;
+  text-decoration: none;
 }
 
 .card.product.list .card-body .card-text .list_line {
@@ -4554,6 +4768,9 @@ a.ref {
 
 .card.product.list .card-body .card-text .good-price, .card.product.list .card-body .card-text .equipment-price {
   width: 150px;
+}
+
+.body-price {
   margin: 15px 0;
 }
 
@@ -4571,6 +4788,35 @@ a.ref {
   color: #fff;
   background-color: #2c9fbb;
   border-color: #2c9fbb;
+}
+
+.product-overlay {
+  cursor: pointer;
+}
+
+.product-overlay .body-price {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+
+.product-overlay:hover .body-price {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+}
+
+.product-overlay .overlay.body-overlay {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+}
+
+.product-overlay:hover .overlay.body-overlay {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+  min-height: 99px;
 }
 
 /* / Каталог */
@@ -4647,13 +4893,109 @@ a.ref {
   width: 100%;
 }
 
+.filters .title__main {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0.5em 0;
+}
+
 .filters .filter_fieldset_title {
   font-size: 13px;
   font-weight: 600;
   color: #000;
 }
 
+.filters .ui-widget-header {
+  background: #93d75b;
+}
+
+.filters .ui-widget.ui-widget-content {
+  border: 0;
+  background: #c7c7c7;
+}
+
+.filters .ui-widget-content {
+  height: 4px;
+}
+
+.filters .ui-state-default, .filters .ui-widget-content .ui-state-default {
+  background: #2c9fbb;
+  border-color: #2c9fbb;
+}
+
+.filters .filter_num_input input {
+  border-bottom: 0;
+}
+
+.filters h4 {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 2em 0;
+}
+
+.filters .nice_select_option label{
+  display: flex;
+  align-items: center;
+}
+
+.filters .nice_select_option span {
+  font-size: 12px;
+}
+
+.filters .nice_select_option .nice_select_option_label {
+  width: 19px;
+  height: 17px;
+}
+
+.filters .ui-slider .ui-slider-handle {
+  width: 12px;
+  height: 12px;
+}
+
+
 /*Карточка товара */
+
+.list-group.list-box {
+  font-size: 12px;
+}
+
+.list-group.list-box li {
+  font-size: 12px;
+  font-family: "Open sans","Arial",sans-serif;
+  line-height: 24px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+
+.list-group.list-box.icon-list-box li i {
+  font-size: 16px;
+  color: #3a80b1;
+  width: 1.7em;
+  display: flex;
+  justify-content: center;
+}
+
+.list-group.list-box.icon-list-box.radius-box li i {
+
+    background: #3a80b1;
+    color: #fff;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 12px;
+    margin: 5px 5px 5px 0;
+    padding-right: 5px;
+}
+
+.list-group.list-box.icon-list-box.radius-box li i.green {
+    background: #7cb646;
+}
+
+.list-group.list-box.icon-list-box.radius-box li i.red {
+    background: #ed6b4d;
+}
 
 section.showcase {
   margin: 3rem 0;
@@ -4726,6 +5068,19 @@ section.showcase {
   border: unset !important;
 }
 
+.tab-content {
+  font-size: 13px;
+}
+
+.tab-content p {
+  font-size: 13px;
+  margin: 10px 0;
+}
+
+.tab-content .image_in_content_wr {
+  margin: 50px 0;
+}
+
 .form-group.form-list-options:nth-child(odd) {
   background-color: #fff;
 }
@@ -4745,15 +5100,22 @@ section.showcase {
 
 .cart .card-gallery .thumbs .item img {
   width: 70px;
+  border: 1px solid #ededed;
+  border-radius: 6px;
 }
 
 .cart .card-gallery .big img {
-  width: 160px;
+  width: 200px;
 }
 
-.cart .card-gallery .thumbs .item {
-  border: 1px solid #ededed;
-  border-radius: 6px;
+.cart .card-gallery .big .slick-slide div a {
+  display: flex !important;
+  justify-content: center;
+}
+
+.cart .card-gallery .thumbs .slick-list {
+  display: flex;
+  justify-content: center;
 }
 
 .text-success {
@@ -4872,4 +5234,79 @@ section.showcase {
   font-size: 12px;
   line-height: 18px;
   color: #535353;
+}
+
+
+.bg-light {
+  background: #f3f3f3;
+}
+
+h2 .badge {
+  font-size: 18px;
+}
+
+.badge-success {
+  background: #70a93b;
+}
+
+.text-primary {
+  color: #3881ad !important;
+}
+
+.fancybox-container {
+  z-index: 500 !important;
+}
+
+.fancybox-content {
+    width: 900px;
+    padding: 0 !important;
+    overflow: hidden !important;
+}
+
+.t21_product_maininfo_price2_wr i {
+  font-size: 16px;
+  color:#c8d4de;
+  border: 1px solid #c8d4de;
+  border-radius: 50%;
+}
+
+.t21_product_maininfo_price2_wr a {
+  text-decoration: none;
+}
+
+.t21_product_maininfo_price2_wr a i {
+  font-size: 12px;
+  color: #c8d4de;
+  border: 1px solid #c8d4de;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.real_content .card-tab li {
+  list-style-type:none;
+  margin-bottom: 0px;
+  margin-left: 10px;
+}
+
+.real_content .card-tab .nav-link.active, .nav-pills .show > .nav-link {
+  background: #f3f6f7;
+}
+
+.forms-septic {
+  font-size: 12px;
+}
+
+.forms-septic .h5 {
+  font-weight: 600;
+}
+
+@media (max-width: 960px) {
+  .fancybox-content {
+    width: 100%
+  }
 }
