@@ -12,9 +12,7 @@
     <div class="card product list">
         <div class="row">
             <div class="col-12 col-xl-3 px-5 p-xl-0 d-flex card-img align-items-center justify-content-center bd-highlight">
-                <a href="{$id | url}">
                     <img src="{$image | phpthumbon: 'w=300&h=300&bg=fff&q=61'}" class="card-img-top p-3" alt="{$pagetitle}">
-                </a>
             </div>
             <div class="col-12 col-xl-9">
                 <div class="card-body pl-xl-0 position-relative h-100">
