@@ -6,9 +6,9 @@
 
 <div class="dsmc_calc_item my-3 col-12{($ms_price_key != 0 && $opt != '') ? ' product-overlay' : ''}"
      data-dsmc_calc_productid="{$id}"
-     data_calc_productprice="{$price | preg_replace:'/[^0-9]|/': ''}"
-     data_calc_earthwork="{$calc_earthwork.0 ?: '0'}"
-     data_calc_puskonaladka="{$calc_puskonaladka.0 | preg_replace:'/[^0-9]|/': ''}">
+     data-calc_productprice="{$price | preg_replace:'/[^0-9]|/': ''}"
+     data-calc_earthwork="{$calc_earthwork.0 ?: '0'}"
+     data-calc_puskonaladka="{$calc_puskonaladka.0 | preg_replace:'/[^0-9]|/': '' ?: '0'}">
     <div class="card product list">
         <div class="row">
             <div class="col-12 col-xl-3 px-5 p-xl-0 d-flex card-img align-items-center justify-content-center bd-highlight">
