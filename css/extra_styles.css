@@ -1,4 +1,4 @@
-
+.hide_element {display:none !important;}
 
 /*new calc styles*/
 
@@ -872,6 +872,8 @@ h2.centered {text-align:center;}
 .about_text_item.n6 p {padding-left:35px;}
 .about_text_item.n2 p {padding-right:10px;}
 
+.tab-content [itemprop="description"] > p img {display:block;margin-left:auto;margin-right:auto;max-width:100%;margin-bottom:10px;}
+
 
 @media only screen and (min-width:1200px) {
   .top_banner_wrap {background-size:cover !important;}
@@ -926,6 +928,9 @@ h2.centered {text-align:center;}
   .about_text_item {width:100% !important;height: auto !important;}
   .about_text_item .icon {width:100px !important;height:auto !important;display:inline-block;vertical-align:middle;padding:15px 0;}
   .about_text_item p {display:inline-block;vertical-align:middle;width:240px !important;padding:15px 0;}
+  
+  .cart .card-gallery .big img {    width: auto;    max-width: 100%;}
+  
 }
 
 

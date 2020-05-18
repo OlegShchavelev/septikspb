@@ -520,6 +520,31 @@ header {
   .header_phones {
     padding-left: 0;
   }
+
+  .new-header .header_top_line li a {
+    font-size: 14px;
+    color: #7fb1c1;
+    font-weight: normal;
+    font-weight: 600;
+    line-height: 28px;
+    padding: 0 10px 0 10px;
+  }
+
+  .new-header .header_top_line li:hover>a {
+    font-weight: 600;
+    color: #fff885;
+    background: #429fbd;
+    border-radius: 3px;
+    padding: 4px 10px;
+  }
+
+  .new-header .header_top_line li.active>a {
+    font-weight: 600;
+    color: #fff885;
+    background: #429fbd;
+    border-radius: 3px;
+    padding: 4px 10px;
+  }
 }
 
 .header_phones a {
@@ -1740,6 +1765,10 @@ footer {
 @media (max-width:767px) {
   .side_banners {
     display: none;
+  }
+
+  .navbar.navbar_left {
+    border-right: 0 !important;
   }
 }
 
@@ -3131,7 +3160,7 @@ fieldset[id='mse2_ms|price'] .filter_fieldset_title {
 
 .t21_product_maininfo {
   border: 1px solid #e8f5fb;
-  border-radius: 6px;
+  border-radius: 0px;
   padding: 0 30px;
 }
 
@@ -3656,30 +3685,6 @@ fieldset[id='mse2_ms|price'] .filter_fieldset_title {
 
 .new-header .header_top_line li:first-child {
   padding-left: 0;
-}
-
-.new-header .header_top_line li a {
-  font-size: 14px;
-  color: #7fb1c1;
-  font-weight: normal;
-  font-weight: 600;
-  line-height: 28px;
-  padding: 0 10px 0 10px;
-}
-
-.new-header .header_top_line li:hover>a {
-  font-weight: 600;
-  color: #fff885;
-  background: #429fbd;
-  border-radius: 3px;
-}
-
-.new-header .header_top_line li.active>a {
-  font-weight: 600;
-  color: #fff885;
-  background: #429fbd;
-  border-radius: 3px;
-  padding: 4px 10px;
 }
 
 .new-header .header_nav_ms_cart_li.top_line_cart a {
@@ -4414,7 +4419,7 @@ a.ref {
   margin-bottom: 35px;
 }
 
-.form-group input[type="text"], .form-group input[type="email"] {
+.form-group input[type="text"], .form-group input[type="email"], .form-group input[type="number"] {
   height: 48px;
   border: 1px solid #eee;
   border-radius: 0;
@@ -4423,6 +4428,10 @@ a.ref {
   box-sizing: border-box;
   outline: none;
   font-size: 13px;
+}
+
+.form-group input[type="text"].error , .form-group input[type="email"].error {
+  border: 1px solid #dc3545;
 }
 
 .form-group textarea {
@@ -4594,7 +4603,7 @@ input[type="checkbox"]:checked + .form-check-label svg polyline {
   height: 72px;
 }
 
-.msdom_delivery_distance {
+.msdom_delivery_distance.blue {
   color:#3f82ae;
   font-size: 13px;
   margin-bottom: 20px;
@@ -4770,18 +4779,26 @@ input[type="checkbox"]:checked + .form-check-label svg polyline {
   width: 150px;
 }
 
-.body-price {
+.card.product .card-text {
   margin: 15px 0;
 }
 
 .btn-radius {
   border-radius: 50%;
   width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-more {
-  bottom: 20px;
   right: 20px;
+  bottom: 20px;
+}
+
+.btn-more a {
+  text-decoration: none;
 }
 
 .btn.btn-success.btn-hover-primary:hover {
@@ -4797,26 +4814,30 @@ input[type="checkbox"]:checked + .form-check-label svg polyline {
 .product-overlay .body-price {
   opacity: 1;
   visibility: visible;
-  height: 100%;
+  transition: all 0.5s;
 }
 
 .product-overlay:hover .body-price {
   opacity: 0;
   visibility: hidden;
-  height: 0;
+  transition: all 0.25s;
 }
 
 .product-overlay .overlay.body-overlay {
   opacity: 0;
   visibility: hidden;
-  height: 0;
+  min-height: 94px;
+  transition: all 0.25s;
+}
+
+.row-card.product-overlay .overlay.body-overlay {
+  top: 0 !important;
 }
 
 .product-overlay:hover .overlay.body-overlay {
   opacity: 1;
   visibility: visible;
-  height: 100%;
-  min-height: 99px;
+  transition: all 0.5s;
 }
 
 /* / Каталог */
@@ -4824,6 +4845,8 @@ input[type="checkbox"]:checked + .form-check-label svg polyline {
 /* Боковой левый бар */
 .nav.flex-column .submenu.nav {
   padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 15px;
 }
 
 .navbar.navbar_left .nav li a {
@@ -4831,6 +4854,15 @@ input[type="checkbox"]:checked + .form-check-label svg polyline {
   color: #000000;
   font-weight: 600;
   text-decoration: none;
+}
+
+.navbar.navbar_left .nav li a:hover {
+  color: #2c9fbb;
+}
+
+.navbar.navbar_left .nav li i {
+  font-size: 14px;
+  cursor: pointer;
 }
 
 .navbar.navbar_left .nav li.active a {
@@ -4841,8 +4873,17 @@ input[type="checkbox"]:checked + .form-check-label svg polyline {
   display: block;
 }
 
-.navbar.navbar_left .nav li .submenu li {
+.navbar.navbar_left .nav li .submenu {
   display: none;
+}
+
+.navbar.navbar_left .nav li.active .submenu {
+  display: block;
+}
+
+.navbar.navbar_left .nav li .submenu li .nav-link {
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .navbar.navbar_left .nav li.active .submenu {
@@ -4891,6 +4932,11 @@ input[type="checkbox"]:checked + .form-check-label svg polyline {
 
 .filters {
   width: 100%;
+  margin: 20px 0;
+}
+
+.filters .mse2_filters {
+  display: block;
 }
 
 .filters .title__main {
@@ -4950,6 +4996,127 @@ input[type="checkbox"]:checked + .form-check-label svg polyline {
 .filters .ui-slider .ui-slider-handle {
   width: 12px;
   height: 12px;
+}
+
+.filters label.custom-checkbox {
+    font-size: 12px;
+    margin: 12px 0;
+}
+
+.filters label.custom-checkbox input {
+margin-right: 5px;
+}
+
+/* Custom labels: the container */
+.checkcontainer {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 17px;
+    -webkit-user-select: none; /* Chrome, Opera, Safari */
+    -moz-user-select: none; /* Firefox 2+ */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none; /* Standard syntax */
+}
+
+/* Hide the browser's default checkbox */
+.checkcontainer input {
+  	position: absolute;
+	  opacity: 0;
+cursor: pointer;}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: calc(50% - 9px);
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checkcontainer:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkcontainer input:checked ~ .checkmark {
+    background-color: #55acda;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.checkcontainer input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkcontainer .checkmark::after {
+    left: 7px;
+    top: 3px;
+    width: 6px;
+    height: 9px;
+    border: solid #fff;
+    border-top-width: medium;
+    border-right-width: medium;
+    border-bottom-width: medium;
+    border-left-width: medium;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* Create a custom radio button */
+.radiobtn{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.checkcontainer:hover input ~ .radiobtn{
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.checkcontainer input:checked ~ .radiobtn{
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radiobtn:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.checkcontainer input:checked ~ .radiobtn:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.checkcontainer .radiobtn:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
 }
 
 
@@ -5019,6 +5186,10 @@ section.showcase {
   background-color: #f3f6f7;
 }
 
+.card-tab.nav li > a.active {
+  background-color: #f3f6f7;
+}
+
 .card-tab.nav li.active > a:hover {
   background-color: #2e85ab;
   border-color: unset !important;
@@ -5033,6 +5204,7 @@ section.showcase {
   padding: 0.5rem 1.4rem;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
+  margin-right: 5px;
 }
 
 .section-tab-content.tab-content , .section-tab-content.tab-content .t21_tabs_content  {
@@ -5094,18 +5266,29 @@ section.showcase {
 
 .cart .card-gallery {
   border: 1px solid #ededed;
-  border-radius: 6px;
+  border-radius: 0px;
   height: 100%;
 }
 
 .cart .card-gallery .thumbs .item img {
-  width: 70px;
+  width: 65px;
   border: 1px solid #ededed;
-  border-radius: 6px;
+  border-radius: 0px;
+  cursor: pointer;
+}
+
+.cart .card-gallery .thumbs .slick-current .item img {
+  border: 1px solid #70a93b;
 }
 
 .cart .card-gallery .big img {
   width: 200px;
+}
+
+.cart .slick-slider {
+  margin-bottom: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .cart .card-gallery .big .slick-slide div a {
@@ -5113,10 +5296,23 @@ section.showcase {
   justify-content: center;
 }
 
-.cart .card-gallery .thumbs .slick-list {
-  display: flex;
-  justify-content: center;
+.gallery.card-gallery .loader {
+  visibility: hidden !important;
 }
+
+.gallery.card-gallery .loader.loaders {
+  visibility: visible !important;
+}
+
+.gallery.card-gallery .spinner {
+  top:calc(50% - 16px);
+  left:calc(50% - 16px);
+}
+
+.gallery.card-gallery .loader.loaders + .spinner {
+  display:none !important;
+}
+
 
 .text-success {
   color: #70a93b !important;
@@ -5287,6 +5483,18 @@ h2 .badge {
   text-decoration: none;
 }
 
+.real_content p {
+  font-size: 13px;
+}
+
+.real_content ul li {
+  font-size: 13px;
+}
+
+.real_content img {
+  margin: 20px 0;
+}
+
 .real_content .card-tab li {
   list-style-type:none;
   margin-bottom: 0px;
@@ -5305,8 +5513,152 @@ h2 .badge {
   font-weight: 600;
 }
 
+.lb5_wr .owl-dots {
+  display: none;
+}
+
+/* Фикс кнопок */
+
+.t21_product_maininfo_price2_cart:hover, .t21_product_maininfo_price1_cart:hover,.lb_button_t1.lb_button_t1_calc:hover:hover,.lb_button_t1.lb_button_t1_catalog:hover,.lb_button_t1.lb_button_t1_worker:hover, .solution_item_order:hover, .lb6_link:hover {
+  color: #fff !important;
+  transform: all 0.5s !important;
+  opacity: 0.9 !important;
+}
+
+/* End Фикс кнопок */
+
 @media (max-width: 960px) {
   .fancybox-content {
     width: 100%
   }
+
+  .card.product.list .card-img {
+    border-right: none;
+}
+}
+
+/* Новая версия калькулятора */
+
+.filters.calculators {
+  border: 1px solid #eaeaea;
+}
+
+.main p, .main {
+  font-size: 13px;
+}
+
+.custom-checkbox.box.checkcontainer {
+  padding-left: 10px;
+}
+
+.custom-checkbox.box .checkmark {
+  display: none;
+}
+
+.custom-checkbox.box.checkcontainer.active {
+  background-color: #70a93b;
+  border-color: #70a93b;
+}
+
+.custom-checkbox.box.checkcontainer.active i {
+  color: #fff !important;
+}
+
+.card.product.list.active {
+  border: 2px solid #7cb646;
+}
+
+.card.product.list.active::after {
+  content: 'Выбрано';
+  position: absolute;
+  top:20px;
+  right: 20px;
+}
+
+.card.product.list.active::after {
+    content: "Выбрано";
+    position: absolute;
+    top: 16px;
+    right: 17px;
+    background: #dc3545;
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Новая версия калькулятора */
+
+.real_content.lead {
+    font-size: 13px !important;
+    font-weight: 400;
+    line-height: 22px;
+    color: #222;
+    font-family: "Open Sans";
+}
+
+.navbar_left .submenu_item.nav-item.level1 span {
+  padding: 0 10px;
+}
+
+.navbar_left .nav-item.level1 .nav-padding {
+  padding: 8px 10px;
+}
+
+.navbar_left .level2 ul {
+  display: none !important;
+}
+
+.navbar_left .level2.active ul {
+  display: block !important;
+}
+
+.navbar_left .level2.active.active-item a {
+  color: #2c9fbb !important;
+  text-decoration: underline !important;
+}
+
+.navbar_left .level3.active.active-item a {
+  color: #2c9fbb !important;
+  text-decoration: underline !important;
+}
+
+.navbar_left .level2 ul li a {
+  color: #565656 !important;
+}
+
+.navbar_left .level1 ul li a:hover {
+  color: #3b3b3b !important;
+  text-decoration: underline !important;
+}
+
+
+.navbar_left .level2 ul li a:hover {
+  color: #3b3b3b !important;
+  text-decoration: underline !important;
+}
+
+.navbar_left .submenu_item.nav-item.level1.active span {
+  padding: 0 10px;
+  background: #eef8fa;
+  border-radius: 10px;
+}
+
+.navbar_left .submenu_item.nav-item.level2.active span {
+  background: #fff !important;
+  padding: 0 !important;
+  color: #2c9fbb;
+  padding-right: 10px !important;
+}
+
+.navbar_left .submenu_item.nav-item.level2.active span a {
+  color: #2c9fbb;
+  text-decoration: underline;
+}
+
+.navbar_left .submenu_item.nav-item.level2 span {
+  background: #fff !important;
+  padding: 0 !important;
+  padding-right: 10px !important;
 }

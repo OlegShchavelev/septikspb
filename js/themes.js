@@ -29,4 +29,96 @@ $(document).ready(function() {
 			 $("#form_option").hide();
 	  }
 		});
+
+		$(document).on('change', '[name="delivery"]', function() {
+ 	     if ($('[name="delivery"]:checked').attr('id') == 'delivery_1') {
+	 	     $("#index").hide();
+	 			 $("#city").hide();
+	 			 $("#street").hide();
+ 	  }
+ 	     if ($('[name="delivery"]:checked').attr('id') == 'delivery_3') {
+				 $("#index").hide();
+	 			 $("#city").hide();
+	 			 $("#street").show();
+ 	  }
+			 if ($('[name="delivery"]:checked').attr('id') == 'delivery_4') {
+				$("#index").hide();
+ 				$("#city").show();
+ 				$("#street").show();
+		}
+			if ($('[name="delivery"]:checked').attr('id') == 'delivery_5') {
+				$("#index").show();
+				$("#city").show();
+				$("#street").show();
+	  }
+ 		});
+
+		$(".left_menu .dropdown").on("click", function(){
+		    var menuopener = $(this);
+		    if (menuopener.hasClass("fa-arrow-alt-circle-right")) {
+								menuopener.closest('li').children('ul').slideDown();
+								menuopener.closest('li').addClass('active');
+		            menuopener.removeClass('fa-arrow-alt-circle-right').removeClass('text-primary');
+								menuopener.addClass('fa-arrow-alt-circle-down').addClass('text-success');
+						 }
+						 else
+						 {
+								menuopener.closest('li').children('ul').slideUp();
+								menuopener.closest('li').removeClass('active');
+								menuopener.removeClass('fa-arrow-alt-circle-down').removeClass('text-success');
+								menuopener.addClass('fa-arrow-alt-circle-right').addClass('text-primary');
+						 }
+						 return false;
+		});
+
+		setTimeout(function(){
+		$(".gallery.card-gallery .loader").addClass('loaders');
+		},
+		300);
+
+		// Калькулятор
+
+		//.portfolio_tags_item toggling
+
+		function highlightTags() {
+			    $('.custom-checkbox.box').removeClass('active');
+			    var t_elem = $('.custom-checkbox.box');
+			    for (var i = 0;i < t_elem.length; i++) {
+			        if ($(t_elem[i]).find('input[type="checkbox"]:checked').length) {$(t_elem[i]).addClass('active');}
+			    }
+			}
+
+			highlightTags();
+
+			$('.custom-checkbox.box').click(function(e) {
+			       highlightTags();
+			});
+			//--
+
+      $(".card-select .product.list").click(function() {
+
+            // Select all list items
+            var listItems = $(".card-select .product.list");
+
+            // Remove 'active' tag for all list items
+            for (let i = 0; i < listItems.length; i++) {
+                listItems[i].classList.remove("active");
+            }
+
+            // Add 'active' tag for currently selected item
+            this.classList.add("active");
+        });
+
+				$(".calc_input_tube").change(function() {
+          if ($(this).val() > 30){
+            miniShop2.Message.error('Ошибка! Нельзя ставить кол-во больше 30!');
+            $(this).val(30);
+          }
+					else if ($(this).val() < 2) {
+						miniShop2.Message.error('Ошибка! Нельзя ставить кол-во меньше 2!');
+					  $(this).val(2);
+					}
+        });
+
+
 });
