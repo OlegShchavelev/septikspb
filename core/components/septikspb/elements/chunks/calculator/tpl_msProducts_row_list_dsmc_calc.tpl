@@ -7,7 +7,7 @@
 <div class="dsmc_calc_item my-3 col-12{($ms_price_key != 0 && $opt != '') ? ' product-overlay' : ''}"
      data-dsmc_calc_productid="{$id}"
      data_calc_productprice="{$price | preg_replace:'/[^0-9]|/': ''}"
-     data_calc_earthwork="{$calc_earthwork.0}"
+     data_calc_earthwork="{$calc_earthwork.0 ?: '0'}"
      data_calc_puskonaladka="{$calc_puskonaladka.0 | preg_replace:'/[^0-9]|/': ''}">
     <div class="card product list">
         <div class="row">
@@ -41,9 +41,9 @@
                             </ul>
                         </div>
                     {/if}
-                    <a href="{$id | url}" class="cart-title">
+                    <span href="{$id | url}" class="cart-title">
                         {$pagetitle}
-                    </a>
+                    </span>
                     <div class="card-text position-relative">
                         <div class="d-flex body-price{($ms_price_key != 0 && $opt != '') ? ' position-absolute' : ''}">
                             {if $ms_price_key != 0}
