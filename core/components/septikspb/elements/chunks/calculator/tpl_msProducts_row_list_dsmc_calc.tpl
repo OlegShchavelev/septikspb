@@ -8,7 +8,7 @@
      data-dsmc_calc_productid="{$id}"
      data_calc_productprice="{$price}"
      data_calc_earthwork="{$calc_earthwork[0]}"
-     data_calc_earthwork="{$calc_puskonaladka[0]}">
+     data_calc_puskonaladka="{$calc_puskonaladka[0]}">
     <div class="card product list">
         <div class="row">
             <div class="col-12 col-xl-3 px-5 p-xl-0 d-flex card-img align-items-center justify-content-center bd-highlight">
