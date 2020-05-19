@@ -3,11 +3,13 @@
     <input type="hidden" name="{$formID}_resource" value="{'id' | resource}">
     <input type="hidden" name="token" value="{$token}">
     <input type="hidden" name="form" value="{$formID}">
+    <input type="hidden" name="{$formID}_address" value="">
     <input type="hidden" name="{$formID}_product_id" id="dsmc_calc_product_id" value="">
     <input type="hidden" name="{$formID}_cost_equipment" id="dsmc_calc_cost_equipment" value="">
     <input type="hidden" name="{$formID}_cost_distance" id="dsmc_cost_distance" value="">
-    <input type="hidden" name="{$formID}_cost_tube" id="dsmc_cost_tube" value="{$.get.calc_input_tube}">
-    <input type="hidden" name="{$formID}_cost_earth work" id="dsmc_cost_earth" value="">
+    <input type="hidden" name="{$formID}_count_tube" id="dsmc_count_tube" value="">
+    <input type="hidden" name="{$formID}_cost_tube" id="dsmc_cost_tube" value="">
+    <input type="hidden" name="{$formID}_cost_earth" id="dsmc_cost_earth" value="">
     <input type="hidden" name="{$formID}_cost_installation" id="dsmc_cost_installation" value="">
     <input type="hidden" name="{$formID}_tolalcost" id="dsmc_tolalcost" value="">
 
