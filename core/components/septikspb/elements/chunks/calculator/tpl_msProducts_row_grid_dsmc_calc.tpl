@@ -9,7 +9,7 @@
      data-calc_productprice="{$price | preg_replace:'/[^0-9]|/': ''}"
      data-calc_earthwork="{$calc_earthwork.0 ?: '0'}"
      data-calc_puskonaladka="{$calc_puskonaladka.0 | preg_replace:'/[^0-9]|/': '' ?: '0'}">
-    <div class="card product h-100">
+    <div class="card product h-100 {$idx == 1 ? ' active' : ''}">
         <div class="flags px-3 pt-3">
             <ul class="list-group list-box icon-list-box radius-box list-group-horizontal mb-3">
                 {foreach $ms_prod_bonus as $item}
@@ -46,25 +46,6 @@
             </div>
             <div class="card-text position-relative">
                 <div class="d-flex flex-column justify-content-between body-price">
-                    {if $ms_price_key != 0}
-                        <div class="good-price">
-                            <p class="label green">
-                                Цена «под ключ»
-                            </p>
-                            <div class="list_line mt-2">
-                                <p class="price">
-                                    {$ms_price_key | price} {'ms2_frontend_currency' | lexicon}
-                                </p>
-                                <div class="service mt-1">
-                                    <ul>
-                                        <li>Оборудование</li>
-                                        <li>Доставка</li>
-                                        <li>Монтаж</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    {/if}
                     <div class="equipment-price mt-2">
                         <p class="label blue">
                             {($ms_price_key != 0 && $opt != '') != 0 ? 'Цена оборудования' : 'Цена'}
