@@ -3,12 +3,11 @@
     <input type="hidden" name="{$formID}_resource" value="{'id' | resource}">
     <input type="hidden" name="token" value="{$token}">
     <input type="hidden" name="form" value="{$formID}">
-    <input type="hidden" name="{$formID}_address" value="">
+    <input type="hidden" name="{$formID}_address" id="dsmc_address" value="">
     <input type="hidden" name="{$formID}_product_id" id="dsmc_calc_product_id" value="">
     <input type="hidden" name="{$formID}_cost_equipment" id="dsmc_calc_cost_equipment" value="">
     <input type="hidden" name="{$formID}_cost_distance" id="dsmc_cost_distance" value="">
-    <input type="hidden" name="{$formID}_count_tube" id="dsmc_count_tube" value="">
-    <input type="hidden" name="{$formID}_cost_tube" id="dsmc_cost_tube" value="">
+    <input type="hidden" name="{$formID}_cost_tube" id="dsmc_cost_tube" value="{($.get.calc_input_tube * 700) | number : 0 : '.' : ' '}">
     <input type="hidden" name="{$formID}_cost_earth" id="dsmc_cost_earth" value="">
     <input type="hidden" name="{$formID}_cost_installation" id="dsmc_cost_installation" value="">
     <input type="hidden" name="{$formID}_tolalcost" id="dsmc_tolalcost" value="">
@@ -33,7 +32,7 @@
                     <div class="row">
 
                         <div class="col-md-6 col-12">Оборудование - <span class='cost_equipment'>0</span> {'ms2_frontend_currency' | lexicon}</div>
-                        <div class="col-md-6">Трубы - <span class='cost_tube'>{$.get.calc_input_tube * 700}</span> {'ms2_frontend_currency' | lexicon}</div>
+                        <div class="col-md-6">Трубы - <span class='cost_tube'>{($.get.calc_input_tube * 700) | number : 0 : '.' : ' '}</span> {'ms2_frontend_currency' | lexicon}</div>
                         <div class="col-md-6">Земельная работа - <span class='cost_earth work'>0</span> {'ms2_frontend_currency' | lexicon}</div>
                         <div class="msdom_delivery_distance col-md-6 d-block">Расстояние: <span class="range_delivery"></span> км</div>
                         <div class="col-md-6">Монтаж - <span class='cost_installation'>0</span> {'ms2_frontend_currency' | lexicon}</div>

@@ -50,7 +50,7 @@ msoption|ms_drainage_system == calc_drainage_system
             {if 'dsmc.filters' | placeholder != 'Нечего фильтровать'}
                 <div class="row">
                     {'dsmc.filters' | placeholder}
-                    <fieldset class="col-4">
+                    <fieldset class="col-lg-4">
                         <h4 class="filter_title">Метраж прокладки труб</h4>
 
                         <div class="row">

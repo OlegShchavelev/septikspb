@@ -20,7 +20,14 @@ msoption|ms_prod_waterlevel,
 msoption|ms_vanni:boolean,
 msoption|ms_prod_grunt,
 msoption|ms_drainage_system
-'
+',
+'aliases' => '
+msoption|ms_kol_person == calc_kol_person,
+msoption|ms_prod_waterlevel == calc_prod_waterlevel,
+msoption|ms_vanni == calc_ms_vanni,
+msoption|ms_prod_grunt == calc_prod_grunt,
+msoption|ms_drainage_system == calc_drainage_system
+',
 'filterOptions' => '{"autoLoad":0}'
 'sortby' => 'price',
 'sortdir' => 'ASC',

@@ -9,7 +9,7 @@
      data-calc_productprice="{$price | preg_replace:'/[^0-9]|/': ''}"
      data-calc_earthwork="{$calc_earthwork.0 ?: '0'}"
      data-calc_puskonaladka="{$calc_puskonaladka.0 | preg_replace:'/[^0-9]|/': '' ?: '0'}">
-    <div class="card product list">
+    <div class="card product list {$idx == 1 ? ' active' : ''}">
         <div class="row">
             <div class="col-12 col-xl-3 px-5 p-xl-0 d-flex card-img align-items-center justify-content-center bd-highlight">
                     <img src="{$image | phpthumbon: 'w=300&h=300&bg=fff&q=61'}" class="card-img-top p-3" alt="{$pagetitle}">

@@ -21,8 +21,8 @@
 {set $dsmc_list = $fields}
 {set $dsmc_cost = $fields}
 
-{unset $dsmc_list['id'] $dsmc_list['msid'] $dsmc_list['Итоговая сумма'] $dsmc_list['Оборудование'] $dsmc_list['Трубы'] $dsmc_list['Земельные работы'] $dsmc_list['Монтаж'] $dsmc_list['sla']}
-{unset $dsmc_cost['Имя'] $dsmc_cost['Телефон'] $dsmc_cost['id'] $dsmc_cost['msid'] $dsmc_cost['sla']}
+{unset $dsmc_list['id'] $dsmc_list['msid'] $dsmc_list['Стоимость доставки'] $dsmc_list['Итоговая сумма'] $dsmc_list['Оборудование'] $dsmc_list['Трубы'] $dsmc_list['Земельные работы'] $dsmc_list['Монтаж'] $dsmc_list['sla']}
+{unset $dsmc_cost['Имя'] $dsmc_cost['Телефон'] $dsmc_cost['id'] $dsmc_cost['msid'] $dsmc_cost['sla'] $dsmc_cost['Адрес']}
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -123,7 +123,9 @@
                                 {if $fields['msid'] ?}
                                 <h4>Примерная калькуляция:</h4>
                                 {foreach $dsmc_cost as $name => $value}
+                                    {if ($value != 0 && $value != '')}
                                     <p><b>{$name}</b>: {$value} р.</p>
+                                    {/if}
                                 {/foreach}
                                 <br>
                                 {/if}
