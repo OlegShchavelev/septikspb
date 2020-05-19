@@ -16,11 +16,12 @@
     <div class="row align-items-center my-4">
         <legend class="col-form-label col-sm-7">Выберите уровень сервиса</legend>
         <div class="form-check form-check-inline ml-3 my-2">
-            <input class="form-check-input" type="radio" name="{$formID}_sla" id="{$formID}_sla1" value="Да" checked="">
+            <input class="form-check-input" type="radio" name="{$formID}_sla" id="{$formID}_sla1" value="
+Решение под ключ" checked="">
             <label class="form-check-label-box" for="{$formID}_sla">Решение под ключ</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="{$formID}_sla" id="{$formID}_sla2" value="Нет">
+            <input class="form-check-input" type="radio" name="{$formID}_sla" id="{$formID}_sla2" value="Только оборудование">
             <label class="form-check-label-box" for="{$formID}_sla">Только оборудование</label>
         </div>
     </div>
