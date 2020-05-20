@@ -15,12 +15,12 @@
     <div class="row align-items-center my-4">
         <legend class="col-form-label col-sm-7">Выберите уровень сервиса</legend>
         <div class="form-check form-check-inline ml-3 my-2">
-            <input class="form-check-input" type="radio" name="{$formID}_sla" id="{$formID}_sla1" value="
+            <input class="form-check-input checker checker1" type="radio" name="{$formID}_sla" id="{$formID}_sla1" value="
 Решение под ключ" checked="">
             <label class="form-check-label-box" for="{$formID}_sla">Решение под ключ</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="{$formID}_sla" id="{$formID}_sla2" value="Только оборудование">
+            <input class="form-check-input checker" type="radio" name="{$formID}_sla" id="{$formID}_sla2" value="Только оборудование">
             <label class="form-check-label-box" for="{$formID}_sla">Только оборудование</label>
         </div>
     </div>
@@ -32,7 +32,7 @@
                     <div class="row">
 
                         <div class="col-md-6 col-12">Оборудование - <span class='cost_equipment'>0</span> {'ms2_frontend_currency' | lexicon}</div>
-                        <div class="col-md-6">Трубы - <span class='cost_tube'>{($.get.calc_input_tube * 700) | number : 0 : '.' : ' '}</span> {'ms2_frontend_currency' | lexicon}</div>
+                        <div class="col-md-6">Трубы - <span class='cost_tube' data-calc_input_tube="{($.get.calc_input_tube * 700)}">{($.get.calc_input_tube * 700) | number : 0 : '.' : ' '}</span> {'ms2_frontend_currency' | lexicon}</div>
                         <div class="col-md-6">Земельная работа - <span class='cost_earth work'>0</span> {'ms2_frontend_currency' | lexicon}</div>
                         <div class="msdom_delivery_distance col-md-6 d-block">Расстояние: <span class="range_delivery"></span> км</div>
                         <div class="col-md-6">Монтаж - <span class='cost_installation'>0</span> {'ms2_frontend_currency' | lexicon}</div>
