@@ -26,7 +26,7 @@
     </div>
     <div class="total border-top py-5">
         <div class="row mx-0">
-            <div class="col-md-7 bg-success-2 p-5 text-white">
+            <div class="col-md-8 col-lg-7 bg-success-2 p-5 text-white">
                 <div class="calc-total_panel">
                     <div class="title h6 mb-3">Предварительная смета</div>
                     <div class="row">
@@ -43,7 +43,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-5 p-5 border-top border-bottom border-right">
+            <div class="dsmc-calc-finalcost col-md-4 col-lg-5 p-5 border-top border-bottom border-right">
                 <div class="calc-title h4">Юниан Астра 3</div>
                 <div class="h5"><span class="calc-final-cost">0</span> {'ms2_frontend_currency' | lexicon}</div>
             </div>

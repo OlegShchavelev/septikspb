@@ -4834,6 +4834,20 @@ input[type="checkbox"]:checked + .form-check-label svg polyline {
   top: 0 !important;
 }
 
+.dsmc_calc_item.row-card.product-overlay .grid .overlay.body-overlay {
+  top: 0 !important;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  left: 0;
+}
+
+.dsmc_calc_item.row-card.product-overlay .grid .overlay.body-overlay .list-box {
+  padding: 1rem;
+  position: relative;
+  top: 70px;
+}
+
 .product-overlay:hover .overlay.body-overlay {
   opacity: 1;
   visibility: visible;
@@ -5564,21 +5578,21 @@ h2 .badge {
   color: #fff !important;
 }
 
-.card.product.list.active {
+.card.product.list.active, .card.product.grid.active {
   border: 2px solid #7cb646;
 }
 
-.card.product.list.active::after {
+.card.product.list.active::after, .card.product.grid.active::after {
   content: 'Выбрано';
   position: absolute;
   top:20px;
   right: 20px;
 }
 
-.card.product.list.active::after {
+.card.product.list.active::after, .card.product.grid.active::after{
     content: "Выбрано";
     position: absolute;
-    top: 16px;
+    top: 18px;
     right: 17px;
     background: #dc3545;
     color: #fff;
@@ -5661,4 +5675,18 @@ h2 .badge {
   background: #fff !important;
   padding: 0 !important;
   padding-right: 10px !important;
+}
+
+.dsmc_calc.order .btn-sm {
+  font-size: 0.75rem !important;
+}
+
+@media (max-width:480px) {
+  .dsmc-calc-nav .dsmc_calc.order {
+    position: absolute;
+    right: 0;
+  }
+  .dsmc-calc-finalcost {
+    border-left: 1px solid #dee2e6 !important;
+  }
 }

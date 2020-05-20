@@ -95,10 +95,10 @@ $(document).ready(function() {
 			});
 			//--
 
-      $(".card-select .product.list").click(function() {
+      $(".card-select .product.list, .card-select .product.grid").click(function() {
 
             // Select all list items
-            var listItems = $(".card-select .product.list");
+            var listItems = $(".card-select .product.list, .card-select .product.grid");
 
             // Remove 'active' tag for all list items
             for (let i = 0; i < listItems.length; i++) {
@@ -109,16 +109,34 @@ $(document).ready(function() {
             this.classList.add("active");
         });
 
-				$(".calc_input_tube").change(function() {
+      $(".calc_input_tube").change(function() {
+
           if ($(this).val() > 30){
             miniShop2.Message.error('Ошибка! Нельзя ставить кол-во больше 30!');
             $(this).val(30);
           }
-					else if ($(this).val() < 2) {
-						miniShop2.Message.error('Ошибка! Нельзя ставить кол-во меньше 2!');
-					  $(this).val(2);
-					}
+
+          else if ($(this).val() < 2) {
+          	miniShop2.Message.error('Ошибка! Нельзя ставить кол-во меньше 2!');
+          	$(this).val(2);
+          }
+
         });
 
+	$(".dsmc-calc-nav.navbar").on("click","a", function (e) {
+		e.preventDefault();
+		let id  = $(this).attr('href'),
+		top = $(id).offset().top - 40;
+		$('body,html').animate({scrollTop: top}, 1500);
+	});
+
+	$(window).scroll(function(e){
+		let order = $('#dsmc-calc-order-section').offset();
+		if($(this).scrollTop() > 350 && $(this).scrollTop() < order.top - 100) {
+			$(".dsmc-calc-nav.navbar").addClass('fixed-top').removeClass('d-none');
+		} else {
+			$(".dsmc-calc-nav.navbar").removeClass('fixed-top').addClass('d-none');
+		}
+	});
 
 });

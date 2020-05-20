@@ -4,12 +4,12 @@
 'product' => $id
 ]}
 
-<div class="dsmc_calc_item col-md-6 col-xl-3 my-3 row-card{($ms_price_key != 0 && $opt != '') ? ' product-overlay' : ''}"
+<div class="dsmc_calc_item col-10 col-md-4 col-lg-3 col-xl-3 my-3 row-card position-relative{($ms_price_key != 0 && $opt != '') ? ' product-overlay' : ''}"
      data-dsmc_calc_productid="{$id}"
      data-calc_productprice="{$price | preg_replace:'/[^0-9]|/': ''}"
      data-calc_earthwork="{$calc_earthwork.0 ?: '0'}"
      data-calc_puskonaladka="{$calc_puskonaladka.0 | preg_replace:'/[^0-9]|/': '' ?: '0'}">
-    <div class="card product h-100 {$idx == 1 ? ' active' : ''}">
+    <div class="card product grid h-100 {$idx == 1 ? ' active' : ''}">
         <div class="flags px-3 pt-3">
             <ul class="list-group list-box icon-list-box radius-box list-group-horizontal mb-3">
                 {foreach $ms_prod_bonus as $item}
@@ -34,17 +34,15 @@
             </ul>
         </div>
         <div class="d-flex card-img align-items-center justify-content-center bd-highlight">
-            <a href="{$id | url}">
                 <img src="{$image | phpthumbon: 'w=300&h=300&bg=fff&q=61'}" class="card-img-top p-3" alt="{$pagetitle}">
-            </a>
         </div>
-        <div class="card-body position-relative d-flex flex-column justify-content-between">
+        <div class="card-body d-flex flex-column justify-content-between">
             <div class="card-text d-flex flex-column justify-content-center h-100">
-                <a href="{$id | url}" class="cart-title">
+                <span class="cart-title">
                     {$pagetitle}
-                </a>
+                </span>
             </div>
-            <div class="card-text position-relative">
+            <div class="card-text">
                 <div class="d-flex flex-column justify-content-between body-price">
                     <div class="equipment-price mt-2">
                         <p class="label blue">

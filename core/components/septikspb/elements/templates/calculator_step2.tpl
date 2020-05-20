@@ -33,7 +33,7 @@ msoption|ms_drainage_system == calc_drainage_system
 'sortdir' => 'ASC',
 'suggestions' => 1,
 'toPlaceholders' => 'dsmc.',
-'tpl' => 'tpl.msProducts.row.list.dsmc.calc',
+'tpl' => 'tpl.msProducts.row.grid.dsmc.calc',
 ]}
 
 <div class="container main" id="mse2_mfilter">
@@ -49,12 +49,14 @@ msoption|ms_drainage_system == calc_drainage_system
 
 
     <div id="mse2_results">
-        <div class="row card-select" id="dsmc_calc">
+        <div class="row card-select justify-content-center justify-content-md-start" id="dsmc_calc">
             [[+dsmc.results]]
         </div>
     </div>
 
+    <div id="dsmc-calc-order-section">
     {'!mvtForms2' | snippet : ['form'=>'calc']}
+    </div>
 
     {'content' | resource}
 </div>
