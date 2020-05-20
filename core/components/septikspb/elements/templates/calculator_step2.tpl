@@ -36,17 +36,36 @@ msoption|ms_drainage_system == calc_drainage_system
 'tpl' => 'tpl.msProducts.row.grid.dsmc.calc',
 ]}
 
-<div class="container main" id="mse2_mfilter">
+<div class="container main " id="mse2_mfilter">
     <h1>{'pagetitle' | resource}</h1>
 
-    <a href="{'659' | url}" class="btn btn-success btn-lg mb-4 mt-2">Вернуться к шагу 1</a>
+    <a href="{'659' | url}" class="btn btn-success btn-lg mb-4 mt-2 text-decoration-none">Вернуться к шагу 1</a>
 
     <p>
         Данный расчет стоимости является предварительным, для правильного подбора оборудования и расчета окончательной сметы, необходим выезд нашего инженера на объект. Это бесплатная услуга. Свяжитесь с нами или оставьте запрос на сайте.
     </p>
 
-    <h4 class="mt-3">Кликните на вариант и заполните заявку</h4>
+    <h4 class="mt-3">Вы выбрали следующий вариант</h4>
 
+    <div id="mse2_selected_wrapper">
+        <div>
+            {if $.get.calc_kol_person ?}
+                <span class="py-2 px-3 my-1 d-inline-block bg-light">Количество людей:<span class="font-weight-semibold ml-2">{$.get.calc_kol_person}</span></span>
+            {/if}
+        </div>
+        {if $.get.calc_prod_waterlevel ?}
+        <span class="py-2 px-3 my-1 d-inline-block bg-light">Уровень воды:<span class="font-weight-semibold ml-2">{$.get.calc_prod_waterlevel}</span></span>
+        {/if}
+        {if $.get.calc_drainage_system ?}
+        <span class="py-2 px-3 my-1 d-inline-block bg-light">Тип грунта:<span class="font-weight-semibold ml-2">{$.get.calc_drainage_system}</span></span>
+        {/if}
+        {if $.get.calc_prod_grunt ?}
+        <span class="py-2 px-3 my-1 d-inline-block bg-light">Водоотведение:<span class="font-weight-semibold ml-2">{$.get.calc_prod_grunt}</span></span>
+        {/if}
+        {if $.get.calc_input_tube ?}
+        <span class="py-2 px-3 my-1 d-inline-block bg-light">Количество труб:<span class="font-weight-semibold ml-2">{$.get.calc_input_tube} м</span></span>
+        {/if}
+    </div>
 
     <div id="mse2_results">
         <div class="row card-select justify-content-center justify-content-md-start" id="dsmc_calc">
