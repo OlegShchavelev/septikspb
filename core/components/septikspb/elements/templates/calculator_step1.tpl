@@ -27,7 +27,7 @@ msoption|ms_prod_grunt == calc_prod_grunt,
 msoption|ms_drainage_system == calc_drainage_system
 ',
 'sortdir' => 'ASC',
-'suggestions' => 1,
+'suggestions' => 0,
 'toPlaceholders' => 'dsmc.',
 'filterOptions' => '{"autoLoad":0}'
 'tpl' => 'tpl.msProducts.row.list.dsmc',

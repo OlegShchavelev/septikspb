@@ -36,10 +36,20 @@ msoption|ms_drainage_system == calc_drainage_system
 'tpl' => 'tpl.msProducts.row.grid.dsmc.calc',
 ]}
 
+{set $get = $.get}
+{unset $get[q]}
+
+{foreach $get as $key => $value index=$index}
+    {if $value ?}
+    {set $GET[$index] = $key ~ '=' ~ $value}
+    {/if}
+{/foreach}
+
+
 <div class="container main " id="mse2_mfilter">
     <h1>{'pagetitle' | resource}</h1>
 
-    <a href="{'659' | url}" class="btn btn-success btn-lg mb-4 mt-2 text-decoration-none">Вернуться к шагу 1</a>
+    <a href="{'659' | url}?{$GET | join : '&'}" class="btn btn-success btn-lg mb-4 mt-2 text-decoration-none">Вернуться к шагу 1</a>
 
     <p>
         Данный расчет стоимости является предварительным, для правильного подбора оборудования и расчета окончательной сметы, необходим выезд нашего инженера на объект. Это бесплатная услуга. Свяжитесь с нами или оставьте запрос на сайте.
