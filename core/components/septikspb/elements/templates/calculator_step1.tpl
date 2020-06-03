@@ -13,18 +13,20 @@
 'limit' => 18,
 'sortby' => 'price',
 'filters' => '
-msoption|ms_kol_person,
-msoption|ms_prod_waterlevel,
-msoption|ms_vanni:boolean,
-msoption|ms_prod_grunt,
-msoption|ms_drainage_system
+    msoption|ms_kol_person,
+    msoption|ms_prod_waterlevel,
+    msoption|calc_vanni,
+    msoption|ms_prod_grunt,
+    msoption|ms_drainage_system,
+    msoption|ms_energy,
+    msoption|ms_prod_stoki
 '
 'aliases' => '
-msoption|ms_kol_person == calc_kol_person,
-msoption|ms_prod_waterlevel == calc_prod_waterlevel,
-msoption|ms_vanni == calc_ms_vanni,
-msoption|ms_prod_grunt == calc_prod_grunt,
-msoption|ms_drainage_system == calc_drainage_system
+    msoption|ms_kol_person == calc_kol_person,
+    msoption|ms_prod_waterlevel == calc_prod_waterlevel,
+    msoption|ms_vanni == calc_ms_vanni,
+    msoption|ms_prod_grunt == calc_prod_grunt,
+    msoption|ms_drainage_system == calc_drainage_system
 ',
 'sortdir' => 'ASC',
 'suggestions' => 0,

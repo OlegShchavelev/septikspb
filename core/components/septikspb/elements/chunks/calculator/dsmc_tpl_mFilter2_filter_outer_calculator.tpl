@@ -1,5 +1,26 @@
 {var $key = $table ~ $delimeter ~ $filter}
+
+
+{switch $filter}
+{case 'ms_prod_waterlevel'}
+{set $tooltip_name = 'На какой глубине залегает грунтовая вода на вашем участке? Глубина залегания до 1.5 метров - это высокий уровень, более 1.5 метров - это низкий уровень. Большинство наших септиков могут работать при любом уровне залегания грунтовых вод.'}
+{case 'ms_prod_grunt'}
+{set $tooltip_name = 'Тип грунта - глина, суглинок, торф, песок, супесь, "плывун". Укажите преобладающий тип грунта вашего участка. Некоторые виды септиков имеют возможность монтажа в "плывун".'}
+{case 'ms_drainage_system'}
+{set $tooltip_name = 'Как вы хотите организовать отвод очищенных стоков? Принудительное отведение подходит при наличии мелких канав или высокого уровня грунтовых вод на участке. Самотечный вариант - это сброс в колодцы, дренаж или низком уровне грунтовых вод на участке.'}
+{case 'ms_energy'}
+{set $tooltip_name = 'Принципа работы септика может требовать подключение к сети, а может допускать его независимость от электричества. Выбор зависит от условий на вашем участке.'}
+{case 'ms_prod_stoki'}
+{set $tooltip_name = 'Принцип работы некоторых ЛОС позволяет работать без откачки с отводом всех стоков в дренаж или канаву. Некоторые септики требуют откачки с вывозом или насосом с отводом на участок.'}
+{/switch}
+
 <fieldset id="mse2_{$key}" class="col-lg-4">
-    <h4 class="filter_title">{('mse2_filter_' ~ $table ~ '_' ~ $filter) | lexicon} <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Disabled tooltip"><i class="far fa-question-circle"></i></span></h4>
+    <h4 class="filter_title">{('mse2_filter_' ~ $table ~ '_' ~ $filter) | lexicon}
+        {if $tooltip_name ?}
+        <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="{$tooltip_name}">
+            <i class="far fa-question-circle"></i>
+        </span>
+        {/if}
+    </h4>
     {$rows}
 </fieldset>
