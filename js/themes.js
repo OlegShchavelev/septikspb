@@ -15,7 +15,9 @@ $(document).ready(function() {
 	  centerMode: false,
 	  focusOnSelect: true
 	});
-	 $('[data-toggle="popover"]').popover();
+
+	// $('[data-toggle="tooltip"]').tooltip();
+	$('[data-toggle="popover"]').popover();
 
 	 $(document).on('change', '[name="septic_sla"]', function() {
 	     if ($('[name="septic_sla"]:checked').attr('id') == 'septic_sla1') {

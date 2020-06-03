@@ -414,7 +414,7 @@
     <div class="header_nav">
         <div class="container">
             <div class="header_nav_wr">
-                <ul class="clearafter">
+                <ul class="clearafter pl-0">
                     {'!pdoMenu' | snippet : [
                     'tplOuter' => '@INLINE {$wrapper}'
                     'parents' => 9,
