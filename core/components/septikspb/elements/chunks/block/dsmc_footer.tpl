@@ -65,8 +65,8 @@
     {if 'template' | resource == 41}
     <nav class="dsmc-calc-nav navbar navbar-expand-lg navbar-light bg-success-2 text-white py-2 d-none">
         <div class="container">
-            <div class="calc-title font-weight-semibold col-12 col-md-6 col-lg-6">Юнилос Астра 5</div>
-            <div class="calc-cost font-weight-semibold col-12 col-md-3 col-lg-3">
+            <div class="calc-title font-weight-semibold col-12 col-md-5 col-lg-6">Юнилос Астра 5</div>
+            <div class="calc-cost font-weight-semibold col-12 col-md-4 col-lg-3">
                 <span class="calc-label-cost mr-1">под ключ:</span>
                 <span class="calc-final-cost font-weight-bold">0</span>
                 <span class="font-weight-bold text-uppercase">р</span>
