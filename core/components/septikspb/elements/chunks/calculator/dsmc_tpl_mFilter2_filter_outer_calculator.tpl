@@ -1,6 +1,5 @@
 {var $key = $table ~ $delimeter ~ $filter}
 
-
 {switch $filter}
 {case 'ms_prod_waterlevel'}
 {set $tooltip_name = 'На какой глубине залегает грунтовая вода на вашем участке? Глубина залегания до 1.5 метров - это высокий уровень, более 1.5 метров - это низкий уровень. Большинство наших септиков могут работать при любом уровне залегания грунтовых вод.'}
@@ -17,9 +16,9 @@
 <fieldset id="mse2_{$key}" class="col-lg-4">
     <h4 class="filter_title">{('mse2_filter_' ~ $table ~ '_' ~ $filter) | lexicon}
         {if $tooltip_name ?}
-        <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="{$tooltip_name}">
+        <a class="d-inline-block" tabindex="0" data-toggle="tooltip" data-placement="bottom" title="{$tooltip_name}">
             <i class="far fa-question-circle"></i>
-        </span>
+        </a>
         {/if}
     </h4>
     {$rows}

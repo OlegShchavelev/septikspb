@@ -65,11 +65,18 @@
     {if 'template' | resource == 41}
     <nav class="dsmc-calc-nav navbar navbar-expand-lg navbar-light bg-success-2 text-white py-2 d-none">
         <div class="container">
-            <div class="calc-title font-weight-semibold col-11 col-md-7 col-lg-7">Юнилос Астра 5</div>
-            <div class="calc-cost font-weight-semibold col-11 col-md-2 col-lg-2">
-                <span class="calc-final-cost">0</span> р.</div>
-            <div class="dsmc_calc order col-2 col-md-3 col-lg-3 d-flex justify-content-end">
-                <a class="btn btn-success btn-sm text-decoration-none" href="#dsmc-calc-order-section" role="button"><i class="fas fa-cart-arrow-down mr-1 mr-md-2"></i><span class="d-none d-md-inline">Купить</span></a>
+            <div class="calc-title font-weight-semibold col-12 col-md-6 col-lg-6">Юнилос Астра 5</div>
+            <div class="calc-cost font-weight-semibold col-12 col-md-3 col-lg-3">
+                <span class="calc-label-cost mr-1">под ключ:</span>
+                <span class="calc-final-cost font-weight-bold">0</span>
+                <span class="font-weight-bold text-uppercase">р</span>
+                <span data-toggle="tooltip" class="btn btn-round btn-tooltip ml-2" title="другой текст подсказки">?</span>
+            </div>
+            <div class="dsmc_calc order col-12 col-md-3 col-lg-3 d-flex justify-content-center justify-content-md-end">
+                <a class="btn btn-success btn-sm text-decoration-none d-flex my-2 my-md-0" href="#dsmc-calc-order-section" role="button">
+                    <i class="icon-truck-alt mr-1 mr-md-2"></i>
+                    Расчет доставки
+                </a>
             </div>
         </div>
     </nav>

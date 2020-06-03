@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/septik.eot?72cjr9');
-  src:  url('../fonts/septik.eot?72cjr9#iefix') format('embedded-opentype'),
-    url('../fonts/septik.ttf?72cjr9') format('truetype'),
-    url('../fonts/septik.woff?72cjr9') format('woff'),
-    url('../fonts/septik.svg?72cjr9#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?4tvf');
+  src:  url('fonts/icomoon.eot?4tvf#iefix') format('embedded-opentype'),
+  url('fonts/icomoon.ttf?4tvf') format('truetype'),
+  url('fonts/icomoon.woff?4tvf') format('woff'),
+  url('fonts/icomoon.svg?4tvf#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,14 +25,132 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-kitchen:before {
-  content: "\e920";
+.icon-truck-alt:before {
+  content: "\e900";
+  color: #fff;
 }
-.icon-basin:before {
-  content: "\e921";
+.icon-info:before {
+  content: "\e901";
 }
-.icon-washer:before {
-  content: "\e922";
+.icon-ingener:before {
+  content: "\e902";
+}
+.icon-cart:before {
+  content: "\e903";
+}
+.icon-truck:before {
+  content: "\e904";
+}
+
+
+@font-face {
+  font-family: 'Geometria';
+  src: url('../fonts/Geometria.eot');
+  src: local('Geometria'),
+  url('../fonts/Geometria.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Geometria.woff') format('woff'),
+  url('../fonts/Geometria.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geometria';
+  src: url('../fonts/Geometria-Thin.eot');
+  src: local('Geometria Thin'), local('Geometria-Thin'),
+  url('../fonts/Geometria-Thin.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Geometria-Thin.woff') format('woff'),
+  url('Geometria-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geometria';
+  src: url('../fonts/Geometria-MediumItalic.eot');
+  src: local('Geometria MediumItalic'), local('Geometria-MediumItalic'),
+  url('../fonts/Geometria-MediumItalic.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Geometria-MediumItalic.woff') format('woff'),
+  url('../fonts/Geometria-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Geometria';
+  src: url('../fonts/Geometria-Italic.eot');
+  src: local('Geometria Italic'), local('Geometria-Italic'),
+  url('../fonts/Geometria-Italic.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Geometria-Italic.woff') format('woff'),
+  url('../fonts/Geometria-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Geometria';
+  src: url('../fonts/Geometria-Heavy.eot');
+  src: local('Geometria Heavy'), local('Geometria-Heavy'),
+  url('../fonts/Geometria-Heavy.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Geometria-Heavy.woff') format('woff'),
+  url('../fonts/Geometria-Heavy.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geometria';
+  src: url('Geometria-ExtraBoldItalic.eot');
+  src: local('../fonts/Geometria ExtraBoldItalic'), local('Geometria-ExtraBoldItalic'),
+  url('../fonts/Geometria-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Geometria-ExtraBoldItalic.woff') format('woff'),
+  url('../fonts/Geometria-ExtraBoldItalic.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Geometria';
+  src: url('../fonts/Geometria-Medium.eot');
+  src: local('Geometria Medium'), local('Geometria-Medium'),
+  url('../fonts/Geometria-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Geometria-Medium.woff') format('woff'),
+  url('../fonts/Geometria-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geometria';
+  src: url('../fonts/Geometria-BoldItalic.eot');
+  src: local('Geometria BoldItalic'), local('Geometria-BoldItalic'),
+  url('../fonts/Geometria-BoldItalic.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Geometria-BoldItalic.woff') format('woff'),
+  url('../fonts/Geometria-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Geometria';
+  src: url('../fonts/Geometria-LightItalic.eot');
+  src: local('../fonts/Geometria LightItalic'), local('Geometria-LightItalic'),
+  url('../fonts/Geometria-LightItalic.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Geometria-LightItalic.woff') format('woff'),
+  url('../fonts/Geometria-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Geometria';
+  src: url('../fonts/Geometria-HeavyItalic.eot');
+  src: local('Geometria HeavyItalic'), local('Geometria-HeavyItalic'),
+  url('../fonts/Geometria-HeavyItalic.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Geometria-HeavyItalic.woff') format('woff'),
+  url('../fonts/Geometria-HeavyItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
 }
 
 @font-face {
@@ -43,6 +161,72 @@
   url('../fonts/Geometria.woff') format('woff'),
   url('../fonts/Geometria.ttf') format('truetype');
   font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geometria';
+  src: url('../fonts/Geometria-Bold.eot');
+  src: local('Geometria Bold'), local('Geometria-Bold'),
+  url('../fonts/Geometria-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Geometria-Bold.woff') format('woff'),
+  url('../fonts/Geometria-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geometria';
+  src: url('../fonts/Geometria-ExtraBold.eot');
+  src: local('Geometria ExtraBold'), local('Geometria-ExtraBold'),
+  url('../fonts/Geometria-ExtraBold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Geometria-ExtraBold.woff') format('woff'),
+  url('../fonts/Geometria-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geometria';
+  src: url('../fonts/Geometria-ThinItalic.eot');
+  src: local('Geometria ThinItalic'), local('Geometria-ThinItalic'),
+  url('../fonts/Geometria-ThinItalic.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Geometria-ThinItalic.woff') format('woff'),
+  url('../fonts/Geometria-ThinItalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Geometria';
+  src: url('../fonts/Geometria-ExtraLightItalic.eot');
+  src: local('Geometria ExtraLightItalic'), local('Geometria-ExtraLightItalic'),
+  url('../fonts/Geometria-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Geometria-ExtraLightItalic.woff') format('woff'),
+  url('../fonts/Geometria-ExtraLightItalic.ttf') format('truetype');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Geometria';
+  src: url('../fonts/Geometria-Light.eot');
+  src: local('Geometria Light'), local('Geometria-Light'),
+  url('../fonts/Geometria-Light.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Geometria-Light.woff') format('woff'),
+  url('../fonts/Geometria-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geometria';
+  src: url('../fonts/Geometria-ExtraLight.eot');
+  src: local('Geometria ExtraLight'), local('Geometria-ExtraLight'),
+  url('../fonts/Geometria-ExtraLight.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Geometria-ExtraLight.woff') format('woff'),
+  url('../fonts/Geometria-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
   font-style: normal;
 }
 
@@ -5680,13 +5864,48 @@ h2 .badge {
   font-size: 0.75rem !important;
 }
 
-@media (max-width:480px) {
-  .dsmc-calc-nav .dsmc_calc.order {
-    position: absolute;
-    right: 0;
-  }
-  .dsmc-calc-finalcost {
-    border-left: 1px solid #dee2e6 !important;
-  }
+.dsmc-calc-nav , .dsmc-calc-nav span, .dsmc-calc-nav p   {
+  font-family: 'Geometria';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
 }
 
+.dsmc-calc-nav .btn span , .dsmc-calc-nav .btn {
+  font-size: 13px;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.dsmc-calc-nav .btn.btn-success:active , .dsmc-calc-nav .btn.btn-success:focus {
+  background-color: #8edb5f;
+  border: 1px solid #8edb5f;
+  box-shadow: none;
+}
+
+.dsmc-calc-nav .btn i {
+  font-size: 20px;
+}
+
+.dsmc-calc-nav .btn.btn-tooltip {
+  color: #61B955;
+  font-size: 9px;
+  font-weight: 800;
+  background-color: #84d179;
+  border-radius: 50%;
+  padding: 0px 6px;
+  width: 14px;
+  height: 14px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 540px) {
+.dsmc-calc-nav .btn {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}
+}

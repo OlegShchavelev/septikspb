@@ -67,7 +67,7 @@
                         </div>
                     </fieldset>
                 </div>
-                <div class="py-4">
+                <div class="py-4 text-center">
                     <button type="submit" class="btn btn-success btn-lg">Подобрать решение</button>
                 </div>
             {/if}
