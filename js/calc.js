@@ -30,7 +30,7 @@ $(document).on('click', '.active', function(e){
   }
   else
   {
-    $('#dsmc_calc_product_id').val(btn.parent().attr('data-dsmc_calc_productid').toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
+    $('#dsmc_calc_product_id').val(btn.parent().attr('data-  ').toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
     $('.cost_equipment').html(btn.parent().attr('data-calc_productprice').toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
     $('#dsmc_calc_cost_equipment').val(btn.parent().attr('data-calc_productprice').toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
     var total = parseInt($('.cost_equipment').html().replace(/\s+/g, ''));
