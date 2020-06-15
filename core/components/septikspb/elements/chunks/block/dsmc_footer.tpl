@@ -70,7 +70,7 @@
                 <span class="calc-label-cost mr-1">под ключ:</span>
                 <span class="calc-final-cost font-weight-bold">0</span>
                 <span class="font-weight-bold text-uppercase">р</span>
-                <span data-toggle="tooltip" class="btn btn-round btn-tooltip ml-2" title="другой текст подсказки">?</span>
+                <span data-toggle="tooltip" data-placement="bottom" data-html="true" class="btn btn-round btn-tooltip ml-2" title="<b>Ваша сумма оборудования</b></br> из данных по параметрам калькулятора">?</span>
             </div>
             <div class="dsmc_calc order col-12 col-md-3 col-lg-3 d-flex justify-content-center justify-content-md-end">
                 <a class="btn btn-success btn-sm text-decoration-none d-flex my-2 my-md-0" href="#dsmc-calc-order-section" role="button">

@@ -25,6 +25,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-kitchen:before {
+  content: "\e920";
+}
+.icon-basin:before {
+  content: "\e921";
+}
+.icon-washer:before {
+  content: "\e922";
+}
 .icon-truck-alt:before {
   content: "\e900";
   color: #fff;
@@ -40,7 +49,6 @@
 }
 .icon-truck:before {
   content: "\e904";
-}
 
 
 @font-face {
@@ -4949,21 +4957,36 @@ input[type="checkbox"]:checked + .form-check-label svg polyline {
   font-weight: 900;
   content: "\f067";
   color: #72af4c;
-  ;
   font-size: 8px;
   margin-right: 4px;
+}
+
+.badge.barge-installment {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  z-index: 500;
+  top: 10px;
+  left: 25px;
+}
+
+.badge.barge-radius {
+  border-radius: 50%;
 }
 
 .badge .badge-danger {
   background-color: #fc5454;
 }
 
-.card.product.list .card-body .card-text .good-price, .card.product.list .card-body .card-text .equipment-price {
-  width: 150px;
-}
-
 .card.product .card-text {
   margin: 15px 0;
+}
+
+.card.product .good-price .service ul {
+  padding-left: 0;
 }
 
 .btn-radius {
@@ -4991,7 +5014,7 @@ input[type="checkbox"]:checked + .form-check-label svg polyline {
 }
 
 .product-overlay {
-  cursor: pointer;
+  cursor: grab;
 }
 
 .product-overlay .body-price {
@@ -5899,6 +5922,34 @@ h2 .badge {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+
+.tooltip.show {
+  opacity: 1;
+}
+
+.tooltip-inner {
+  color: #8f8989;
+  background-color: #f5f5ef;
+  border-radius: .25rem;
+  opacity: 1 !important;
+  font-size: 12px;
+  font-family: 'Rubik';
+  text-align: left;
+  padding: 10px 10px 10px 15px;
+}
+
+.bs-tooltip-top .arrow::before, .bs-tooltip-auto[x-placement^="top"] .arrow::before {
+  border-top-color: #F5F5EF; /* цвет стрелочки (по умолчанию #000)*/
+}
+.bs-tooltip-right .arrow::before, .bs-tooltip-auto[x-placement^="right"] .arrow::before {
+  border-right-color: #F5F5EF; /* цвет стрелочки (по умолчанию #000)*/
+}
+.bs-tooltip-bottom .arrow::before, .bs-tooltip-auto[x-placement^="bottom"] .arrow::before {
+  border-bottom-color: #F5F5EF; /* цвет стрелочки (по умолчанию #000) */
+}
+.bs-tooltip-left .arrow::before, .bs-tooltip-auto[x-placement^="left"] .arrow::before {
+  border-left-color: #F5F5EF; /* цвет стрелочки (по умолчанию #000) */
 }
 
 @media screen and (max-width: 540px) {

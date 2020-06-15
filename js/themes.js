@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
 	 $('.slider-for').slick({
 	  slidesToShow: 1,
 	  slidesToScroll: 1,
@@ -16,7 +17,6 @@ $(document).ready(function() {
 	  focusOnSelect: true
 	});
 
-	// $('[data-toggle="tooltip"]').tooltip();
 	$('[data-toggle="popover"]').popover();
 
 	 $(document).on('change', '[name="septic_sla"]', function() {
@@ -133,12 +133,13 @@ $(document).ready(function() {
 	});
 
 	$(window).scroll(function(e){
-		let order = $('#dsmc-calc-order-section').offset();
-		if($(this).scrollTop() > 350 && $(this).scrollTop() < order.top - 100) {
-			$(".dsmc-calc-nav.navbar").addClass('fixed-top').removeClass('d-none');
-		} else {
-			$(".dsmc-calc-nav.navbar").removeClass('fixed-top').addClass('d-none');
-		}
+			if($("div").is("#dsmc-calc-order-section")) {
+			let order = $('#dsmc-calc-order-section').offset();
+			if ($(this).scrollTop() > 350 && $(this).scrollTop() < order.top - 100) {
+				$(".dsmc-calc-nav.navbar").addClass('fixed-top').removeClass('d-none');
+			} else {
+				$(".dsmc-calc-nav.navbar").removeClass('fixed-top').addClass('d-none');
+			}}
 	});
 
 });

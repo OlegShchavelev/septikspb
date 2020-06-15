@@ -269,7 +269,7 @@
 
 
 
-            <ul class="header_menu_mobile_main_categories_ul clearafter show_cat_li">
+            <ul class="header_menu_mobile_main_categories_ul clearafter show_cat_li pl-0">
                 <li><a data-toggle="katalog" href="[[~274]]">Каталог</a></li>
                 <!--
                 <li><a data-toggle="septik" href="[[~274]]">Септики и станции</a></li>
@@ -423,6 +423,9 @@
                     'levelClass' => 'level',
                     'tpl' => '@INLINE <li{$classes}><a href="{$link}" {$attributes}>{$menutitle}</a>{$wrapper}</li>',
                     'tplInner' => '@INLINE <ul>{$wrapper}</ul>'
+                    'where' => [
+                    'class_key:!=' => 'msProduct'
+                    ]
                     ]}
                 </ul>
             </div>
