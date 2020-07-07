@@ -33,7 +33,7 @@
                         {if 'ms_installment' | resource == 1}
                         <div class="badge badge-warning barge-radius barge-installment">
                             <span class="font-weight-normal mt-2 mb-1">Рассрочка</span>
-                            <span class="h6 font-weight-semibold">0 0 24</span>
+                            <span class="h6 font-weight-semibold">0 0 6</span>
                         </div>
                         {/if}
                         {'!msGallery' | snippet : [

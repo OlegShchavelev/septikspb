@@ -46,7 +46,7 @@
         css/jquery.fancybox.css
     ',
     'jsSources' => '
-    js/jquery-3.4.1.min.js,
+    js/jquery-3.5.1.min.js,
     js/jquery.bxslider.js,
     js/owl.carousel.min.js,
     js/jquery.ezmark.min.js,
