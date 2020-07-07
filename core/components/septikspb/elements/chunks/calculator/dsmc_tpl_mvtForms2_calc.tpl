@@ -15,46 +15,50 @@
     <div class="row align-items-center my-4">
         <div class="flex w-100">
             <div class="col-12">
-            <h4>Выберите уровень сервиса</h4>
-        </div>
+                <h4>Выберите уровень сервиса</h4>
+            </div>
             <div class="col-12 mt-4 mb-0">
-        <div class="form-check form-check-inline ml-0">
-            <input class="form-check-input checker checker1" type="radio" name="{$formID}_sla" id="{$formID}_sla1" value="
+                <div class="form-check form-check-inline ml-0">
+                    <input class="form-check-input checker checker1" type="radio" name="{$formID}_sla" id="{$formID}_sla1" value="
 Решение под ключ" checked="">
-            <label class="form-check-label-box mb-0" for="{$formID}_sla">Решение под ключ</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input checker" type="radio" name="{$formID}_sla" id="{$formID}_sla2" value="Только оборудование">
-            <label class="form-check-label-box mb-0" for="{$formID}_sla">Только оборудование</label>
-        </div>
-        </div>
+                    <label class="form-check-label-box mb-0" for="{$formID}_sla">Решение под ключ</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input checker" type="radio" name="{$formID}_sla" id="{$formID}_sla2" value="Только оборудование">
+                    <label class="form-check-label-box mb-0" for="{$formID}_sla">Только оборудование</label>
+                </div>
+            </div>
         </div>
     </div>
     <div class="total border-top py-5">
         <div class="row mx-0">
-            <div class="col-md-8 col-lg-7 bg-success-2 p-5 text-white">
+            <div class="col-12 col-md-12 col-lg-6 p-5 bg-success-2 text-white" id="estimate" style="transition:0.5s">
                 <div class="calc-total_panel">
-                    <div class="title h6 mb-3">Предварительная смета</div>
+                    <div class="title h6 mb-3">Смета на монтаж "Под ключ"</div>
                     <div class="row">
                         <div class="col-md-6 col-12">Оборудование - <span class='cost_equipment'>0</span> {'ms2_frontend_currency' | lexicon}</div>
                         <div class="col-md-6">Трубы - <span class='cost_tube' data-calc_input_tube="{($.get.calc_input_tube * 700)}">{($.get.calc_input_tube * 700) | number : 0 : '.' : ' '}</span> {'ms2_frontend_currency' | lexicon}</div>
-                        <div class="col-md-6">Земляная работа - <span class='cost_earth work'>0</span> {'ms2_frontend_currency' | lexicon}</div>
+                        <div class="col-md-6">Земельные работы - <span class='cost_earth work'>0</span> {'ms2_frontend_currency' | lexicon}</div>
                         <div class="msdom_delivery_distance col-md-6 d-block">Расстояние: <span class="range_delivery"></span> км</div>
                         <div class="col-md-6">Монтаж - <span class='cost_installation'>0</span> {'ms2_frontend_currency' | lexicon}</div>
-                        <div class="msdom_delivery_cost col-md-6 d-block">Стоимость доставки: <span class="cost_delivery"></span>
+                        <div class="msdom_delivery_cost col-md-6 d-block">Доставка: <span class="cost_delivery"></span>
                             <span class="msdom_suffix">{'ms2_frontend_currency' | lexicon}</span></div>
-                        <span class='cost_drainage d-none'>{$.get.calc_drainage_system == 'Принудительный' ? '6300' : '10000'}</span>
+                        <div class="col-md-6">Водоотведение - <span class='cost_drainage' data-value="{$.get.calc_drainage_system == 'Принудительный' ? '6 300' : $.get.calc_drainage_system == 'Самотеком'? '10 000' : $.get.calc_drainage_system == 'Сброс на рельеф, в канаву' ? '0' : '0'}">{$.get.calc_drainage_system == 'Принудительный' ? '6 300' : $.get.calc_drainage_system == 'Самотеком'? '10 000' : $.get.calc_drainage_system == 'Сброс на рельеф, в канаву' ? '0' : '0'}</span> р.</div>
+
 
                     </div>
                 </div>
             </div>
-            <div class="dsmc-calc-finalcost col-md-4 col-lg-5 p-5 border-top border-bottom border-right">
+            <div class="col-md-3 col-lg-3 img-equipment d-flex align-items-center justify-content-center border-top border-bottom">
+
+            </div>
+            <div class="dsmc-calc-finalcost col-md-9 col-lg-3 p-5 border-top border-bottom border-right">
                 <div class="calc-title h4">Юниан Астра 3</div>
-                <div class="h5"><span class="calc-final-cost">0</span> {'ms2_frontend_currency' | lexicon}</div>
+                <div class="h5 font-weight-bold" id="final-cost" style="color: #61b955; transition: 0.5s;"><span class="calc-final-cost">0</span> {'ms2_frontend_currency' | lexicon}</div>
             </div>
         </div>
     </div>
-    <h2 class="h5">Расчет доставки</h2>
+    <h2 class="h5">Указать адрес доставки</h2>
 
     <p class="my-5">
         Просто укажите на карте точное место доставки. Доставка оборудования на ваш участок в пределах 50 км от нашего склада осуществляется бесплатно. Доставка на большее расстояние рассчитывается по схеме 30 рублей за 1 км пути. Если ваш участок находится в 55 км от нашего склада, то доставка будет стоить 150 рублей.
@@ -65,7 +69,7 @@
     'tplInput' => '@INLINE <input type="text" id="septic_city" name="septic_city" placeholder="[[%msdom_input_placeholder]]" value="" class="form-control">'
     ]}
 
-    <h2 class="mt-4 h5">Контактные данные</h2>
+    <h2 class="mt-4 h5">Контакты для обратной связи</h2>
     <div class="row">
         <div class="form-group col-xl-6">
             <div class="input-group">

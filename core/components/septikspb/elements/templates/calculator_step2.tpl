@@ -20,7 +20,9 @@ msoption|ms_prod_waterlevel,
 msoption|ms_vanni:boolean,
 msoption|ms_prod_grunt,
 msoption|ms_drainage_system,
-msoption|calc_vanni
+msoption|calc_vanni,
+msoption|ms_energy,
+msoption|ms_prod_stoki
 ',
 'aliases' => '
 msoption|ms_kol_person == calc_kol_person,
@@ -29,6 +31,8 @@ msoption|ms_vanni == calc_ms_vanni,
 msoption|ms_prod_grunt == calc_prod_grunt,
 msoption|ms_drainage_system == calc_drainage_system,
 msoption|calc_vanni == calc_vanni
+msoption|ms_energy == calc_energy,
+msoption|ms_prod_stoki == calc_prod_stoki
 ',
 'filterOptions' => '{"autoLoad":0}'
 'sortby' => 'price',
@@ -51,13 +55,13 @@ msoption|calc_vanni == calc_vanni
 <div class="container main " id="mse2_mfilter">
     <h1>{'pagetitle' | resource}</h1>
 
-    <a href="{'659' | url}?{$GET | join : '&'}" class="btn btn-success btn-lg mb-4 mt-2 text-decoration-none">Вернуться к шагу 1</a>
+    <a href="{'659' | url}?{$GET | join : '&'}" class="btn btn-success btn-lg mb-4 mt-2 text-decoration-none">Назад к выбору параметров</a>
 
     <p>
         Наш калькулятор подобрал для вас список оборудования на основе указанных вами параметров, которые вы можете увидеть ниже. Вам осталось только выбрать подходящую систему ЛОС и указать расположение вашего участка. Вы всегда можете вернуться к первому шагу и изменить исходные данные для подбора оборудования.
     </p>
 
-    <h4 class="mt-3">Вы выбрали следующий вариант</h4>
+    <h4 class="mt-3">Выбранные параметры</h4>
 
     <div id="mse2_selected_wrapper">
         <div>
@@ -77,6 +81,12 @@ msoption|calc_vanni == calc_vanni
         {if $.get.calc_vanni ?}
             <span class="py-2 px-3 my-1 d-inline-block bg-light">Наличие ванны:<span class="font-weight-semibold ml-2">{$.get.calc_vanni}</span></span>
         {/if}
+        {if $.get.calc_energy ?}
+            <span class="py-2 px-3 my-1 d-inline-block bg-light">Энергонезависимость:<span class="font-weight-semibold ml-2">{$.get.calc_energy}</span></span>
+        {/if}
+        {if $.get.calc_prod_stoki ?}
+            <span class="py-2 px-3 my-1 d-inline-block bg-light">Необходимость откачки:<span class="font-weight-semibold ml-2">{$.get.calc_prod_stoki}</span></span>
+        {/if}
         {if $.get.calc_input_tube ?}
         <span class="py-2 px-3 my-1 d-inline-block bg-light">Количество труб:<span class="font-weight-semibold ml-2">{$.get.calc_input_tube} м</span></span>
         {/if}
@@ -84,7 +94,15 @@ msoption|calc_vanni == calc_vanni
 
     <div id="mse2_results">
         <div class="row card-select justify-content-center justify-content-md-start" id="dsmc_calc">
-            [[+dsmc.results]]
+            {'dsmc.results' | placeholder != 'Подходящих результатов не найдено.' ? ('dsmc.results' | placeholder) : '
+            <div class="container">
+            <div class="alert alert-primary">
+                К сожелению, подходящих результатов не найдено. Вы можете <a href="{'659' | url}?{$GET | join : '&'}">уточнить</a> параметры вашего поиска или <b>отправить</b> запрос нашим специалистам для подбора оборудования</b>
+            </div>
+            </div>
+            ' ~
+            '!mvtForms2' | snippet : ['form'=>'no_results_found']
+            }
         </div>
     </div>
 

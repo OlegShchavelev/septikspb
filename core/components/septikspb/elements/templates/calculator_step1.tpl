@@ -26,7 +26,9 @@
     msoption|ms_vanni == calc_ms_vanni,
     msoption|ms_prod_grunt == calc_prod_grunt,
     msoption|ms_drainage_system == calc_drainage_system,
-    msoption|calc_vanni == calc_vanni
+    msoption|calc_vanni == calc_vanni,
+    msoption|ms_energy == calc_energy,
+    msoption|ms_prod_stoki == calc_prod_stoki
 ',
 'sortdir' => 'ASC',
 'suggestions' => 0,
@@ -45,7 +47,7 @@
         Перед вами калькулятор, который позволит в два простых шага подобрать и спроектировать идеальную автономную канализацию для вашего загородного участка. Мы постарались учесть все наиболее важные и обязательные параметры, которые влияют не только на выбор оборудования, но и формируют итоговую смету на монтаж. Важно понимать, что вы получите предварительную смету. Итоговая сумма может оказаться, как больше, так и меньше. Сделать точный расчет может специалист СептикСервис у вас на участке.
     </p>
 
-    <h4 class="mt-3">Выберите подходящий вариант</h4>
+    <h4 class="mt-3">Укажите подходящие параметры</h4>
 
     <div class="filters calculators px-5 pb-3 pt-3" id="mse2_mfilter">
         <form action="{'660' | url}" method="post" id="mse2_filters">
