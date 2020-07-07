@@ -205,26 +205,9 @@
         </div>
     {/if}
 
-    <div class="order_call_form_wrap magnit-forms">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-4 bg-success-2 faid py-5">
-                    <div class="icon-box relative">
-                        <div class="d-flex align-items-center">
-                            <i class="fas fa-headset display-4 text-white"></i>
-                            <div class="pl-4"><span class="h4 text-white box-title mb-1 d-block">Остались вопросы</span>
-                                <p class="text-white d-block">наш менеджер перезвонит вам в течении 30 минут </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-8 py-5 pl-xl-5">
-                    {'!mvtForms2' | snippet : ['form'=>'magnet']}
-                </div>
 
-            </div>
-        </div>
-    </div><!--/order_call_form_wrap-->
+    {'!mvtForms2' | snippet : ['form'=>'magnet']}
+
 
     {set $addToViewed = '!addToViewed' | snippet}
 

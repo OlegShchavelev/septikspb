@@ -13,15 +13,21 @@
     <input type="hidden" name="{$formID}_tolalcost" id="dsmc_tolalcost" value="">
 
     <div class="row align-items-center my-4">
-        <legend class="col-form-label col-sm-7">Выберите уровень сервиса</legend>
-        <div class="form-check form-check-inline ml-3 my-2">
+        <div class="flex w-100">
+            <div class="col-12">
+            <h4>Выберите уровень сервиса</h4>
+        </div>
+            <div class="col-12 mt-4 mb-0">
+        <div class="form-check form-check-inline ml-0">
             <input class="form-check-input checker checker1" type="radio" name="{$formID}_sla" id="{$formID}_sla1" value="
 Решение под ключ" checked="">
-            <label class="form-check-label-box" for="{$formID}_sla">Решение под ключ</label>
+            <label class="form-check-label-box mb-0" for="{$formID}_sla">Решение под ключ</label>
         </div>
         <div class="form-check form-check-inline">
             <input class="form-check-input checker" type="radio" name="{$formID}_sla" id="{$formID}_sla2" value="Только оборудование">
-            <label class="form-check-label-box" for="{$formID}_sla">Только оборудование</label>
+            <label class="form-check-label-box mb-0" for="{$formID}_sla">Только оборудование</label>
+        </div>
+        </div>
         </div>
     </div>
     <div class="total border-top py-5">
@@ -30,10 +36,9 @@
                 <div class="calc-total_panel">
                     <div class="title h6 mb-3">Предварительная смета</div>
                     <div class="row">
-
                         <div class="col-md-6 col-12">Оборудование - <span class='cost_equipment'>0</span> {'ms2_frontend_currency' | lexicon}</div>
                         <div class="col-md-6">Трубы - <span class='cost_tube' data-calc_input_tube="{($.get.calc_input_tube * 700)}">{($.get.calc_input_tube * 700) | number : 0 : '.' : ' '}</span> {'ms2_frontend_currency' | lexicon}</div>
-                        <div class="col-md-6">Земельная работа - <span class='cost_earth work'>0</span> {'ms2_frontend_currency' | lexicon}</div>
+                        <div class="col-md-6">Земляная работа - <span class='cost_earth work'>0</span> {'ms2_frontend_currency' | lexicon}</div>
                         <div class="msdom_delivery_distance col-md-6 d-block">Расстояние: <span class="range_delivery"></span> км</div>
                         <div class="col-md-6">Монтаж - <span class='cost_installation'>0</span> {'ms2_frontend_currency' | lexicon}</div>
                         <div class="msdom_delivery_cost col-md-6 d-block">Стоимость доставки: <span class="cost_delivery"></span>
@@ -49,7 +54,12 @@
             </div>
         </div>
     </div>
-    <h2 class="h5">Укажите растояние</h2>
+    <h2 class="h5">Расчет доставки</h2>
+
+    <p class="my-5">
+        Просто укажите на карте точное место доставки. Доставка оборудования на ваш участок в пределах 50 км от нашего склада осуществляется бесплатно. Доставка на большее расстояние рассчитывается по схеме 30 рублей за 1 км пути. Если ваш участок находится в 55 км от нашего склада, то доставка будет стоить 150 рублей.
+    </p>
+
     {'!msDom' | snippet : [
     'tplOuter' => 'tpl.msDom.map.outer.septic.calc',
     'tplInput' => '@INLINE <input type="text" id="septic_city" name="septic_city" placeholder="[[%msdom_input_placeholder]]" value="" class="form-control">'

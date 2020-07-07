@@ -25,7 +25,8 @@
     msoption|ms_prod_waterlevel == calc_prod_waterlevel,
     msoption|ms_vanni == calc_ms_vanni,
     msoption|ms_prod_grunt == calc_prod_grunt,
-    msoption|ms_drainage_system == calc_drainage_system
+    msoption|ms_drainage_system == calc_drainage_system,
+    msoption|calc_vanni == calc_vanni
 ',
 'sortdir' => 'ASC',
 'suggestions' => 0,
@@ -41,7 +42,7 @@
 <div class="container main">
     <h1>{'pagetitle' | resource}</h1>
     <p>
-        Данный расчет стоимости является предварительным, для правильного подбора оборудования и расчета окончательной сметы, необходим выезд нашего инженера на объект. Это бесплатная услуга. Свяжитесь с нами или оставьте запрос на сайте.
+        Перед вами калькулятор, который позволит в два простых шага подобрать и спроектировать идеальную автономную канализацию для вашего загородного участка. Мы постарались учесть все наиболее важные и обязательные параметры, которые влияют не только на выбор оборудования, но и формируют итоговую смету на монтаж. Важно понимать, что вы получите предварительную смету. Итоговая сумма может оказаться, как больше, так и меньше. Сделать точный расчет может специалист СептикСервис у вас на участке.
     </p>
 
     <h4 class="mt-3">Выберите подходящий вариант</h4>
@@ -52,8 +53,11 @@
                 <div class="row">
                     {'dsmc.filters' | placeholder}
                     <fieldset class="col-lg-4">
-                        <h4 class="filter_title">Метраж прокладки труб</h4>
-
+                        <h4 class="filter_title">Метраж прокладки труб
+                            <a class="d-inline-block" tabindex="0" data-toggle="tooltip" data-placement="bottom" title="Вы можете указать предположительную длину прокладки труб по участку. В смете будут учтены материалы и земельные работы. Данный параметр необязательный. Точный метраж труб сможет посчитать специалист на месте. Минимальный метраж - 2 метра.">
+                                <i class="far fa-question-circle"></i>
+                            </a>
+                        </h4>
                         <div class="row">
                             <div class="col-5">
                                 <div class="form-group mb-0">
@@ -61,7 +65,7 @@
                                 </div>
                             </div>
                             <div class="col-7 d-flex align-items-center">
-                                не обязательно
+                                м
                             </div>
                         </div>
                     </fieldset>

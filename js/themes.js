@@ -111,7 +111,7 @@ $(document).ready(function() {
             this.classList.add("active");
         });
 
-      $(".calc_input_tube").change(function() {
+      	$(".calc_input_tube").change(function() {
 
           if ($(this).val() > 30){
             miniShop2.Message.error('Ошибка! Нельзя ставить кол-во больше 30!');
@@ -125,21 +125,22 @@ $(document).ready(function() {
 
         });
 
-	$(".dsmc-calc-nav.navbar").on("click","a", function (e) {
-		e.preventDefault();
-		let id  = $(this).attr('href'),
-		top = $(id).offset().top - 40;
-		$('body,html').animate({scrollTop: top}, 1500);
-	});
 
-	$(window).scroll(function(e){
-			if($("div").is("#dsmc-calc-order-section")) {
-			let order = $('#dsmc-calc-order-section').offset();
-			if ($(this).scrollTop() > 350 && $(this).scrollTop() < order.top - 100) {
-				$(".dsmc-calc-nav.navbar").addClass('fixed-top').removeClass('d-none');
-			} else {
-				$(".dsmc-calc-nav.navbar").removeClass('fixed-top').addClass('d-none');
-			}}
-	});
+		$(".dsmc-calc-nav.navbar").on("click","a", function (e) {
+			e.preventDefault();
+			let id  = $(this).attr('href'),
+			top = $(id).offset().top - 40;
+			$('body,html').animate({scrollTop: top}, 1500);
+		});
+
+		$(window).scroll(function(e){
+				if($("div").is("#dsmc-calc-order-section")) {
+				let order = $('#dsmc-calc-order-section').offset();
+				if ($(this).scrollTop() > 350 && $(this).scrollTop() < order.top - 100) {
+					$(".dsmc-calc-nav.navbar").addClass('fixed-top').removeClass('d-none');
+				} else {
+					$(".dsmc-calc-nav.navbar").removeClass('fixed-top').addClass('d-none');
+				}}
+		});
 
 });
