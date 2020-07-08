@@ -7,7 +7,7 @@ $('#calk-form').on("click",".output-data-list a",showProductInfo);$(document.bod
 $(document).ready(function() {
 
   setTimeout(function() {
-    $('<li class="submenu_calc_button"><div class="side_nav_calc_link"><a href="kalkulyator.html">Подобрать септик</a></div></li>')
+    $('<li class="submenu_calc_button"><div class="side_nav_calc_link"><a href="/podbor-septika">Подобрать септик</a></div></li>')
     .appendTo('.new-header .header_nav_wr > ul > li:first-child > ul');
   },444);
 

@@ -13,24 +13,22 @@
 'paginator' => 'pdoPage',
 'element' => 'msProducts',
 'depth' => 1,
-'limit' => 18,
+'limit' => 0,
 'filters' => '
 msoption|ms_kol_person,
 msoption|ms_prod_waterlevel,
-msoption|ms_vanni:boolean,
 msoption|ms_prod_grunt,
 msoption|ms_drainage_system,
-msoption|calc_vanni,
+msoption|ms_stock_vanni,
 msoption|ms_energy,
 msoption|ms_prod_stoki
 ',
 'aliases' => '
 msoption|ms_kol_person == calc_kol_person,
 msoption|ms_prod_waterlevel == calc_prod_waterlevel,
-msoption|ms_vanni == calc_ms_vanni,
 msoption|ms_prod_grunt == calc_prod_grunt,
 msoption|ms_drainage_system == calc_drainage_system,
-msoption|calc_vanni == calc_vanni
+msoption|ms_stock_vanni == calc_stock_vanni,
 msoption|ms_energy == calc_energy,
 msoption|ms_prod_stoki == calc_prod_stoki
 ',
@@ -78,8 +76,8 @@ msoption|ms_prod_stoki == calc_prod_stoki
         {if $.get.calc_prod_grunt ?}
         <span class="py-2 px-3 my-1 d-inline-block bg-light">Тип грунта:<span class="font-weight-semibold ml-2">{$.get.calc_prod_grunt}</span></span>
         {/if}
-        {if $.get.calc_vanni ?}
-            <span class="py-2 px-3 my-1 d-inline-block bg-light">Наличие ванны:<span class="font-weight-semibold ml-2">{$.get.calc_vanni}</span></span>
+        {if $.get.calc_stock_vanni ?}
+            <span class="py-2 px-3 my-1 d-inline-block bg-light">Наличие ванны:<span class="font-weight-semibold ml-2">{$.get.calc_stock_vanni}</span></span>
         {/if}
         {if $.get.calc_energy ?}
             <span class="py-2 px-3 my-1 d-inline-block bg-light">Энергонезависимость:<span class="font-weight-semibold ml-2">{$.get.calc_energy}</span></span>
@@ -97,7 +95,7 @@ msoption|ms_prod_stoki == calc_prod_stoki
             {'dsmc.results' | placeholder != 'Подходящих результатов не найдено.' ? ('dsmc.results' | placeholder) : '
             <div class="container">
             <div class="alert alert-primary">
-                К сожелению, подходящих результатов не найдено. Вы можете <a href="{'659' | url}?{$GET | join : '&'}">уточнить</a> параметры вашего поиска или <b>отправить</b> запрос нашим специалистам для подбора оборудования</b>
+                К сожелению, подходящих результатов не найдено. Вы можете <a href="">уточнить</a> параметры вашего поиска или <b>отправить</b> запрос нашим специалистам для подбора оборудования</b>
             </div>
             </div>
             ' ~

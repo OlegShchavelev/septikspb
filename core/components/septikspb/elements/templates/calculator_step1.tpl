@@ -14,7 +14,7 @@
 'filters' => '
     msoption|ms_kol_person,
     msoption|ms_prod_waterlevel,
-    msoption|calc_vanni,
+    msoption|ms_stock_vanni,
     msoption|ms_prod_grunt,
     msoption|ms_drainage_system,
     msoption|ms_energy,
@@ -26,7 +26,7 @@
     msoption|ms_vanni == calc_ms_vanni,
     msoption|ms_prod_grunt == calc_prod_grunt,
     msoption|ms_drainage_system == calc_drainage_system,
-    msoption|calc_vanni == calc_vanni,
+    msoption|ms_stock_vanni == calc_stock_vanni,
     msoption|ms_energy == calc_energy,
     msoption|ms_prod_stoki == calc_prod_stoki
 ',

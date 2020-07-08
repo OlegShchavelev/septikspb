@@ -20,7 +20,6 @@
 
     {'jivosite' | option}
 
-
     {'!MinifyX' | snippet : [
     'registerJs'=>'placeholder'
     'registerCss' => 'placeholder'

@@ -4989,7 +4989,7 @@ input[type="checkbox"]:checked + .form-check-label svg polyline {
   flex-direction: column;
   justify-content: center;
   position: absolute;
-  z-index: 500;
+  z-index: 1;
   top: 10px;
   left: 25px;
 }
