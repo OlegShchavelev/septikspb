@@ -67,7 +67,6 @@ $(document).ready(function() {
     });
 
  }
-
 }
 
 $(".side_nav .dropdown").on("click", function(){
@@ -85,5 +84,4 @@ $(".side_nav .dropdown").on("click", function(){
 				 }
 				 return false;
 });
-
 });
