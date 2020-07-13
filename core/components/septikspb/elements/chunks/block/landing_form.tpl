@@ -1,0 +1,1 @@
+{'!mvtForms2' | snippet : ['form'=>'magnet']}
