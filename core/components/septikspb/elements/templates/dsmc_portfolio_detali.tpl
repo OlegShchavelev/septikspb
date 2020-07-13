@@ -48,7 +48,7 @@
                 {'!msProductsSection' | snippet : [
                 'depth' => 0,
                 'limit' => 1,
-                'additionalPlaceholders' => [
+                'wrapperPlaceholders' => [
                 'title' => 'Оборудование'
                 ],
                 'tpl' => 'tpl.msProducts.row.list.dsmc',
@@ -67,7 +67,7 @@
 
             {'msProductsSection' | snippet : [
             'depth' => 0,
-            'additionalPlaceholders' => [
+            'wrapperPlaceholders' => [
             'title' => 'Вы смотрели'
             'item' => 'item',
             ],

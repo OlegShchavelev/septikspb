@@ -150,7 +150,7 @@
             {'!msProductsSection' | snippet : [
             'depth' => 0,
             'limit' => 3,
-            'additionalPlaceholders' => [
+            'wrapperPlaceholders' => [
             'title' => 'Модификации'
             ],
             'parents' => 0,
@@ -191,7 +191,7 @@
 
             {'!msProductsSection' | snippet : [
             'depth' => 0,
-            'additionalPlaceholders' => [
+            'wrapperPlaceholders' => [
             'title' => 'Похожие товары'
             ],
             'limit' => 3,
@@ -215,7 +215,7 @@
 
         {'msProductsSection' | snippet : [
         'depth' => 0,
-        'additionalPlaceholders' => [
+        'wrapperPlaceholders' => [
         'title' => 'Вы смотрели'
         'item' => 'item',
         ],
