@@ -30,6 +30,23 @@
     </div>
 </div>
 </div>
+
+{*
+<section>
+    <div class="main-slider">
+        <div class="item">
+            <div class="bg-light w-100"</div>
+        </div>
+        <div class="item">
+            <div class="bg-warning w-100"></div>
+        </div>
+        <div class="item">
+            <div class="bg-primary w-100"></div>
+        </div>
+    </div>
+</section>
+*}
+
 [[!bottomAdd?&input=`
 <script>
     $('.header_slider_wr').find("ul").bxSlider({
