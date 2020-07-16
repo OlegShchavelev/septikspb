@@ -21,6 +21,7 @@
                     {'!ms2GalleryResources' | snippet : [
                     'includeOriginal' => 1,
                     'tpl' => 'dsmc.card.portfolio'
+                    'limit' => 0
                     ]}
                 </div>
             </div>
