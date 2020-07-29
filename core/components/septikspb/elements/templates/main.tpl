@@ -5,7 +5,6 @@
 
 {include 'dsmc_header'}
 
-{if $_modx->user.id > 0}
     <section>
         <div class="main-slider">
             {set $banner = json_decode($_modx->resource.migx_new_top_banner, true)}
@@ -17,21 +16,8 @@
             {/foreach}
         </div>
     </section>
-{/if}
 
 
-[[!bottomAdd?&input=`
-<script>
-    $('.header_slider_wr').find("ul").bxSlider({
-        pagerCustom: '.header_slider_pager',
-        controls: false,
-        auto: true,
-        onSliderLoad: function () {
-            $(".header_slider_wr").find("li").removeClass("v_hidden"); // Показываем все слайды
-        }
-    });
-</script>
-`]]
 <main>
     <div class="lb_index_1">
         <div class="container">
