@@ -286,7 +286,8 @@
                 <li class="direct_ref"><a href="[[~4]]">Контакты</a></li>
                 <li class="rollover_contacts">
                     <p class="phone">
-                        <a href="tel:+7 (812) 929-32-05">+7 (812) 922-32-05</a>
+                        <a href="tel:{'phone_1' | option | preg_replace:'/[^0-9]|/': ''}">{'phone_1' | option}</a>
+                        <a href="tel:{'phone_2' | option | preg_replace:'/[^0-9]|/': ''}">{'phone_2' | option}</a>
                     </p>
 
                     <a data-toggle="call_form" class="mobile_order_call" href="#">Заказать звонок</a>
@@ -402,8 +403,9 @@
                     <a href="[[~1]]"><img src="css/images/logo.png" class="img-responsive" alt=""></a>
                 </div>
                 <div class="clearfix col-md"></div>
-                <div class="col-md-2 col-sm-6 col-xs-12  header_phones align-self-center">
-                    <a href="">+7 (812) 922-32-05</a>
+                <div class="col-md-2 col-sm-6 col-xs-12  header_phones align-items-center">
+                    <a class="py-0 my-0" href="tel:{'phone_1' | option | preg_replace:'/[^0-9]|/': ''}">{'phone_1' | option}</a>
+                    <a class="py-0 my-0" href="tel:{'phone_2' | option | preg_replace:'/[^0-9]|/': ''}">{'phone_2' | option}</a>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12 pl-lg-5 hidden-xs  header_fbf_wr align-self-center">
                     <a onclick="jivo_api.open( { start : 'call' } );">Заказать звонок</a>

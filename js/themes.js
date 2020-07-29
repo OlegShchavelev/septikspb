@@ -145,24 +145,78 @@ $(document).ready(function () {
     $('.main-slider').slick({
         centerMode: true,
         arrows: true,
-        centerPadding: '60px',
+        centerPadding: '760px',
         slidesToShow: 1,
         responsive: [
             {
-                breakpoint: 768,
+                breakpoint: 2561,
                 settings: {
                     arrows: false,
                     centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 3
+                    centerPadding: '500px',
+                    slidesToShow: 1
                 }
             },
             {
-                breakpoint: 480,
+                breakpoint: 1921,
                 settings: {
                     arrows: false,
                     centerMode: true,
-                    centerPadding: '40px',
+                    centerPadding: '450px',
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 1601,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '285px',
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 1367,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '170px',
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 1281,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '120px',
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 1025,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '50px',
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 769,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '0px',
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 556,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '0px',
                     slidesToShow: 1
                 }
             }
