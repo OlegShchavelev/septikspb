@@ -147,6 +147,7 @@ $(document).ready(function () {
         arrows: true,
         centerPadding: '760px',
         slidesToShow: 1,
+        autoplay: true,
         responsive: [
             {
                 breakpoint: 2561,
