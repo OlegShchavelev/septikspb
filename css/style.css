@@ -3283,14 +3283,14 @@ fieldset[id='mse2_ms|price'] .filter_fieldset_title {
     display: none;
 }
 
-.tab-content ul li {
+.tab-content ul li:not(.list-inline-item) {
     display: flex;
     align-items: center;
     margin-left: 1em;
     line-height: 20px;
 }
 
-.tab-content ul li::before {
+.tab-content ul li:not(.list-inline-item)::before {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     content: "";

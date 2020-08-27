@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 {include 'dsmc_head'}
-<body class="template{'template' | resource} page{'id' | resource} body_mark2" itemscope itemtype="http://schema.org/WebPage">
+<body class="template{'template' | resource} page{'id' | resource} body_mark2" itemscope
+      itemtype="http://schema.org/WebPage">
 {include 'dsmc_header'}
 {include 'breadcrumb'}
 
@@ -16,14 +17,16 @@
                 {/if}
             </div>
             {if 'ms_installment' | resource == 1}
-            <div class="col-lg-4">
+                <div class="col-lg-4">
                     <div class="card border-0">
                         <div class="d-flex align-items-center justify-content-left  justify-content-md-end mt-4 mb-2 my-md-0">
                             <div class="mr-3"><img src="upload/vendor/tinkoff.svg" class="img-fluid"></div>
-                            <div class="font-weight-semibold">Рассрочка <a href="{'587' | url}" class="text-decoration-none">0% на все</a></div>
+                            <div class="font-weight-semibold">Рассрочка <a href="{'587' | url}"
+                                                                           class="text-decoration-none">0% на все</a>
+                            </div>
                         </div>
                     </div>
-            </div>
+                </div>
             {/if}
         </div>
         <div class="row pt-4 clear" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
@@ -31,10 +34,10 @@
                 <div class="gallery card-gallery">
                     <div class="d-flex flex-column justify-content-between h-100 loader">
                         {if 'ms_installment' | resource == 1}
-                        <div class="badge badge-warning barge-radius barge-installment">
-                            <span class="font-weight-normal mt-2 mb-1">Рассрочка</span>
-                            <span class="h6 font-weight-semibold">0 0 6</span>
-                        </div>
+                            <div class="badge badge-warning barge-radius barge-installment">
+                                <span class="font-weight-normal mt-2 mb-1">Рассрочка</span>
+                                <span class="h6 font-weight-semibold">0 0 6</span>
+                            </div>
                         {/if}
                         {'!msGallery' | snippet : [
                         'tpl' => 'dsmc.tpl.msGallery.new'
@@ -73,16 +76,13 @@
 
                 <div class="t21_prod_info_props">
                     {if ($capabilities || $bonus) ?}
-
                         <div class="title">Возможности:</div>
                         <ul class="list-group list-box icon-list-box">
                             {$capabilities}
                         </ul>
-
                         {if $capabilities ?}
                             <hr class="mt-4">
                         {/if}
-
                         <ul class="list-group list-box icon-list-box radius-box my-3 ">
                             {$bonus}
                         </ul>
@@ -104,14 +104,18 @@
                     {/if}
                     <div class="t21_product_maininfo_price1_title">Цена оборудования</div>
                     <div class="t21_product_maininfo_price_wr">
-                        <div class="t21_product_maininfo_price1_value" itemprop="price">{$_pls['price']} {'ms2_frontend_currency' | lexicon}<span itemprop="priceCurrency" style="display:none;">RUB</span></div>
+                        <div class="t21_product_maininfo_price1_value"
+                             itemprop="price">{$_pls['price']} {'ms2_frontend_currency' | lexicon}<span
+                                    itemprop="priceCurrency" style="display:none;">RUB</span></div>
                         {if $_pls['old_price'] != 0}
                             <div class="t21_product_maininfo_price1_old">{$_pls['old_price']} {'ms2_frontend_currency' | lexicon}</div>
                         {/if}
 
                     </div>
                     <form method="post" class="ms2_form">
-                        <button class="t21_product_maininfo_price1_cart" type="submit" name="ms2_action" value="cart/add">В корзину</button>
+                        <button class="t21_product_maininfo_price1_cart" type="submit" name="ms2_action"
+                                value="cart/add">В корзину
+                        </button>
                         <input type="hidden" name="id" value="{'id' | resource}">
                         <input type="hidden" name="count" value="1">
                         <input type="hidden" name="options" value="[]">
@@ -121,11 +125,14 @@
                         <div class="t21_product_maininfo_price2_title">Цена под ключ</div>
                         <div class="t21_product_maininfo_price2_wr d-flex align-items-center">
                             <div class="t21_product_maininfo_price2_value">{'ms_price_key' | resource | price} {'ms2_frontend_currency' | lexicon}</div>
-                            <a href="javascript:return" data-toggle="popover" title="Условия монтажа" data-content="{'price_key' | option}" class="ml-3"><i class="fas fa-question"></i></a>
+                            <a href="javascript:return" data-toggle="popover" title="Условия монтажа"
+                               data-content="{'price_key' | option}" class="ml-3"><i class="fas fa-question"></i></a>
                         </div>
-                        <a data-fancybox data-src="#mounting-form" href="javascript:;" class="t21_product_maininfo_price2_cart">Заказать</a>
+                        <a data-fancybox data-src="#mounting-form" href="javascript:;"
+                           class="t21_product_maininfo_price2_cart">Заказать</a>
                     {/if}
-                    <a data-fancybox data-src="#oneclick-form" href="javascript:;"class="one_click_buy t21_product_maininfo_ocb"><span>Купить в 1 клик</span></a>
+                    <a data-fancybox data-src="#oneclick-form" href="javascript:;"
+                       class="one_click_buy t21_product_maininfo_ocb"><span>Купить в 1 клик</span></a>
                 </div>
             </div>
         </div>
@@ -138,6 +145,7 @@
             {/if}
         </div>
     </div>
+
 
     {'!seoTabs' | snippet: [
     'tplWrapper' => 'tpl.seoTabsWrapper.dsmc',
