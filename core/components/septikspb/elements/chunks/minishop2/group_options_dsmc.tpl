@@ -39,7 +39,7 @@
         'showSize' => 1
         ]}
 
-        { if $fileatach ?}
+        {if $fileatach ?}
         <div class="form-group align-items-center list-group-flush d-flex form-list-options">
         <label class="col-6 col-md-4 text-right text-md-left col-form-label mx-0 px-0">Документы</label>
         <div class="col-6 col-md-8 mx-0">

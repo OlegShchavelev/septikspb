@@ -1,5 +1,5 @@
 <li class="list-inline-item">
-    <a href="{$url}">
+    <a href="{$url}" target="_blank">
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-file-earmark-arrow-down text-dark text-lg mr-2"
              fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path d="M4 1h5v1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V6h1v7a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2z"/>
@@ -7,5 +7,5 @@
             <path fill-rule="evenodd"
                   d="M5.646 9.146a.5.5 0 0 1 .708 0L8 10.793l1.646-1.647a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 0-.708z"/>
             <path fill-rule="evenodd" d="M8 6a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0v-4A.5.5 0 0 1 8 6z"/>
-        </svg><span class="small">{$name}</span><span class="badge badge-success ml-2">{$size | filesize}</span></a>
+        </svg><span>{$description ?: $name}</span><span class="badge badge-success ml-2">{$size | filesize}</span></a>
 </li>

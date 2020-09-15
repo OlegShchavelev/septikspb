@@ -1,6 +1,11 @@
 <?php
 
-// Добавляем плейсхолдер для передачи данных в
+// Добавляем плейсхолдер для передачи данных в tpl и tplWrapper
+
+if (empty($snippet)) {
+    $snippet = 'msProducts';
+}
+
 
 $modx->setPlaceholders($wrapperPlaceholders,'dsmc_wrapper_');
-return $modx->runSnippet('msProducts',$scriptProperties);
+return $modx->runSnippet($snippet , $scriptProperties);

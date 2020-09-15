@@ -153,6 +153,17 @@
     'tpl' => 'tpl.seoTabs.dsmc'
     ]}
 
+    {'!msProductsSection' | snippet : [
+    'snippet' => 'ms2Gallery'
+    'tags' => 'дипломы и сертификаты',
+    'parents' => 0,
+    'resources' => 'parent' | resource,
+    'tpl' => 'dsmc.ms2gallery.certifications',
+    'wrapperPlaceholders' => [
+    'title' => 'Cертификаты ' ~ ('vendor.name' | resource)
+    ],
+    ]}
+
     {if $_modx->resource.modifikacii.0 ?}
         <div class="container">
             {'!msProductsSection' | snippet : [
@@ -214,8 +225,8 @@
     {/if}
 
 
-    {'!mvtForms2' | snippet : ['form'=>'magnet']}
 
+    {'!mvtForms2' | snippet : ['form'=>'magnet']}
 
     {set $addToViewed = '!addToViewed' | snippet}
 
