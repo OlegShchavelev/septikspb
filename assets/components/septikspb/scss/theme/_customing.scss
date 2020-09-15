@@ -1,0 +1,448 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('fonts/icomoon.eot?usy90z');
+  src: url('fonts/icomoon.eot?usy90z#iefix') format("embedded-opentype"), url('fonts/icomoon.ttf?usy90z') format("truetype"), url('fonts/icomoon.woff?usy90z') format("woff"), url('fonts/icomoon.svg?usy90z#icomoon') format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cart:before {
+  content: "\e902";
+}
+
+.icon-truck:before {
+  content: "\e903";
+}
+
+.icon-info:before {
+  content: "\e900";
+}
+
+.icon-ingener:before {
+  content: "\e901";
+}
+
+/* Щавелев Олег =========== */
+
+/* Новые секции =========== */
+
+.category_form {
+  hr {
+    border-bottom: 1px solid #e6e6e6;
+    border-top: 0;
+    margin: 25px 0px;
+  }
+
+  span {
+    font-weight: 600;
+  }
+
+  .list {
+    margin-top: 20px;
+    margin-left: -2px;
+    margin-right: -2px;
+  }
+
+  .list-inline > li {
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+}
+
+section.section {
+  margin: 40px 0px;
+  border: 2px solid #ebebeb;
+
+  p {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &.background {
+    border: 1px solid #c4e5f2;
+    background-size: cover;
+    background-position: 0 bottom;
+  }
+}
+
+.cards {
+  padding: 40px 35px;
+  border-bottom: 1px solid #efefef;
+}
+
+/* Новые секции (конец) =========== */
+
+/* Общие стили =========== */
+
+.text-decoration-none {
+  text-decoration: none;
+}
+
+.border-radius-5 {
+  border-radius: 5px;
+}
+
+.font-size-0 {
+  font-size: 14px;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.btn-blue {
+  border: 1px solid #cadbea;
+  color: #348eb7;
+  margin-bottom: 10px;
+
+  &:hover {
+    border: 1px solid #2b81b4;
+    color: #fff;
+    background-color: #377092;
+  }
+}
+
+.btn-green {
+  border: 2px solid #9ed670;
+  background-color: #f0fafe;
+}
+
+.mt--1 {
+  margin-top: 1em;
+}
+
+.mt--2 {
+  margin-top: 2em;
+}
+
+.mt--3 {
+  margin-top: 3em;
+}
+
+.mb--1 {
+  margin-bottom: 1em;
+}
+
+.mb--2 {
+  margin-bottom: 2em;
+}
+
+.mb--3 {
+  margin-bottom: 3em;
+}
+
+.mt--10px {
+  margin-top: 10px;
+}
+
+.px--0 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.bg--blue {
+  background: #3db9ff;
+}
+
+.bg--green {
+  background: #9ed670;
+}
+
+.bg--white {
+  background-color: #fff;
+}
+
+.icon--box--icon--circle {
+  margin: 0 auto 24px;
+  margin: 0 auto 1.5rem;
+  border-radius: 100%;
+  width: 130px;
+  height: 130px;
+  text-align: center;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  i {
+    font-size: 4rem;
+    color: #FFF;
+    margin: 0 auto;
+  }
+}
+
+.icon--box--icon--box {
+  margin-right: 16px;
+  margin-right: 1rem;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+
+  i {
+    font-size: 2rem;
+    color: #FFF;
+    margin: 0 auto;
+  }
+
+  &.bg--blue {
+    float: left;
+    margin-right: 0px;
+    margin-left: 0;
+    float: left;
+    margin-right: 0px;
+    margin-left: 0;
+    position: relative;
+    z-index: 20;
+  }
+}
+
+/* Общие стили (конец) =========== */
+
+/* Оформление заказа =========== */
+
+.table-striped .count input {
+  padding: 0 10px;
+}
+
+/* Оформление заказа =========== */
+
+@media only screen and (max-width: 992px) {
+  .category_form {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .display-none-sm {
+    display: none;
+  }
+}
+
+/* Бококовое меню =========== */
+
+.side_nav_categoryes .isparent ul {
+  display: none;
+}
+
+.side_nav {
+  .isparent.active ul {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .submenu_1 {
+    margin: 15px 0;
+  }
+}
+
+.dropdown-down + .submenu_2 {
+  margin-bottom: -15px;
+}
+
+.side_nav {
+  .level1 {
+    > a {
+      padding: 14px 25px 14px 25px;
+      color: #000;
+    }
+
+    &.active {
+      > a > span.dropdown {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        right: 0;
+        width: 25px;
+        background-color: rgba(72, 83, 90, 0.04);
+        z-index: 2;
+      }
+
+      > a > span:hover {
+        background-color: rgb(40, 113, 160);
+      }
+
+      > a > span.dropdown::before {
+        position: absolute;
+        top: calc(50% - 7px);
+        width: 0;
+        height: 0;
+        z-index: 3;
+        font: normal normal normal 14px/1 FontAwesome;
+        left: calc(50% - 2px);
+      }
+
+      > a > span.dropdown.dropdown-left::before {
+        content: '\f105';
+      }
+
+      > a > span.dropdown.dropdown-down::before {
+        content: '\f107';
+        left: calc(50% - 4px);
+      }
+
+      > a > span:hover::before {
+        border-color: transparent transparent transparent rgba(255, 255, 255, 0.82);
+      }
+    }
+
+    > a > span.dropdown {
+      position: absolute;
+      height: 100%;
+      top: 0;
+      right: 0;
+      width: 25px;
+      background-color: rgba(72, 83, 90, 0.04);
+      z-index: 2;
+    }
+
+    > a > span.dropdown:hover {
+      background-color: rgb(40, 113, 160);
+    }
+
+    > a > span.dropdown::before {
+      position: absolute;
+      top: calc(50% - 7px);
+      width: 0;
+      height: 0;
+      z-index: 3;
+      font: normal normal normal 14px/1 FontAwesome;
+      left: calc(50% - 2px);
+    }
+
+    > a > span.dropdown.dropdown-left::before {
+      content: '\f105';
+    }
+
+    > a > span.dropdown.dropdown-down::before {
+      content: '\f107';
+      left: calc(50% - 4px);
+    }
+
+    > a > span:hover::before {
+      border-color: transparent transparent transparent rgba(255, 255, 255, 0.82);
+    }
+  }
+
+  .level2 > a {
+    position: relative;
+    width: 100%;
+  }
+
+  .isparent.active ul.submenu_2 {
+    display: none;
+  }
+
+  .level2 {
+    &.isparent.active ul.submenu_2 {
+      display: block;
+    }
+
+    &.active {
+      > a > span.dropdown {
+        position: absolute;
+        height: 25px;
+        top: calc(50% - 12px);
+        right: 6px;
+        width: 25px;
+        background-color: rgba(72, 83, 90, 0.04);
+        z-index: 2;
+        border-radius: 100%;
+      }
+
+      > a > span.dropdown::before {
+        position: absolute;
+        top: calc(50% - 7px);
+        width: 0;
+        height: 0;
+        z-index: 3;
+        font: normal normal normal 14px/1 FontAwesome;
+        left: calc(50% - 2px);
+      }
+
+      > a > span.dropdown::hover::before {
+        color: #fff;
+      }
+
+      > a > span.dropdown.dropdown-left::before {
+        content: '\f105';
+      }
+
+      > a > span.dropdown.dropdown-down::before {
+        content: '\f107';
+        left: calc(50% - 5px);
+      }
+    }
+
+    > a > span.dropdown {
+      position: absolute;
+      height: 25px;
+      top: calc(50% - 12px);
+      right: 6px;
+      width: 25px;
+      background-color: rgba(72, 83, 90, 0.04);
+      z-index: 2;
+      border-radius: 100%;
+    }
+
+    > a > span.dropdown::before {
+      position: absolute;
+      top: calc(50% - 7px);
+      width: 0;
+      height: 0;
+      z-index: 3;
+      font: normal normal normal 14px/1 FontAwesome;
+      left: calc(50% - 2px);
+    }
+
+    > a > span.dropdown::hover::before {
+      color: #fff;
+    }
+
+    > a > span.dropdown.dropdown-left::before {
+      content: '\f105';
+    }
+
+    > a {
+      > span.dropdown.dropdown-down::before {
+        content: '\f107';
+        left: calc(50% - 5px);
+      }
+
+      &:hover span.dropdown {
+        border-bottom: unset;
+        background-color: rgb(40, 113, 160);
+        color: #fff;
+      }
+    }
+  }
+}
+
+/* Бококовое меню =========== */

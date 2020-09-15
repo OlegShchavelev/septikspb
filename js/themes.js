@@ -19,6 +19,18 @@ $(document).ready(function () {
 
     $('[data-toggle="popover"]').popover();
 
+    // =====================================================
+    //      CMP MS2 Сustom JS Сортировка
+    // =====================================================
+
+    $(document).on('change', '#mse2_sort', function () {
+        var selected = $(this).find('option:selected');
+        var sort = selected.data('sort');
+        sort += mse2Config.method_delimeter + selected.val();
+        mse2Config.sort = sort;
+        mSearch2.submit();
+    });
+
     $(document).on('change', '[name="septic_sla"]', function () {
         if ($('[name="septic_sla"]:checked').attr('id') == 'septic_sla1') {
             $("#comment").hide();

@@ -59,7 +59,10 @@
     ]
     }
 
+    <link rel="stylesheet" href="{'assets_url' | option}components/septikspb/dist/css/style.default.min.css" id="theme-stylesheet">
     {$_modx->getPlaceholder('MinifyX.css')}
+
+
 
     <meta name="Document-state" content="Dynamic" />
     <meta name="Revizit-after" content="3 days" />

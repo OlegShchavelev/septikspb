@@ -13,8 +13,9 @@
     'snippet' => 'mFilter2'
     'paginator' => 'pdoPage',
     'element' => 'msProducts',
+    'class' => 'msProduct',
     'depth' => 1,
-    'limit' => 18,
+    'limit' => 35,
     'sortby' => 'price',
     'sortdir' => 'ASC',
     'suggestions' => 1,
@@ -25,9 +26,9 @@
     ]}
 
     <div class="container main_category_container" id="mse2_mfilter">
-        {if 'pagetitle_full' | resource ?}
+        {if 'pagetitle_full' | tv ?}
             <h1>
-                {'pagetitle_full' | resource}
+                {'pagetitle_full' | tv}
             </h1>
         {else}
             <h1>
@@ -66,6 +67,18 @@
                         </ul>
                     </div>
                 {/if}
+
+                <header class="product-grid-header p-0 d-flex justify-content-xl-end justify-content-between">
+                    <div class="d-flex align-items-center justify-content-end col-12 px-0">
+                        <select name="sort" id="mse2_sort" data-style="btn-selectpicker bg-white" title=""
+                                class="selectpicker text-sm py-1 px-3">
+                            <option class="sort" data-sort="resource|pagetitle" value="asc">А-Я</option>
+                            <option class="sort" data-sort="resource|pagetitle" value="desc">Я-А</option>
+                            <option class="sort" data-sort="ms|price" value="asc">Цена ↑</option>
+                            <option class="sort" data-sort="ms|price" value="desc">Цена ↓</option>
+                        </select>
+                    </div>
+                </header>
 
                 {include 'tpl.mFilter2.result.dsmc'}
 

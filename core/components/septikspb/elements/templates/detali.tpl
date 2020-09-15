@@ -160,7 +160,7 @@
     'resources' => 'parent' | resource,
     'tpl' => 'dsmc.ms2gallery.certifications',
     'wrapperPlaceholders' => [
-    'title' => 'Cертификаты ' ~ ('vendor.name' | resource)
+    'title' => 'Cертификаты производителя ' ~ ('vendor.name' | resource)
     ],
     ]}
 
