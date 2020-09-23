@@ -72,10 +72,10 @@
                     <div class="d-flex align-items-center justify-content-end col-12 px-0">
                         <select name="sort" id="mse2_sort" data-style="btn-selectpicker bg-white" title=""
                                 class="selectpicker text-sm py-1 px-3">
-                            <option class="sort" data-sort="resource|pagetitle" value="asc">А-Я</option>
-                            <option class="sort" data-sort="resource|pagetitle" value="desc">Я-А</option>
                             <option class="sort" data-sort="ms|price" value="asc">Цена ↑</option>
                             <option class="sort" data-sort="ms|price" value="desc">Цена ↓</option>
+                            <option class="sort" data-sort="resource|pagetitle" value="asc">А-Я</option>
+                            <option class="sort" data-sort="resource|pagetitle" value="desc">Я-А</option>
                         </select>
                     </div>
                 </header>

@@ -20,9 +20,12 @@
                 <div class="col-lg-4">
                     <div class="card border-0">
                         <div class="d-flex align-items-center justify-content-left  justify-content-md-end mt-4 mb-2 my-md-0">
-                            <div class="mr-3"><img src="upload/vendor/tinkoff.svg" class="img-fluid"></div>
-                            <div class="font-weight-semibold">Рассрочка <a href="{'587' | url}"
-                                                                           class="text-decoration-none">0% на все</a>
+                            <div class="mr-3">
+                                <svg class="svg-icon svg-icon-lg svg-icon-primary">
+                                    <use xlink:href="#icon-finance"></use>
+                                </svg>
+                            </div>
+                            <div class="font-weight-semibold">Рассрочка <a href="{'587' | url}" class="text-decoration-none">0% на все</a>
                             </div>
                         </div>
                     </div>

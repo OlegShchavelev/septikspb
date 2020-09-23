@@ -14,5 +14,24 @@
 {/if}
 {$_modx->regClientScript("/assets/components/mvtforms2/js/web/mvtforms2.dsmc.js")}
 
+<script>
+    function injectSvgSprite(path) {
+        var ajax = new XMLHttpRequest();
+        ajax.open("GET", path, true);
+        ajax.send();
+        ajax.onload = function(e) {
+            var div = document.createElement("div");
+            div.className = 'd-none';
+            div.innerHTML = ajax.responseText;
+            document.body.insertBefore(div, document.body.childNodes[0]);
+        }
+    }
+    // this is set to Bootstrapious website as you cannot
+    // inject local SVG sprite (using only 'icons/orion-svg-sprite.svg' path)
+    // while using file:// protocol
+    // pls don't forget to change to your domain :)
+    injectSvgSprite('{'assets_url' | option}components/septikspb/dist/icons/svg-sprite.svg');
+</script>
+
 
 {'!ya' | snippet}
