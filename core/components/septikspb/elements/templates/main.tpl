@@ -27,20 +27,20 @@
                 <p>
                     СептикСервис – команда опытных инженеров из Санкт-Петербурга,<br/> которая занимается проектированием автономных канализаций,<br/>
 
-                    установкой <a href="[[~274]]" class="with_icon"><img src="img/ti2.png" alt="станции и септики"/>СТАНЦИЙ БИОЛОГИЧЕСКОЙ ОЧИСТКИ и <img src="img/ti1.png" alt=""/>СЕПТИКОВ</a>. Применяемые
+                    установкой <a href="{'274' | url}" class="with_icon"><img src="img/ti2.png" alt="станции и септики"/>СТАНЦИЙ БИОЛОГИЧЕСКОЙ ОЧИСТКИ и <img src="img/ti1.png" alt=""/>СЕПТИКОВ</a>. Применяемые
                     технологии, <br/>
                     теоретическая подготовка и многолетний опыт позволяют нам решать проблемы отсутствия центрального
                     <br/>
                     водоотведения в частных домах и коттеджах с помощью установки септиков.
                     <i><br/><br/></i>
                     Доведем степень очистки сточных вод <br/>
-                    <a class="with_icon" href="[[~19]]"><img src="img/ti3.png" alt=""/>ДО 95 ПРОЦЕНТОВ</a> на участках
-                    <a href="[[~312]]" class="with_icon"><img src="img/ti4.png" alt=""/>
-                        С ЭЛЕКТРИЧЕСТВОМ</a> и <a class="with_icon" href="[[~325]]"><img src="img/ti5.png" alt=""/>БЕЗ
+                    <a class="with_icon" href="{'19' | url}"><img src="img/ti3.png" alt=""/>ДО 95 ПРОЦЕНТОВ</a> на участках
+                    <a href="{'312' | url}" class="with_icon"><img src="img/ti4.png" alt=""/>
+                        С ЭЛЕКТРИЧЕСТВОМ</a> и <a class="with_icon" href="{'325' | url}"><img src="img/ti5.png" alt=""/>БЕЗ
                         ЭЛЕКТРИЧЕСТВА</a> <br/>
                     Используя продукцию ведущих производителей систем ЛОС и станций биологической <br/>
                     очистки,разрабатываем проекты на
-                    <a href="[[~95]]" class="with_icon"><img src="img/ti7.png" alt=""/>ЛЮБОЙ КОШЕЛЕК</a>
+                    <a href="{'95' | url}" class="with_icon"><img src="img/ti7.png" alt=""/>ЛЮБОЙ КОШЕЛЕК</a>
                 </p>
 
             </div>
@@ -63,7 +63,7 @@
                         <div class="solution_item_title">Канализация<br>на трех человек</a></div>
                         <div class="solution_item_price">от 32 200 руб.</div>
                         <div class="solution_item_subtitle">Оборудование + монтаж «под ключ» от 50 200 руб.</div>
-                        <a class="solution_item_order" href="[[~278]]">Подробнее</a>
+                        <a class="solution_item_order" href="{'278' | url}">Подробнее</a>
                     </div>
                 </div>
                 <div>
@@ -74,7 +74,7 @@
                         <div class="solution_item_title">Канализация<br>на четыре человека</a></div>
                         <div class="solution_item_price">от 39 500 руб.</div>
                         <div class="solution_item_subtitle">Оборудование + монтаж «под ключ» от 57 500 руб.</div>
-                        <a class="solution_item_order" href="[[~287]]">Подробнее</a>
+                        <a class="solution_item_order" href="{'287' | url}">Подробнее</a>
                     </div>
                 </div>
                 <div>
@@ -85,7 +85,7 @@
                         <div class="solution_item_title">Канализация<br>на пять человек</a></div>
                         <div class="solution_item_price">от 39 500 руб.</div>
                         <div class="solution_item_subtitle">Оборудование + монтаж «под ключ» от 57 500 руб.</div>
-                        <a class="solution_item_order" href="[[~281]]">Подробнее</a>
+                        <a class="solution_item_order" href="{'281' | url}">Подробнее</a>
                     </div>
                 </div>
                 <div>
@@ -96,7 +96,7 @@
                         <div class="solution_item_title">Канализация<br>на восемь человек</a></div>
                         <div class="solution_item_price">от 66 300 руб.</div>
                         <div class="solution_item_subtitle">Оборудование + монтаж «под ключ» от 86 300 руб.</div>
-                        <a class="solution_item_order" href="[[~282]]">Подробнее</a>
+                        <a class="solution_item_order" href="{'282' | url}">Подробнее</a>
                     </div>
                 </div>
 
@@ -150,7 +150,7 @@
                 </div>
             </div>
             <div class="lb_button_t1_wr">
-                <a href="[[~9]]" class="lb_button_t1 lb_button_t1_catalog"><span>Перейти в каталог</span></a>
+                <a href="{'9' | url}" class="lb_button_t1 lb_button_t1_catalog"><span>Перейти в каталог</span></a>
             </div>
             <div class="real_content">
                 <p>Мы являемся официальным дилером самых надежных на рынке производителей ЛОС. СептикСервис предлагает
@@ -216,7 +216,7 @@
                         <div class="lb4_item">
                             <div class="lb4_item_main"><span>10</span></div>
                             <div class="lb4_item_title">10 лет<br>на рынке септиков</div>
-                            <div class="lb4_item_link"><a href="[[~3]]">О компании</a></div>
+                            <div class="lb4_item_link"><a href="{'3' | url}">О компании</a></div>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-3 col-xs-12">
@@ -224,21 +224,21 @@
                             <div class="lb4_item_main" style="background-image:url('css/images/icon_cbm.png')">&nbsp;
                             </div>
                             <div class="lb4_item_title">Представитель лучших<br>производителей</div>
-                            <div class="lb4_item_link"><a href="[[~3]]">Смотреть сертификаты</a></div>
+                            <div class="lb4_item_link"><a href="{'3' | url}">Смотреть сертификаты</a></div>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-3 col-xs-12">
                         <div class="lb4_item">
                             <div class="lb4_item_main"><span>1500+</span></div>
                             <div class="lb4_item_title">Смонтировали<br>более 1500 систем</div>
-                            <div class="lb4_item_link"><a href="[[~228]]">География проектов</a></div>
+                            <div class="lb4_item_link"><a href="{'228' | url}">География проектов</a></div>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-3 col-xs-12">
                         <div class="lb4_item">
                             <div class="lb4_item_main"><i class="fa fa-star"></i></div>
                             <div class="lb4_item_title">Постоянные<br>акции</div>
-                            <div class="lb4_item_link"><a href="[[~146]]">Узнать больше</a></div>
+                            <div class="lb4_item_link"><a href="{'146' | url}">Узнать больше</a></div>
                         </div>
                     </div>
                 </div>
@@ -293,7 +293,7 @@
                 <div class="col-xs-tr">
                     <div class="col-xs-td lb6_left">
                         <div class="lb6_link_title">Карта выполненых<br>обьектов</div>
-                        <a href="[[~228]]" class="lb6_link">Смотреть все</a>
+                        <a href="{'228' | url}" class="lb6_link">Смотреть все</a>
                     </div>
                     <div class="col-xs-td lb6_right">
                         <div class="real_content">

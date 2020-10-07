@@ -40,7 +40,7 @@
                         </div>
                     {/if}
                     <a href="{$id | url}" class="cart-title">
-                        {$pagetitle}
+                        [[+longtitle:default=`[[+pagetitle]]`]]
                     </a>
                     <div class="card-text position-relative">
                         <div class="d-flex w-100 body-price{($ms_price_key != 0 && $opt != '') ? ' position-absolute' : ''}">

@@ -214,7 +214,7 @@
             {'!msProductsSection' | snippet : [
             'depth' => 0,
             'wrapperPlaceholders' => [
-            'title' => 'Аналоги станции [[*pagetitle]]'
+            'title' => 'Аналоги станции' ~ 'pagetitle' | resource
             ],
             'limit' => 4,
             'parents' => 0,

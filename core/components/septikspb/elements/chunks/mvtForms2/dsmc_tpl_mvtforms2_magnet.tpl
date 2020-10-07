@@ -1,4 +1,4 @@
-<div class="order_call_form_wrap magnit-forms mt-5">
+<div class="order_call_form_wrap magnit-forms {'template' | resource == ">
     <div class="container">
         <div class="row">
             <div class="col-xl-4 bg-success-2 faid py-5">
