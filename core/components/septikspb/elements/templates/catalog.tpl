@@ -14,7 +14,6 @@
     'paginator' => 'pdoPage',
     'element' => 'msProducts',
     'class' => 'msProduct',
-    'depth' => 1,
     'limit' => 35,
     'sortby' => 'price',
     'sortdir' => 'ASC',

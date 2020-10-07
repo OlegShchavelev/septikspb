@@ -214,9 +214,9 @@
             {'!msProductsSection' | snippet : [
             'depth' => 0,
             'wrapperPlaceholders' => [
-            'title' => 'Похожие товары'
+            'title' => 'Аналоги станции [[*pagetitle]]'
             ],
-            'limit' => 3,
+            'limit' => 4,
             'parents' => 0,
             'resources' => $_modx->resource.ms_pohojie.0,
             'sortby' => 'RAND()',

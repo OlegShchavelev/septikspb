@@ -1,5 +1,4 @@
 <?php
-
 // Добавляем плейсхолдер для передачи данных в tpl и tplWrapper
 
 if (empty($snippet)) {
