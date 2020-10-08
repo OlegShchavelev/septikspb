@@ -1,10 +1,10 @@
-<div class="order_call_form_wrap magnit-forms {'template' | resource == ">
+<div class="order_call_form_wrap magnit-forms {'template' | resource == 33 ? '' : 'mt-5'}">
     <div class="container">
         <div class="row">
             <div class="col-xl-4 bg-success-2 faid py-5">
                 <div class="icon-box relative">
                     <div class="d-flex align-items-center">
-                        <i class="fas fa-headset display-4 text-white"></i>
+                        <i class="fas fa-headset display-4 text-white font-weight-bold"></i>
                         <div class="pl-4"><span class="h4 text-white box-title mb-1 d-block">Остались вопросы</span>
                             <p class="text-white d-block">наш менеджер перезвонит вам в течении 30 минут </p>
                         </div>

@@ -39,7 +39,7 @@
                         {if 'ms_installment' | resource == 1}
                             <div class="badge badge-warning barge-radius barge-installment">
                                 <span class="font-weight-normal mt-2 mb-1">Рассрочка</span>
-                                <span class="h6 font-weight-semibold">0 0 6</span>
+                                <span class="h6 font-weight-semibold">0 0 3</span>
                             </div>
                         {/if}
                         {'!msGallery' | snippet : [
@@ -167,6 +167,28 @@
     ],
     ]}
 
+    <section>
+        <div class="container">
+            <div class="row">
+                {'!msProductsSection' | snippet : [
+                'includeOriginal' => 1,
+                'msgr' => 1,
+                'parents' => 228,
+                'includeTVs' => 'tv_portfolio_product',
+                'where' => [
+                'tv_portfolio_product:=' => ('id' | resource)
+                ],
+                'wrapperPlaceholders' => [
+                'title' => 'Выполненные работы по установке ' ~ ('pagetitle' | resource)
+                ],
+                'limit' => 8,
+                'tplWrapper' => 'wrapper.showcase.dsmc',
+                'tpl' => 'dsmc.card.portfolio',
+                ]}
+            </div>
+        </div>
+    </section>
+
     {if $_modx->resource.modifikacii.0 ?}
         <div class="container">
             {'!msProductsSection' | snippet : [
@@ -214,7 +236,7 @@
             {'!msProductsSection' | snippet : [
             'depth' => 0,
             'wrapperPlaceholders' => [
-            'title' => 'Аналоги станции' ~ 'pagetitle' | resource
+            'title' => 'Аналоги станции ' ~ 'pagetitle' | resource
             ],
             'limit' => 4,
             'parents' => 0,

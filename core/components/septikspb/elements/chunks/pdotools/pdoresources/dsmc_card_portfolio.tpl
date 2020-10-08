@@ -1,5 +1,5 @@
-<div class="col-md-2 col-lg-4 col-xl-3">
-    <div class="card border-0">
+<div class="col-md-2 col-lg-4 col-xl-3 my-3">
+    <div class="card card-portfolio border-0">
         <div class="position-relative">
         {if $_pls['small.original'] ?}
         <img class="card-img-top card-img-height my-0" src="{$_pls['small.original']}">

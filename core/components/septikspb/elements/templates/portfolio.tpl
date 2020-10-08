@@ -3,6 +3,7 @@
 {include 'dsmc_head'}
 <body class="template{'template' | resource} page{'id' | resource} body_mark2" itemscope
       itemtype="http://schema.org/WebPage">
+
 {include 'dsmc_header'}
 {include 'breadcrumb'}
 
@@ -27,7 +28,6 @@
             </div>
         </div>
     </div>
-
 </div>
 
 {if 'id' | resource == 183}
