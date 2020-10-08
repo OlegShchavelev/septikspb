@@ -1,0 +1,1 @@
+<a href='{$url}' target='_blank'><span><i class='fas fa-file-download mr-2'></i></span><span>{$description ?: $name}</span></a>

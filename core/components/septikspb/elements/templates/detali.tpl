@@ -129,7 +129,7 @@
                         <div class="t21_product_maininfo_price2_wr d-flex align-items-center">
                             <div class="t21_product_maininfo_price2_value">{'ms_price_key' | resource | price} {'ms2_frontend_currency' | lexicon}</div>
                             <a href="javascript:return" data-toggle="popover" title="Условия монтажа"
-                               data-content="{'price_key' | option}" class="ml-3"><i class="fas fa-question"></i></a>
+                               data-content="{'price_key' | option}" data-html="true" class="ml-3"><i class="fas fa-question"></i></a>
                         </div>
                         <a data-fancybox data-src="#mounting-form" href="javascript:;"
                            class="t21_product_maininfo_price2_cart">Заказать</a>
@@ -167,27 +167,34 @@
     ],
     ]}
 
-    <section>
-        <div class="container">
-            <div class="row">
-                {'!msProductsSection' | snippet : [
-                'includeOriginal' => 1,
-                'msgr' => 1,
-                'parents' => 228,
-                'includeTVs' => 'tv_portfolio_product',
-                'where' => [
-                'tv_portfolio_product:=' => ('id' | resource)
-                ],
-                'wrapperPlaceholders' => [
-                'title' => 'Выполненные работы по установке ' ~ ('pagetitle' | resource)
-                ],
-                'limit' => 8,
-                'tplWrapper' => 'wrapper.showcase.dsmc',
-                'tpl' => 'dsmc.card.portfolio',
-                ]}
-            </div>
-        </div>
-    </section>
+    {if $_modx->user.id > 0}
+
+    {'!FileAttach' | snippet : [
+    'tpl' => 'dsmc.FileAttach.offer',
+    'tag' => 'offer',
+    ]}
+
+    {/if}
+
+    <div class="container">
+    {'!msProductsSection' | snippet : [
+    'includeOriginal' => 1,
+    'msgr' => 1,
+    'parents' => 228,
+    'includeTVs' => 'tv_portfolio_product',
+    'where' => [
+    'tv_portfolio_product:=' => ('id' | resource)
+    ],
+    'wrapperPlaceholders' => [
+    'title' => 'Выполненные работы по установке ' ~ ('pagetitle' | resource)
+    ],
+    'limit' => 8,
+    'tplWrapper' => 'wrapper.showcase.dsmc',
+    'tpl' => 'dsmc.card.portfolio',
+    'wrapIfEmpty' => 0
+    ]}
+    </div>
+
 
     {if $_modx->resource.modifikacii.0 ?}
         <div class="container">
