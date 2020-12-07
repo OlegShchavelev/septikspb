@@ -1,0 +1,21 @@
+.stock {
+  font-size: 0.8125rem;
+  position: relative;
+  &.not-stock {
+    color: $gray-600 !important;
+    &:after {
+      background-color: $gray-600;
+    }
+  }
+  &:after {
+    content:'';
+    display: flex;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    left: -0.75rem;
+    top: calc(50% - 3px);
+    background-color: $success;
+  }
+}

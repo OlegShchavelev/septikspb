@@ -1,0 +1,36 @@
+.badge {
+  &.badge-pills {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+  &:hover {
+    background-color: $success;
+  }
+}
+@include media-breakpoint-only(xl) {
+  &.badge-text-lg {
+    color: $dark !important;
+    background-color: #fff !important;
+    padding: .75rem 1rem;
+    font-size: .875rem !important;
+    font-weight: 600 !important;
+    margin: 0 .5rem;
+    line-height: 1;
+    border-radius: 5px;
+    &:hover {
+      color: $success !important;
+    }
+    &.badge-icon {
+      display: inline-flex;
+      align-items: center;
+      i {
+        font-size: 1.09375rem;
+        margin-right: .5rem !important;
+      }
+    }
+  }
+}

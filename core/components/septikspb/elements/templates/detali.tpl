@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html>
-{include 'dsmc_head'}
-<body class="template{'template' | resource} page{'id' | resource} body_mark2" itemscope
-      itemtype="http://schema.org/WebPage">
-{include 'dsmc_header'}
-{include 'breadcrumb'}
-
+{extends 'template:Базовый шаблон'}
+{block 'content'}
 <div class="cart" itemscope itemtype="http://schema.org/Product">
     <div class="container">
         <div class="row align-items-center">
@@ -25,7 +19,7 @@
                                     <use xlink:href="#icon-finance"></use>
                                 </svg>
                             </div>
-                            <div class="font-weight-semibold">Рассрочка <a href="{'587' | url}" class="text-decoration-none">0% на все</a>
+                            <div class="font-weight-semibold">Рассрочка <a href="{'587' | url}" class="text-decoration-none font-weight-bold">0% на все</a>
                             </div>
                         </div>
                     </div>
@@ -79,7 +73,7 @@
 
                 <div class="t21_prod_info_props">
                     {if ($capabilities || $bonus) ?}
-                        <div class="title">Возможности:</div>
+                        <div class="text-lg text-primary font-weight-bold mb-2">Возможности:</div>
                         <ul class="list-group list-box icon-list-box">
                             {$capabilities}
                         </ul>
@@ -90,7 +84,7 @@
                             {$bonus}
                         </ul>
                     {else}
-                        <div class="title">Преимущества:</div>
+                        <div class="text-lg text-success font-weight-bold">Преимущества:</div>
                         <ul class="list-group list-box icon-list-box radius-box my-3 ">
                             {$tagtop}
                         </ul>
@@ -99,25 +93,36 @@
 
             </div>
             <div class="col-12 col-xl-4 pl-0 pl-xl-5">
-                <div class="t21_product_maininfo">
+                <div class="card border-gray-200">
+                    <div class="card-header bg-transparent border-bottom border-gray-200 text-center">
                     {if 'available' | resource == 1}
-                        <div class="t21_product_maininfo_head_1">Товар в наличии</div>
-                    {else}
-                        <div class="t21_product_maininfo_head_2">Под заказ от 1 до 5 дней</div>
-                    {/if}
-                    <div class="t21_product_maininfo_price1_title">Цена оборудования</div>
-                    <div class="t21_product_maininfo_price_wr">
-                        <div class="t21_product_maininfo_price1_value"
+                        <span class="text-success font-weight-bold stock position-relative">Товар в наличии</span>
+                        {else}
+                        <span class="stock not-stock">Под заказ от 1 до 5 дней</span>
+                        {/if}
+                    </div>
+                    <div class="card-body">
+                    <div class="text-primary font-weight-bold">Цена оборудования</div>
+                    <div class="d-flex justify-content-between">
+                        <div class="text-xl text-dark font-weight-bold"
                              itemprop="price">{$_pls['price']} {'ms2_frontend_currency' | lexicon}<span
                                     itemprop="priceCurrency" style="display:none;">RUB</span></div>
                         {if $_pls['old_price'] != 0}
-                            <div class="t21_product_maininfo_price1_old">{$_pls['old_price']} {'ms2_frontend_currency' | lexicon}</div>
+                            <div class="text-md text-danger font-weight-bold"><del>{$_pls['old_price']} {'ms2_frontend_currency' | lexicon}</del></div>
                         {/if}
-
                     </div>
-                    <form method="post" class="ms2_form">
-                        <button class="t21_product_maininfo_price1_cart" type="submit" name="ms2_action"
-                                value="cart/add">В корзину
+                    <form method="post" class="ms2_form my-3">
+                        <button class="btn btn-primary btn-block btn-lg btn-icon-label" type="submit" name="ms2_action"
+                                value="cart/add">
+                            <span class="btn-inner-icon">
+                                <svg class="svg-icon">
+                                    <use xlink:href="#icon-cart"></use>
+                                </svg>
+                            </span>
+                            <span class="btn-inner-text">
+                            В корзину
+                            </span>
+
                         </button>
                         <input type="hidden" name="id" value="{'id' | resource}">
                         <input type="hidden" name="count" value="1">
@@ -125,22 +130,31 @@
                     </form>
 
                     {if 'ms_price_key' | resource != 0}
-                        <div class="t21_product_maininfo_price2_title">Цена под ключ</div>
+                        <div class="font-weight-bolder text-success">Цена под ключ</div>
                         <div class="t21_product_maininfo_price2_wr d-flex align-items-center">
-                            <div class="t21_product_maininfo_price2_value">{'ms_price_key' | resource | price} {'ms2_frontend_currency' | lexicon}</div>
+                            <div class="text-xl text-dark font-weight-bold">{'ms_price_key' | resource | price} {'ms2_frontend_currency' | lexicon}</div>
                             <a href="javascript:return" data-toggle="popover" title="Условия монтажа"
-                               data-content="{'price_key' | option}" data-html="true" class="ml-3"><i class="fas fa-question"></i></a>
+                               data-content="{'price_key' | option}" data-html="true" class="ml-3 btn btn-light text-dark btn-icon-only rounded-circle"><i class="fas fa-question"></i></a>
                         </div>
                         <a data-fancybox data-src="#mounting-form" href="javascript:;"
-                           class="t21_product_maininfo_price2_cart">Заказать</a>
+                           class="btn btn-success btn-success btn-block btn-lg btn-icon-label my-3">
+                            <span class="btn-inner-icon">
+                               <i class="fas fa-equals"></i>
+                            </span>
+                            <span class="btn-inner-text">
+                            Заказать
+                            </span>
+                        </a>
                     {/if}
+                    </div>
+                    <div class="card-footer text-center bg-transparent border-top border-gray-200">
                     <a data-fancybox data-src="#oneclick-form" href="javascript:;"
-                       class="one_click_buy t21_product_maininfo_ocb"><span>Купить в 1 клик</span></a>
+                       class="one_click_buy"><span class="link-underline">Купить в 1 клик</span></a>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="my-4">
-
 
             {if ($tag && $capabilities || $bonus) ?}
                 <span class="btn btn-outline-success btn-label mr-3 my-3">Преимущества</span>
@@ -163,20 +177,10 @@
     'resources' => 'parent' | resource,
     'tpl' => 'dsmc.ms2gallery.certifications',
     'wrapperPlaceholders' => [
-    'title' => 'Cертификаты производителя ' ~ ('vendor.name' | resource)
+    'title' => 'Cертификаты производителя' ~~ '<span class="text-success">' ~ ('vendor.name' | resource) ~ '</span>'
     ],
     ]}
 
-    {if $_modx->user.id > 0}
-
-    {'!FileAttach' | snippet : [
-    'tpl' => 'dsmc.FileAttach.offer',
-    'tag' => 'offer',
-    ]}
-
-    {/if}
-
-    <div class="container">
     {'!msProductsSection' | snippet : [
     'includeOriginal' => 1,
     'msgr' => 1,
@@ -186,23 +190,23 @@
     'tv_portfolio_product:=' => ('id' | resource)
     ],
     'wrapperPlaceholders' => [
-    'title' => 'Выполненные работы по установке ' ~ ('pagetitle' | resource)
+    'title' => 'Выполненные работы по установке' ~~ '<span class="text-success">' ~('pagetitle' | resource) ~ '</span>',
+    'section_class' => 'bg-light'
     ],
     'limit' => 8,
     'tplWrapper' => 'wrapper.showcase.dsmc',
     'tpl' => 'dsmc.card.portfolio',
     'wrapIfEmpty' => 0
     ]}
-    </div>
 
 
     {if $_modx->resource.modifikacii.0 ?}
-        <div class="container">
             {'!msProductsSection' | snippet : [
             'depth' => 0,
             'limit' => 3,
             'wrapperPlaceholders' => [
-            'title' => 'Модификации'
+            'title' => 'Модификации',
+            'section_class' => 'bg-white'
             ],
             'parents' => 0,
             'tpl' => 'tpl.msProducts.row.list.dsmc',
@@ -212,14 +216,13 @@
             'wrapIfEmpty' => 0,
             'title' => 'Похожие товары'
             ]}
-        </div>
     {/if}
 
-    <section class="bg-light py-5">
+    <section class="bg-light py-6">
         <div class="container">
             <div class="row align-items-center justify-content-center">
                 <div class="col-12 col-xl-4 text-center text-xl-left">
-                    <h2><span class="badge badge-success">Акции</span><br>Септик Cервис</h2>
+                    <h2><span class="badge badge-success text-white">Акции</span><br>Септик Cервис</h2>
                 </div>
                 <div class="col-10 col-xl-8 text-center text-xl-left">
                     <div class="row">
@@ -238,8 +241,6 @@
     </section>
 
     {if $_modx->resource.ms_pohojie.0 ?}
-        <div class="container">
-
             {'!msProductsSection' | snippet : [
             'depth' => 0,
             'wrapperPlaceholders' => [
@@ -253,7 +254,6 @@
             'tplWrapper' => 'wrapper.showcase.dsmc',
             'wrapIfEmpty' => 0,
             ]}
-        </div>
     {/if}
 
 
@@ -262,13 +262,12 @@
 
     {set $addToViewed = '!addToViewed' | snippet}
 
-    <div class="container">
-
         {'msProductsSection' | snippet : [
         'depth' => 0,
         'wrapperPlaceholders' => [
         'title' => 'Вы смотрели'
         'item' => 'item',
+        'section_class' => 'bg-white'
         ],
         'limit' => 4,
         'parents' => 0,
@@ -279,7 +278,6 @@
         'wrapIfEmpty' => 0
         ]}
 
-    </div>
 
     <div id="mounting-form" style="display:none">
         <div class="row">
@@ -323,7 +321,6 @@
 </div>
 </div>
 
-{include 'footer'}
-{include 'scripts'}
-</body>
-</html>
+{/block}
+{block 'form_button'}
+{/block}

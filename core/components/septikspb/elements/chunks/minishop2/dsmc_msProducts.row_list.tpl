@@ -4,7 +4,7 @@
 'product' => $id
 ]}
 
-<div class="my-3 col-12 px-0 px-md-1{($ms_price_key != 0 && $opt != '') ? ' product-overlay' : ''}">
+<div class="my-3 col-12 {($ms_price_key != 0 && $opt != '') ? ' product-overlay' : ''}">
     <div class="card product list">
         <div class="row">
             <div class="col-12 col-xl-3 px-5 p-xl-0 d-flex card-img align-items-center justify-content-center bd-highlight">
@@ -40,7 +40,7 @@
                         </div>
                     {/if}
                     <a href="{$id | url}" class="cart-title">
-                        [[+longtitle:default=`[[+pagetitle]]`]]
+                        {$longtitle ?: $pagetitle}
                     </a>
                     <div class="card-text position-relative">
                         <div class="d-flex w-100 body-price{($ms_price_key != 0 && $opt != '') ? ' position-absolute' : ''}">

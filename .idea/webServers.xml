@@ -9,6 +9,13 @@
           </advancedOptions>
         </fileTransfer>
       </webServer>
+      <webServer id="e57e4fe6-590d-4a2e-ab33-b2a8633e8b81" name="dev_septik" url="https://www.septik.dsmc.pw/">
+        <fileTransfer rootFolder="/var/www/detali/data/www/septik.dsmc.pw" accessType="SFTP" host="95.214.63.164" port="22" sshConfigId="56bc1511-e91f-4428-a0a3-915f06d25f63" sshConfig="detali@95.214.63.164:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

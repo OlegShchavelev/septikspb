@@ -1,7 +1,233 @@
 .card {
+  &.product {
+    border: 1px solid #efefef;
+    border-radius: 0;
+    &.list .card-img {
+      border-right: 1px solid #efefef;
+    }
+
+    .card-img .card-img-top {
+      width: 150px;
+      height: 150px;
+    }
+
+    .card-body .cart-title {
+      font-size: 1rem;
+      font-weight: $font-weight-bold;
+      line-height: 20px;
+      color: $gray-900;
+      text-decoration: none;
+    }
+
+    &.list .card-body .card-text .list_line {
+      border-left: 2px solid #efefef;
+
+      .price {
+        border-left: 2px solid #96d76e;
+        margin-left: -10px;
+        padding-left: 0.5rem;
+      }
+    }
+
+    .card-body .card-text {
+      .price {
+        font-size: 16px;
+        font-weight: bolder;
+      }
+
+      .label {
+        font-size: 11px;
+        font-weight: 600;
+
+        &.blue {
+          color: #2c9fbb;
+        }
+
+        &.green {
+          color: #72af4c;
+        }
+      }
+
+      .service {
+        font-size: 11px;
+      }
+    }
+    &.list.active, &.grid.active {
+      border: 2px solid #7cb646;
+    }
+
+    &.list.active::after, &.grid.active::after {
+      content: 'Выбрано';
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    &.list.active::after, &.grid.active::after {
+      content: "Выбрано";
+      position: absolute;
+      top: 18px;
+      right: 17px;
+      background: #dc3545;
+      color: #fff;
+      padding: 5px 12px;
+      border-radius: 3px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+  }
+
+  &.card-nav {
+    min-height: 300px;
+    .card-body {
+      .card-title,
+      .card-title a
+      {
+          &:hover {
+            color: $success;
+          }
+      }
+    }
+  }
   &.card-portfolio {
     .card-img-top {
       height: 200px;
     }
   }
+
+  .card-gallery {
+    border: 1px solid #ededed;
+    border-radius: 0px;
+    height: 100%;
+
+    .thumbs {
+      .item img {
+        width: 65px;
+        border: 1px solid #ededed;
+        border-radius: 0px;
+        cursor: pointer;
+      }
+
+      .slick-current .item img {
+        border: 1px solid #70a93b;
+      }
+    }
+
+    .big img {
+      width: 200px;
+    }
+  }
+
+
+  .nav {
+    .nav-item {
+      .nav-link {
+        font-size: 0.8125rem;
+        color: #708692;
+        text-transform: none;
+        padding: 0;
+        &:hover {
+          color: $success;
+        }
+      }
+    }
+    &.nav-dark {
+      .nav-item {
+        .nav-link {
+          &:hover {
+            color: $success !important;
+          }
+        }
+      }
+    }
+  }
+
+  .card-icon {
+    text-align: center;
+    width: 12rem;
+    height: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    i {
+      font-size: 5rem;
+      color: $white;
+    }
+    .svg-icon {
+      fill: $white;
+      width: 7.5rem;
+      height: 7.5rem;
+    }
+  }
+  .card-img-bg {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: no-repeat;
+  }
+  .card-img {
+    border-radius: 0;
+  }
+  .card-title,
+  .card-title a {
+      color: $dark;
+      &:hover {
+        text-decoration: none;
+        color: $success !important;
+      }
+  }
+}
+
+.card-group-block {
+  .card {
+    .card-block {
+      position: relative;
+      border-left: 1px solid #83b750;
+      min-height: 75px;
+      &:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 13px 13px 0;
+        border-color: $gray-400 transparent transparent;
+        bottom: -13px;
+        left: 50%;
+        margin-left: -13px;
+      }
+      .svg-icon {
+        &:hover {
+          fill: $white;
+        }
+      }
+    }
+    &:first-of-type {
+      .card-block {
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        border-left: none;
+      }
+    }
+    &:last-of-type {
+      .card-block {
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+      }
+    }
+  }
+}
+
+.card-rounded-hover {
+ border: 3px solid;
+ border-color: $light;
+ transition: border-color .6s ease-in-out;
+ &:hover {
+   border: 3px solid;
+   border-color: $success;
+   cursor: pointer;
+ }
 }

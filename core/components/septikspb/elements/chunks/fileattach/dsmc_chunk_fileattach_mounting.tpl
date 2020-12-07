@@ -1,0 +1,1 @@
+{$fileatach = '!FileAttach' | snippet : [ 'tpl' => 'dsmc.FileAttach', 'showSize' => 1 ]}

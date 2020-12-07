@@ -16,7 +16,7 @@
         </div>
         <div class="card-body text-center">
             <a href="{$uri}" class="h6 text-dark font-weight-bold text-center text-decoration-none">{$pagetitle}</a>
-            <p class="card-text text-center text-muted">{$introtext}</p>
+            <p class="card-text text-center text-muted text-sm py-3">{$introtext}</p>
         </div>
     </div>
 </div>

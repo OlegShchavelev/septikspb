@@ -1,8 +1,8 @@
-<div class="order_call_form_wrap magnit-forms {'template' | resource == 33 ? '' : 'mt-5'}">
+<div class="section section-form-through {'template' | resource == 33 ? '' : 'mt-5'}">
     <div class="container">
         <div class="row">
-            <div class="col-xl-4 bg-success-2 faid py-5">
-                <div class="icon-box relative">
+            <div class="col-xl-4 section-form-through-questions py-5">
+                <div class="position-relative z-index-20">
                     <div class="d-flex align-items-center">
                         <i class="fas fa-headset display-4 text-white font-weight-bold"></i>
                         <div class="pl-4"><span class="h4 text-white box-title mb-1 d-block">Остались вопросы</span>
@@ -21,29 +21,26 @@
                         <div class="form-group col-xl-6">
                             <div class="input-group">
                                 <div class="input-group-prepend">
-        <span class="input-group-text">
-            <i class="far fa-user"></i>
-        </span>
+                                    <span class="input-group-text">
+                                        <i class="far fa-user"></i>
+                                    </span>
                                 </div>
-                                <input class="form-control" name="{$formID}_name" type="text" placeholder="Ваше имя*">
+                                <input class="form-control form-control-lg" name="{$formID}_name" type="text" placeholder="Ваше имя*">
                             </div>
                         </div>
                         <div class="form-group col-xl-6">
                             <div class="input-group">
                                 <div class="input-group-prepend">
-        <span class="input-group-text">
-            <i class="fas fa-phone-alt"></i>
-        </span>
+                                    <span class="input-group-text">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </span>
                                 </div>
-                                <input class="form-control input-lg mvtFormPhone" name="{$formID}_phone" type="text"
-                                       placeholder="Номер телефона*">
+                                <input class="form-control form-control-lg input-lg mvtFormPhone" name="{$formID}_phone" type="text" placeholder="Номер телефона*">
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <textarea class="form-control input-lg" placeholder="Напишите комментарий"
-                                  name="{$formID}_question"></textarea>
-                        <div class="invalid-feedback">Напишите вопрос</div>
+                        <textarea class="form-control form-control-lg" placeholder="Напишите комментарий" name="{$formID}_question"></textarea>
                     </div>
                     <div class="row align-items-center">
                         <div class="form-group col-xl-8 mb-0">
@@ -59,8 +56,8 @@
 
                         </div>
                         <div class="col-xl-4 mt-4 mt-xl-0">
-                            <button style="width: 100%;" id="{$formID}_form_submit"
-                                    class="btn btn-success btn-lg mvtForms2-tohide"
+                            <button id="{$formID}_form_submit"
+                                    class="btn btn-success btn-block btn-lg mvtForms2-tohide"
                                     type="submit">Отправить
                             </button>
                         </div>

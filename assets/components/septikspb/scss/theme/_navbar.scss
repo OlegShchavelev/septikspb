@@ -1,0 +1,122 @@
+.navbar {
+  &.navbar-sm {
+    padding: 0.875rem 1rem 1.125rem 1rem !important;
+  }
+}
+
+/*
+* ===================================================
+*     Dropdown-toggle
+* ===================================================
+*/
+
+
+@include media-breakpoint-down(lg) {
+  .dropdown-toggle {
+    &::after {
+      display: inline-block;
+      color: $primary;
+      margin-left: $caret-spacing;
+      content: '\f107';
+      transition: all linear 0.25s;
+      transform: rotate(0);
+      vertical-align: -1px;
+      font-family: "Font Awesome\ 5 Free";
+      font-weight: 900;
+      font-size: $font-size-base;
+    }
+
+    &[aria-expanded="true"] {
+      &::after {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+}
+
+/*
+* ===================================================
+*     Mobile Sidebar
+* ===================================================
+*/
+
+.modal-navigations {
+  .modal-body {
+    padding: 0;
+
+    .sidebar-block-modal {
+      background-color: $primary;
+      position: relative;
+      left: 0;
+      width: 100%;
+      padding: 1.5rem;
+
+      .sidebar-block-modal-nav-main,
+      .sidebar-block-modal-nav-append {
+
+        .sidebar-block-modal-header {
+          margin-bottom: 1rem;
+        }
+
+        .navbar-nav-roll {
+          > ul {
+            > .nav-item {
+              > .nav-title {
+                font-size: 1rem !important;
+                padding: 1.5rem 1rem;
+              }
+            }
+          }
+          .nav-mobile-submenu {
+            margin-bottom: 1rem;
+          }
+        }
+
+        .navbar-nav,
+        .nav {
+          position: relative;
+
+          .nav-item {
+            .nav-link {
+              font-size: 0.9375rem;
+              color: $white;
+              font-weight: 600;
+              display: flex;
+              align-items: center;
+              padding: .75rem 1rem;
+
+              &.dropdown-toggle {
+                position: relative;
+
+                &::after {
+                  display: inline-flex;
+                  content: '\f105' !important;
+                  position: absolute;
+                  right: 0;
+                  color: $white;
+                }
+
+                &[aria-expanded="true"] {
+                  &::after {
+                    transform: rotate(0);
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .nav-mobile-submenu {
+          .nav-item {
+            .nav-link {
+              font-size: .875rem;
+              text-transform: none;
+              font-weight: $font-weight-normal;
+              padding: .125rem 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

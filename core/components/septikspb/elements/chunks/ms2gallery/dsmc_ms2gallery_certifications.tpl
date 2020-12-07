@@ -1,29 +1,26 @@
 {if $files?}
-<div class="cert_wrap">
+<section class="section py-6">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                {if 'dsmc_wrapper_title' | placeholder ?}
-                <h2 class="green_decor">{'dsmc_wrapper_title' | placeholder}</h3>
-                {/if}
+        {if 'dsmc_wrapper_title' | placeholder ?}
+        <div class="section-title mb-5">
+            <h2>{'dsmc_wrapper_title' | placeholder}</h2>
+        </div>
+        {/if}
 
-                    <div class="cert_block">
-
-                        {foreach $files as $file}
-
-                            <div class="cert_item">
-                                <div class="img">
-                                    <a href="{$file.url}" class="fancy">
-                                        <img src="{$file.mini}" alt=""/>
-                                    </a>
-                                </div>
-                            </div>
-
-                        {/foreach}
-
+        <div class="row justify-content-center">
+            {foreach $files as $file}
+            <div class="col-6 col-md-3 col-lg-2 mb-4">
+                <a class="fancy" href="{$file.url}" data-fancybox="gallery">
+                <div class=" auto-height">
+                    <div class="card card-rounded-hover card-hover-icon-plus bg-light rounded-circle d-flex justify-content-center p-5">
+                        <img class="img-fluid" src="{$file.mini}" alt=""/>
                     </div>
+                </div>
+                </a>
             </div>
+            {/foreach}
         </div>
     </div>
-</div><!--/cert_wrap-->
+    </div>
+</section>
 {/if}

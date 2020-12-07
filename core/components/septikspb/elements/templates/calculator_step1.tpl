@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html>
-{include 'dsmc_head'}
-{include 'dsmc_header'}
-{include 'breadcrumb'}
+{extends 'template:Базовый шаблон'}
+
+{block 'breadcrumb'}
+{/block}
+{block 'content'}
 
 {'!mFilter2' | snippet : [
-'parents' => 657,
+'parents' => 9,
 'paginator' => 'pdoPage',
 'element' => 'msProducts',
 'depth' => 1,
@@ -43,15 +43,16 @@
 
 <div class="container main">
     <h1>{'pagetitle' | resource}</h1>
-    <p>
+    <div class="lead my-4">
+    <p class="lead">
         Перед вами калькулятор, который позволит в два простых шага подобрать и спроектировать идеальную автономную канализацию для вашего загородного участка. Мы постарались учесть все наиболее важные и обязательные параметры, которые влияют не только на выбор оборудования, но и формируют итоговую смету на монтаж. Важно понимать, что вы получите предварительную смету. Итоговая сумма может оказаться, как больше, так и меньше. Сделать точный расчет может специалист СептикСервис у вас на участке.
     </p>
-
+    </div>
+    {if 'dsmc.filters' | placeholder != 'Нечего фильтровать'}
     <h4 class="mt-3">Укажите подходящие параметры</h4>
 
     <div class="filters calculators px-5 pb-3 pt-3" id="mse2_mfilter">
         <form action="{'660' | url}" method="post" id="mse2_filters">
-            {if 'dsmc.filters' | placeholder != 'Нечего фильтровать'}
                 <div class="row">
                     {'dsmc.filters' | placeholder}
                     <fieldset class="col-lg-4">
@@ -75,9 +76,13 @@
                 <div class="py-4 text-center">
                     <button type="submit" class="btn btn-success btn-lg">Подобрать решение</button>
                 </div>
-            {/if}
         </form>
     </div>
+    {else}
+    <div class="alert alert-primary text-white mt-4">
+        К сожелению, подходящих результатов не найдено. Вы можете <b>отправить</b> запрос нашим специалистам для подбора оборудования
+    </div>
+    {/if}
     {'content' | resource}
 </div>
 
@@ -85,7 +90,4 @@
     <div class="container">
     </div>
 </div><!--/order_call_form_wrap-->
-{include 'footer'}
-{include 'scripts'}
-</body>
-</html>
+{/block}

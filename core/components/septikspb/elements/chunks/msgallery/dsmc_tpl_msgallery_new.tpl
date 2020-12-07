@@ -1,18 +1,29 @@
-{if $files?}
-    <div class="big slider-for text-center d-flex justify-content-center mt-5">
-        {foreach $files as $file}
-            <a href="{$file['url'] | phpThumbOn : 'w=600&h=600&bg=ffffff'}" data-fancybox><img src="{$file['url'] | phpThumbOn : 'w=300&h=300&bg=ffffff'}" alt=""  itemprop="image"/></a>
-        {/foreach}
-    </div>
-    {if $files | length >= 2}
-        <div class="thumbs slider-nav">
+<div class="gallery detali-gallery">
+    <div class="gallery-top swiper-container">
+        <div class="swiper-wrapper">
+            {if $files?}
             {foreach $files as $file}
-                <div class="item"><img src="{$file['url'] | phpThumbOn : 'w=100&h=100&zc=1'}" alt="" /></div>
+            <div class="swiper-slide">
+                <a href="{$file['url']}" title="Дуб Azores —  (Однополосный)" class="fancy" data-fancybox="gallery">
+                    <img src="{$file['url']}">
+                </a>
+            </div>
             {/foreach}
+            <!-- Add Arrows -->
+            <div class="swiper-button-next swiper-button-green"></div>
+            <div class="swiper-button-prev swiper-button-green"></div>
+            {/if}
         </div>
-    {/if}
-{else}
-    <img src="{('assets_url' | option) ~ 'components/minishop2/img/web/ms2_medium.png'}"
-         srcset="{('assets_url' | option) ~ 'components/minishop2/img/web/ms2_medium@2x.png'} 2x"
-         alt="" title=""/>
-{/if}
+    </div>
+    <div class="gallery-thumbs position-relative swiper-container">
+        <div class="swiper-wrapper">
+            {if $files?}
+            {foreach $files as $file}
+            <div class="swiper-slide">
+                <img src="{$file['url']}">
+            </div>
+            {/foreach}
+            {/if}
+        </div>
+    </div>
+</div>

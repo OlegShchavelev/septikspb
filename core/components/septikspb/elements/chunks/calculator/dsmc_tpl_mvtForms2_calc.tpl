@@ -17,15 +17,14 @@
             <div class="col-12">
                 <h4>Выберите уровень сервиса</h4>
             </div>
-            <div class="col-12 mt-4 mb-0">
-                <div class="form-check form-check-inline ml-0">
-                    <input class="form-check-input checker checker1" type="radio" name="{$formID}_sla" id="{$formID}_sla1" value="
-Решение под ключ" checked="">
-                    <label class="form-check-label-box mb-0" for="{$formID}_sla">Решение под ключ</label>
+            <div class="mt-4 mb-0 d-flex align-items-center">
+                <div class="custom-control custom-radio ml-3 my-2">
+                    <input class="custom-control-input" type="radio" name="{$formID}_sla" id="{$formID}_sla1" value="Да" checked="">
+                    <label class="custom-control-label" for="{$formID}_sla1">Решение под ключ</label>
                 </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input checker" type="radio" name="{$formID}_sla" id="{$formID}_sla2" value="Только оборудование">
-                    <label class="form-check-label-box mb-0" for="{$formID}_sla">Только оборудование</label>
+                <div class="custom-control custom-radio ml-3">
+                    <input class="custom-control-input" type="radio" name="{$formID}_sla" id="{$formID}_sla2" value="Нет">
+                    <label class="custom-control-label" for="{$formID}_sla2">Только оборудование</label>
                 </div>
             </div>
         </div>
@@ -38,7 +37,7 @@
                     <div class="row">
                         <div class="col-md-6 col-12">Оборудование - <span class='cost_equipment'>0</span> {'ms2_frontend_currency' | lexicon}</div>
                         <div class="col-md-6">Трубы - <span class='cost_tube' data-calc_input_tube="{($.get.calc_input_tube * 700)}">{($.get.calc_input_tube * 700) | number : 0 : '.' : ' '}</span> {'ms2_frontend_currency' | lexicon}</div>
-                        <div class="col-md-6">Земельные работы - <span class='cost_earth work'>0</span> {'ms2_frontend_currency' | lexicon}</div>
+                        <div class="col-md-6">Земляные работы - <span class='cost_earth work'>0</span> {'ms2_frontend_currency' | lexicon}</div>
                         <div class="msdom_delivery_distance col-md-6 d-block">Расстояние: <span class="range_delivery"></span> км</div>
                         <div class="col-md-6">Монтаж - <span class='cost_installation'>0</span> {'ms2_frontend_currency' | lexicon}</div>
                         <div class="msdom_delivery_cost col-md-6 d-block">Доставка: <span class="cost_delivery"></span>
@@ -66,7 +65,7 @@
 
     {'!msDom' | snippet : [
     'tplOuter' => 'tpl.msDom.map.outer.septic.calc',
-    'tplInput' => '@INLINE <input type="text" id="septic_city" name="septic_city" placeholder="[[%msdom_input_placeholder]]" value="" class="form-control">'
+    'tplInput' => '@INLINE <input type="text" id="septic_city" name="septic_city" placeholder="[[%msdom_input_placeholder]]" value="" class="form-control form-control-lg">'
     ]}
 
     <h2 class="mt-4 h5">Контакты для обратной связи</h2>
@@ -78,7 +77,7 @@
             <i class="far fa-user"></i>
         </span>
                 </div>
-                <input class="form-control" name="{$formID}_name" type="text" placeholder="Ваше имя*">
+                <input class="form-control form-control-lg" name="{$formID}_name" type="text" placeholder="Ваше имя*">
             </div>
         </div>
         <div class="form-group col-xl-6">
@@ -88,7 +87,7 @@
             <i class="fas fa-phone-alt"></i>
         </span>
                 </div>
-                <input class="form-control mvtFormPhone" name="{$formID}_phone" type="text" placeholder="Ваш телефон*">
+                <input class="form-control form-control-lg mvtFormPhone" name="{$formID}_phone" type="text" placeholder="Ваш телефон*">
             </div>
         </div>
     </div>
@@ -100,12 +99,12 @@
                     <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
                     <polyline points="1 9 7 14 15 4"></polyline>
                 </svg>
-                <span>Я согласен с <a class="text-dark" href="[[~340]]" rel="nofollow">политикой конфиденциальности</a></span>
+                <span>Я согласен с <a class="text-dark" href="{'340' | url}" rel="nofollow">политикой конфиденциальности</a></span>
             </label>
 
         </div>
         <div class="col-xl-4 mt-4 mt-xl-0">
-            <button style="width: 100%;" id="{$formID}_form_submit" class="btn btn-success btn-lg mvtForms2-tohide" type="submit">Отправить</button>
+            <button style="width: 100%;" id="{$formID}_form_submit" class="btn btn-success btn-lg" type="submit">Отправить</button>
         </div>
     </div>
 </form>

@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html>
-{include 'dsmc_head'}
-<body class="template{'template' | resource} page{'id' | resource} body_mark2" itemscope itemtype="http://schema.org/WebPage">
-{include 'dsmc_header'}
-{include 'breadcrumb'}
+{extends 'template:Базовый шаблон'}
+{block 'content'}
 
 <div class="container">
     <h1>{'pagetitle' | resource}</h1>
+    <div class="text-content">
     {'content' | resource}
+    </div>
 </div>
 
-{'!mvtForms2' | snippet : ['form'=>'magnet']}
 
-{include 'footer'}
-{include 'scripts'}
-</body>
-</html>
+{/block}

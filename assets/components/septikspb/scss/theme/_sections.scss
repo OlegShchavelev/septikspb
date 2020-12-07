@@ -1,0 +1,140 @@
+.section {
+  margin: 0 !important;
+
+  .section-title,
+  .section-bottom {
+    .lead {
+      font-size: 0.8125rem;
+      font-weight: 400;
+      padding: 2rem 0;
+
+      .intro-title {
+        font-size: 0.8125rem;
+        font-weight: 400 !important;
+        color: $secondary;
+      }
+    }
+  }
+
+  &.section-bg-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &.section-footer-bottom {
+    background-color: #f5f8fa;
+  }
+
+  &.section-dark {
+    .text-content {
+      color: $white;
+
+      ol,
+      ul,
+      p {
+        color: $white !important;
+      }
+    }
+  }
+
+  &.section-background-map {
+    background-image: url("/css/images/lb6_map.png");
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+
+  &.section-form-through {
+    background-color: #5aac50;
+
+    .section-form-through-questions {
+      background-color: #61b955;
+
+      &:before {
+        content: '';
+        display: block;
+        background: #61b955;
+        width: 1500px;
+        height: 100%;
+        z-index: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+
+  &.section-masonry {
+    @include media-breakpoint-only(xl) {
+      > .container {
+        > .row {
+          > [class^=col-] {
+            &:nth-child(2) {
+              > .row {
+                > [class^=col-] {
+                  &:first-of-type {
+                    padding-right: .5rem;
+                  }
+
+                  &:last-of-type {
+                    padding-left: 0.5rem;
+                  }
+                }
+              }
+            }
+
+            &:first-of-type {
+              padding-right: 0;
+            }
+
+            &:last-of-type {
+              padding-left: 0;
+            }
+          }
+        }
+      }
+      .card {
+        border-radius: 0;
+      }
+    }
+    @include media-breakpoint-between(md, lg) {
+      > .container {
+        > .row {
+          > [class^=col-] {
+            > .row {
+              > [class^=col-] {
+                &:first-of-type {
+                  padding-right: .5rem;
+                }
+
+                &:last-of-type {
+                  padding-left: 0.5rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.section-skew {
+    position: relative;
+    overflow: hidden;
+    .section-skew-layer {
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: -75%;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      transform: skew(-20deg, 0deg);
+      > .container {
+        position: relative;
+        z-index: 3;
+      }
+    }
+  }
+}

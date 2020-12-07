@@ -25,7 +25,7 @@
             <i class="far fa-user"></i>
         </span>
                                 </div>
-                                <input class="form-control" name="{$formID}_name" type="text" placeholder="Ваше имя*">
+                                <input class="form-control form-control-lg" name="{$formID}_name" type="text" placeholder="Ваше имя*">
                             </div>
                         </div>
                         <div class="form-group col-xl-6">
@@ -35,7 +35,7 @@
             <i class="fas fa-phone-alt"></i>
         </span>
                                 </div>
-                                <input class="form-control input-lg mvtFormPhone" name="{$formID}_phone" type="text"
+                                <input class="form-control form-control-lg mvtFormPhone" name="{$formID}_phone" type="text"
                                        placeholder="Номер телефона*">
                             </div>
                         </div>
@@ -46,7 +46,7 @@
             <i class="fas fa-map-marker-alt"></i>
         </span>
                                 </div>
-                                <input class="form-control input-lg mvtFormPhone" name="{$formID}_address" type="text"
+                                <input class="form-control form-control-lg mvtFormPhone" name="{$formID}_address" type="text"
                                        placeholder="Адрес*">
                             </div>
                         </div>

@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-{include 'dsmc_head'}
-<body class="template{'template' | resource} page{'id' | resource} body_mark2" itemscope
-      itemtype="http://schema.org/WebPage">
+{extends 'template:Базовый шаблон'}
+{block 'content'}
 
-{include 'dsmc_header'}
-{include 'breadcrumb'}
 
 <div class="container" itemscope itemtype="http://schema.org/WebPage">
     <div class="row">
@@ -30,13 +25,4 @@
     </div>
 </div>
 
-{if 'id' | resource == 183}
-    {'!mvtForms2' | snippet : ['form'=>'engineer']}
-{else}
-    {'!mvtForms2' | snippet : ['form'=>'magnet']}
-{/if}
-
-{include 'footer'}
-{include 'scripts'}
-</body>
-</html>
+{/block}
