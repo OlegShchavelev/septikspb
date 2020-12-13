@@ -17,14 +17,14 @@
             <p>
                 СептикСервис – команда опытных инженеров из Санкт-Петербурга,
                 которая занимается проектированием автономных канализаций,
-                установкой станции и септики <a href="{'274' | url}" class="badge-text-lg badge-icon"><i class="fas fa-archive"></i>Станций биологической очистки и септиков</a>. Применяемые технологии,
+                установкой <a href="{'274' | url}" class="badge-text-lg badge-icon"><i class="fas fa-archive"></i>cтанций биологической очистки и септиков</a>. Применяемые технологии,
                 теоретическая подготовка и многолетний опыт позволяют нам решать проблемы отсутствия центрального
                 водоотведения в частных домах и коттеджах с помощью установки септиков.
             </p>
             <p>
-                Доведем степень очистки сточных вод <a href="{'19' | url}" class="badge-text-lg badge-icon"><i class="fas fa-percentage d-none d-xl-block"></i>до 95 процентов</a> на участках <a href="{'312' | url}" class="badge-text-lg badge-icon"><i class="fas fa-bolt d-none d-xl-block"></i> c электричеством</a> и <a href="{'325' | url}" class="badge-text-lg badge-icon"><i class="fas fa-bolt d-none d-xl-block"></i>без электричества</a>
+                Доведем степень очистки сточных вод <a href="{'19' | url}" class="badge-text-lg badge-icon"><i class="fas fa-percentage d-none d-xl-block"></i>до 95 процентов</a> на участках <a href="{'312' | url}" class="badge-text-lg badge-icon"><i class="fas fa-bolt d-none d-xl-block"></i> c электричеством</a> и <a href="{'325' | url}" class="badge-text-lg badge-icon"><i class="fas fa-bolt d-none d-xl-block"></i>без электричества</a>.
                 Используя продукцию ведущих производителей систем ЛОС и станций биологической
-                очистки,разрабатываем проекты на <a href="{'659' | url}" class="badge-text-lg badge-icon"><i class="fas fa-wallet d-none d-xl-block"></i>любой кошелек</a>
+                очистки, мы разрабатываем проекты на <a href="{'659' | url}" class="badge-text-lg badge-icon"><i class="fas fa-wallet d-none d-xl-block"></i>любой кошелек</a>
             </p>
         </div>
     </div>
@@ -36,8 +36,7 @@
             <h2 class="h1">Инженерное оборудование</h2>
             <div class="lead">
                 <p class="intro-title">
-                    За десять лет работы по организации канализаций для частных домов мы выработали выгодные и гибкие по
-                    цене комплексные предложения «под ключ». Они подходят для большенства наших клиентов.
+
                 </p>
             </div>
         </div>
@@ -97,7 +96,7 @@
                 <div class="col-lg-7 d-flex align-items-end pt-0 pt-md-7 pt-lg-0">
                     <div>
                         <h3>Карта выполненых <br> обьектов</h3>
-                        <a href="" class="btn btn-success btn-pills btn-lg">Смотреть все</a>
+                        <a href="{'228' | url}" class="btn btn-success btn-pills btn-lg">Смотреть все</a>
                     </div>
                 </div>
                 <div class="col-lg-5 pt-4">
@@ -136,6 +135,9 @@
                         бетонных колец, сделанная своими руками - прошлый век. Полноценная система очистки стоков -
                         это уже стандарт жизни, который быстро входит в нашу жизнь, меняя образ мышления в сторону
                         экологии.</p>
+                    <p>Нам не нужна агрессивная реклама – <strong>нас рекомендуют</strong>, ведь мы предлагаем
+                            только честные цены на весь каталог товаров. Мы регулярно устраиваем акции, не забывая про
+                            качество монтажа! <strong>Мы - ответственный и надежный подрядчик.</strong></p>
                 </div>
                 <div class="col-md-6">
                     <p>Мы постоянно работаем над расширением ассортимента септиков и станций очистки. Добавляем в

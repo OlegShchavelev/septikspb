@@ -19,11 +19,11 @@
             </div>
             <div class="mt-4 mb-0 d-flex align-items-center">
                 <div class="custom-control custom-radio ml-3 my-2">
-                    <input class="custom-control-input" type="radio" name="{$formID}_sla" id="{$formID}_sla1" value="Да" checked="">
+                    <input class="custom-control-input checker checker1" type="radio" name="{$formID}_sla" id="{$formID}_sla1" value="Решение под ключ" checked="">
                     <label class="custom-control-label" for="{$formID}_sla1">Решение под ключ</label>
                 </div>
                 <div class="custom-control custom-radio ml-3">
-                    <input class="custom-control-input" type="radio" name="{$formID}_sla" id="{$formID}_sla2" value="Нет">
+                    <input class="custom-control-input checker" type="radio" name="{$formID}_sla" id="{$formID}_sla2" value="Только оборудование">
                     <label class="custom-control-label" for="{$formID}_sla2">Только оборудование</label>
                 </div>
             </div>
