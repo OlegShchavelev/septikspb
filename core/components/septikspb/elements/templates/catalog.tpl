@@ -96,7 +96,7 @@
             <div class="col-lg-9">
 
                 {if 'content2' | tv ?}
-                <div class="lead">
+                <div class="lead" itemprop="mainContentOfPage">
                     {'content2' | tv}
                 </div>
                 {/if}

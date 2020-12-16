@@ -8,7 +8,7 @@
 'id' => 2
 ]}
 
-<section class="section bg-light text-center py-6 border-0">
+<section class="section bg-light text-center py-6 border-0" itemprop="mainContentOfPage">
     <div class="container">
         <div class="section section-title text-center mb-4">
             <h1 class="h1 mb-5">Автономные канализации для частных домов и дач</h1>
@@ -75,6 +75,7 @@
 
 <div class="section py-6">
     <div class="container">
+      
         {'!seoTabs' | snippet: [
         'tpl' => 'seoTabs.main'
         ]}
@@ -89,38 +90,9 @@
 'id' => 4
 ]}
 
-<div class="section bg-primary section section-dark section-background-map py-6">
-    <div class="container">
-        <div class="text-content">
-            <div class="row">
-                <div class="col-lg-7 d-flex align-items-end pt-0 pt-md-7 pt-lg-0">
-                    <div>
-                        <h3>Карта выполненых <br> обьектов</h3>
-                        <a href="{'228' | url}" class="btn btn-success btn-pills btn-lg">Смотреть все</a>
-                    </div>
-                </div>
-                <div class="col-lg-5 pt-4">
-                    <div class="section-title mb-5">
-                        <h2 class="h1">Сотни довольных <br> нами клиентов</h2>
-                        <p>
-                            Мы разработали и воплотили в жизнь более 1500 проектов по всему Северо-Западу.
-                            Сотрудничество с нами - это специальные проекты для всех и каждого. Эффективное финансовое
-                            вложение, учет всех ваших пожеланий, безупречное гарантийное обслуживание - это
-                            СептикСервис!
-                        </p>
-                        <p>
-                            Мы постоянно отслеживаем новые предложения от производителей, тенденции рынка и потребностей
-                            наших клиентов. Таким образом мы предлагаем только самые современные инженерные решения,
-                            которые бесперебойно прослужат вам долгое время. Портфолио компании подтверждает наш
-                            огромный опыт, тщательность монтажа, а также в обширную географию нашего бизнеса. Мы
-                            производим монтаж и доставку по Ленинградской, Псковской, Новгородской области, Карелии
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+{'!infoBlock' | snippet : [
+'id' => 8
+]}
 
 <section class="section py-6">
     <div class="container">

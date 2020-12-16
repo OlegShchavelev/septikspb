@@ -26,14 +26,19 @@
 
     <meta name="Document-state" content="Dynamic"/>
     <meta name="Revizit-after" content="3 days"/>
+    
+    {'!tm' | snippet}
+    {'jivosite' | option}
 
 </head>
+
+{'!ya' | snippet}
 
 {set $headerbar_top_menu = 'fetchMenu' | snippet : [
 'resources' => 'config_topmenu_id' | option
 ]}
 
-<body>
+<body itemscope itemtype="https://schema.org/WebPage">
 <header class="header">
     <div class="headerbar-top text-sm">
         <div class="headerbar-top-toggler bg-success d-flex d-xl-none" type="button" data-toggle="modal"
@@ -90,11 +95,11 @@
                 <div class="col-lg-7 offset-lg-2 d-none d-lg-flex align-items-center justify-content-between">
                     <ul class="list-unstyled list-inline mb-0 ml-4 headerbar-main-phones">
                         <li class="list-inline-item mr-3">
-                            <a href="{'phone_1' | option | preg_replace:'/[^0-9.+]|/': ''}" class="text-dark">{'phone_1'
+                            <a href="tel:{'phone_1' | option | preg_replace:'/[^0-9.+]|/': ''}" class="text-dark">{'phone_1'
                                 | option}</a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="{'phone_2' | option | preg_replace:'/[^0-9.+]|/': ''}" class="text-dark">{'phone_2'
+                            <a href="tel:{'phone_2' | option | preg_replace:'/[^0-9.+]|/': ''}" class="text-dark">{'phone_2'
                                 | option}</a>
                         </li>
                     </ul>
@@ -130,23 +135,23 @@
     ]
     ]}
 
-    <div class="navbar navbar-sm navbar-light navbar-expand-xl d-none d-xl-flex">
+    <div class="navbar navbar-sm navbar-light navbar-expand-xl d-none d-xl-flex" itemscope itemtype="http://schema.org/SiteNavigationElement">
         <div class="container">
-            <ul class="navbar-nav justify-content-around w-100">
+            <ul class="navbar-nav justify-content-around w-100" itemprop="" itemscope="" itemtype="http://schema.org/ItemList">
                 {foreach $headerbar_main_menu.9.children as $item first=$first last=$last}
                 {set $item['last'] = $last}
                 {if $item['children'] ?}
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ItemList">
                     <a data-toggle="dropdown" data-click-behavior="link" data-display="static" aria-haspopup="true"
                        aria-expanded="true" class="nav-link dropdown-toggle"
-                       href="{$item['uri']}">{$item['menutilte'] ?: $item['pagetitle']}</a>
-                    <ul class="dropdown-menu {if $last ?} dropdown-menu-right{/if}">
+                       href="{$item['uri']}" itemprop="url">{$item['menutilte'] ?: $item['pagetitle']}</a><meta itemprop="name" content="{$item['menutilte'] ?: $item['pagetitle']}" />
+                    <ul class="dropdown-menu {if $last ?} dropdown-menu-right{/if}" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ItemList">
                         {foreach $item.children as $children}
                         {set $children['level'] = $item['level'] + 1}
-                        <li>
-                            <a class="dropdown-item" href="{$children.uri}" class="nav-link">
+                        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ItemList">
+                            <a class="dropdown-item" href="{$children.uri}" class="nav-link" itemprop="url">
                                 {$children.pagetitle}
-                            </a>
+                            </a><meta itemprop="name" content="{$children.pagetitle}" />
                         </li>
                         {/foreach}
                         {if $item.id == 274}
@@ -177,7 +182,7 @@
 </header>
 
 {block 'breadcrumb'}
-<nav aria-label="breadcrumb" class="bg-light mb-4 d-flex align-items-center">
+<nav aria-label="breadcrumb" class="bg-light mb-4 d-flex align-items-center" itemprop="breadcrumb">
     <div class="container">
         {'!pdoCrumbs' | snippet : [
         'showCurrent' => 1,
@@ -229,7 +234,7 @@
 {/if}
 {/block}
 
-<footer>
+<footer itemscope itemtype="http://schema.org/Organization">
     <div class="section bg-light py-4">
         <div class="container">
             <div class="row">
@@ -276,14 +281,14 @@
                     <div class="text-sm my-4">
                         {'config_footer_copy' | option}
                     </div>
-                    <div class="text-lg font-weight-bold my-4">
-                        {'config_address' | option}
+                    <div class="text-lg font-weight-bold my-4" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                      <span itemprop="streetAddress">{'config_address' | option}</span>
                     </div>
-                    <div class="text-lg font-weight-bold my-4 d-flex flex-column">
-                        <a href="{'config_phone' | option | preg_replace:'/[^0-9.+]|/': ''}" class="text-dark">{'config_phone'
+                    <div class="text-lg font-weight-bold my-4 d-flex flex-column" itemprop="telephone">
+                        <a href="tel:{'config_phone' | option | preg_replace:'/[^0-9.+]|/': ''}" class="text-dark">{'config_phone'
                             | option}
                         </a>
-                        <a href="{'config_additional_phone' | option | preg_replace:'/[^0-9.+]|/': ''}"
+                        <a href="tel:{'config_additional_phone' | option | preg_replace:'/[^0-9.+]|/': ''}"
                            class="text-dark">{'config_additional_phone'
                             | option}
                         </a>

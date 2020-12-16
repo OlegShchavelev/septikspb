@@ -84,7 +84,7 @@
                             {$bonus}
                         </ul>
                     {else}
-                        <div class="text-lg text-success font-weight-bold">Преимущества:</div>
+                        <div class="text-lg text-primary font-weight-bold">Преимущества:</div>
                         <ul class="list-group list-box icon-list-box radius-box my-3 ">
                             {$tagtop}
                         </ul>
@@ -96,17 +96,17 @@
                 <div class="card border-gray-200">
                     <div class="card-header bg-transparent border-bottom border-gray-200 text-center">
                     {if 'available' | resource == 1}
-                        <span class="text-success font-weight-bold stock position-relative">Товар в наличии</span>
+                        <span class="text-success font-weight-bold stock position-relative">Товар в наличии</span><link itemprop="availability" href="http://schema.org/InStock">
                         {else}
                         <span class="stock not-stock">Под заказ от 1 до 5 дней</span>
                         {/if}
                     </div>
                     <div class="card-body">
-                    <div class="text-primary font-weight-bold">Цена оборудования</div>
+                    <div class="text-primary font-weight-bold mb-2">Цена оборудования</div>
                     <div class="d-flex justify-content-between">
                         <div class="text-xl text-dark font-weight-bold"
-                             itemprop="price">{$_pls['price']} {'ms2_frontend_currency' | lexicon}<span
-                                    itemprop="priceCurrency" style="display:none;">RUB</span></div>
+                             itemprop="price">{$_pls['price']} {'ms2_frontend_currency' | lexicon}</div><span
+                                    itemprop="priceCurrency" style="display:none;">RUB</span>
                         {if $_pls['old_price'] != 0}
                             <div class="text-md text-danger font-weight-bold"><del>{$_pls['old_price']} {'ms2_frontend_currency' | lexicon}</del></div>
                         {/if}

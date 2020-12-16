@@ -50,18 +50,7 @@
         </div>
         <div class="section-bottom text-center">
         <div class="lead">
-            <p class="lead">
-                Вы можете выбрать наиболее подходящее для вас предложение по количеству жильцов в доме и оставить заявку  на нашем сайте.
-                Мы обеспечим бесплатный выезд нашего замерщика. Он оценил фронт работ, а вы сделаете окончательный выбор.
-            </p>
-            <a href="#" class="btn btn-primary btn-lg btn-pills">
-                            <span class="mr-2">
-                                <svg class="svg-icon svg-icon-md">
-                                    <use xlink:href="#icon-calculator"></use>
-                                </svg>
-                            </span>
-                Калькулятор
-            </a>
+            {$addfld}
         </div>
         </div>
     </div>
