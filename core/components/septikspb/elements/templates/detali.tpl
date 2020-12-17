@@ -84,13 +84,14 @@
                             {$bonus}
                         </ul>
                     {else}
+                        {if $tagtop ?}
                         <div class="text-lg text-primary font-weight-bold">Преимущества:</div>
                         <ul class="list-group list-box icon-list-box radius-box my-3 ">
                             {$tagtop}
                         </ul>
+                        {/if}
                     {/if}
                 </div>
-
             </div>
             <div class="col-12 col-xl-4 pl-0 pl-xl-5">
                 <div class="card border-gray-200">

@@ -112,7 +112,7 @@ $(document).on('change', '.checker', function(e){
        $('.cost_drainage').html(0);
        document.getElementById('estimate').style.backgroundColor = "#00a1ef";
        document.getElementById('final-cost').style.color = "#00a1ef";
-       $('.title').text('Оборудование и доставка"');
+       $('.title').text('Оборудование и доставка');
       // $('.cost_equipment').html(btn.parent()[1].getAttribute('data-calc_productprice').toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
       // $('#dsmc_calc_cost_equipment').val(btn.parent()[1].getAttribute('data-calc_productprice').toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
     }

@@ -103,7 +103,7 @@ msoption|ms_prod_stoki == calc_prod_stoki
                     class="font-weight-semibold ml-2">{$.get.calc_prod_stoki}</span></span>
         {/if}
         {if $.get.calc_input_tube ?}
-        <span class="py-2 px-3 my-1 d-inline-block bg-light">Количество труб:<span class="font-weight-semibold ml-2">{$.get.calc_input_tube} м</span></span>
+        <span class="py-2 px-3 my-1 d-inline-block bg-light">Метраж труб:<span class="font-weight-semibold ml-2">{$.get.calc_input_tube} м</span></span>
         {/if}
     </div>
 

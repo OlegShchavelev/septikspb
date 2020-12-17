@@ -7,7 +7,7 @@
         </div>
         {/if}
 
-        <div class="row justify-content-center">
+        <div class="row {$files | length > 2 ? 'justify-content-center ' : 'justify-content-md-start justify-content-center'}">
             {foreach $files as $file}
             <div class="col-6 col-md-3 col-lg-2 mb-4">
                 <a class="fancy" href="{$file.url}" data-fancybox="gallery">

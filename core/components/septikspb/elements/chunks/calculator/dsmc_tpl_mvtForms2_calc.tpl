@@ -20,7 +20,7 @@
             <div class="mt-4 mb-0 d-flex align-items-center">
                 <div class="custom-control custom-radio ml-3 my-2">
                     <input class="custom-control-input checker checker1" type="radio" name="{$formID}_sla" id="{$formID}_sla1" value="Решение под ключ" checked="">
-                    <label class="custom-control-label" for="{$formID}_sla1">Решение под ключ</label>
+                    <label class="custom-control-label" for="{$formID}_sla1">Решение «под ключ»</label>
                 </div>
                 <div class="custom-control custom-radio ml-3">
                     <input class="custom-control-input checker" type="radio" name="{$formID}_sla" id="{$formID}_sla2" value="Только оборудование">
@@ -37,7 +37,7 @@
                     <div class="row">
                         <div class="col-md-6 col-12">Оборудование - <span class='cost_equipment'>0</span> {'ms2_frontend_currency' | lexicon}</div>
                         <div class="col-md-6">Трубы - <span class='cost_tube' data-calc_input_tube="{($.get.calc_input_tube * 700)}">{($.get.calc_input_tube * 700) | number : 0 : '.' : ' '}</span> {'ms2_frontend_currency' | lexicon}</div>
-                        <div class="col-md-6">Земляные работы - <span class='cost_earth work'>0</span> {'ms2_frontend_currency' | lexicon}</div>
+                        <div class="col-md-6">Земельные работы - <span class='cost_earth work'>0</span> {'ms2_frontend_currency' | lexicon}</div>
                         <div class="msdom_delivery_distance col-md-6 d-block">Расстояние: <span class="range_delivery"></span> км</div>
                         <div class="col-md-6">Монтаж - <span class='cost_installation'>0</span> {'ms2_frontend_currency' | lexicon}</div>
                         <div class="msdom_delivery_cost col-md-6 d-block">Доставка: <span class="cost_delivery"></span>
@@ -57,7 +57,7 @@
             </div>
         </div>
     </div>
-    <h2 class="h5">Указать адрес доставки</h2>
+    <h2 class="h5">Место проведения работ</h2>
 
     <p class="my-5">
         Просто укажите на карте точное место доставки. Доставка оборудования на ваш участок в пределах 50 км от нашего склада осуществляется бесплатно. Доставка на большее расстояние рассчитывается по схеме 30 рублей за 1 км пути. Если ваш участок находится в 55 км от нашего склада, то доставка будет стоить 150 рублей.

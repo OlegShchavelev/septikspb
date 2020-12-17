@@ -248,11 +248,13 @@
                             <div id="footerMenu1" class="expand-lg collapse">
                                 <h5 class="text-dark font-weight-bold h4 mb-4 d-none d-lg-block">Производители</h5>
                                 <ul class="nav flex-column nav-no-gutters">
-                                    {foreach $footer_vendor.274.children as $item}
-                                    <li class="nav-item">
-                                        <a href="{$item.url}" class="nav-link">{$item.pagetitle}</a>
-                                    </li>
-                                    {/foreach}
+                                    {'!pdoMenu' | snippet : [
+                                    'parents' => 0,
+                                    'outerClass' => 'nav flex-column nav-no-gutters',
+                                    'rowClass' => 'nav-item',
+                                    'tpl' => '@INLINE <li {$classes}><a href="{$link}" class="nav-link" {$attributes}>{$menutitle}</a>{$wrapper}</li>'
+                                    'resources' => '19,217,612,326,332,350,417,576,747,56,485']
+                                    }
                                 </ul>
                             </div>
                         </div>
@@ -264,11 +266,14 @@
                             <div id="footerMenu2" class="expand-lg collapse">
                                 <h5 class="text-dark font-weight-bold h4 mb-4 d-none d-lg-block">Услуги</h5>
                                 <ul class="nav flex-column nav-no-gutters">
-                                    {foreach $footer_service.229.children as $item}
-                                    <li class="nav-item">
-                                        <a href="{$item.url}" class="nav-link">{$item.pagetitle}</a>
-                                    </li>
-                                    {/foreach}
+                                    {'!pdoMenu' | snippet : [
+                                    'parents' => 0,
+                                    'tplInner' => '@INLINE {$wrapper}'
+                                    'outerClass' => 'nav flex-column nav-no-gutters',
+                                    'rowClass' => 'nav-item',
+                                    'tpl' => '@INLINE <li {$classes}><a href="{$link}" class="nav-link" {$attributes}>{$menutitle}</a></li>{$wrapper}'
+                                    'resources' => '796,276,57,182,55,38,140,440,369,526']
+                                    }
                                 </ul>
                             </div>
                         </div>

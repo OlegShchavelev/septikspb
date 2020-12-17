@@ -267,7 +267,7 @@
       .swiper-slide {
         img {
           width: 65px !important;
-          height: 45px;
+          height: 45px !important;
           object-fit: cover;
           cursor: pointer;
         }
@@ -296,7 +296,10 @@
       .swiper-wrapper {
         .swiper-slide {
           width: 65px !important;
-          height: 45px;
+          height: 45px !important;
+          .img {
+            height: 45px;
+          }
         }
       }
     }
