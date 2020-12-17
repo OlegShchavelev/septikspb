@@ -35,7 +35,8 @@
 {'!ya' | snippet}
 
 {set $headerbar_top_menu = 'fetchMenu' | snippet : [
-'resources' => 'config_topmenu_id' | option
+'resources' => 'config_topmenu_id' | option,
+'showHidden' => 0
 ]}
 
 <body itemscope itemtype="https://schema.org/WebPage">
@@ -127,7 +128,6 @@
 
     {set $headerbar_main_menu = 'fetchMenu' | snippet : [
     'parents' => 9,
-    'resources' => '-277',
     'includeTVs' => 'tv_mscategories_image',
     'prepareTVs' => '',
     'sortby' => [
@@ -242,38 +242,38 @@
                     <div class="row">
                         <div class="col-lg-4">
                             <a data-toggle="collapse" href="#footerMenu1" aria-expanded="false"
-                               aria-controls="footerMenu1" class="d-lg-none block-toggler my-3 pt-lg-0">Производители
+                               aria-controls="footerMenu1" class="d-lg-none block-toggler my-3 pt-lg-0">Септики
                                 <span class="block-toggler-icon block-toggler-sm-icon"></span>
                             </a>
                             <div id="footerMenu1" class="expand-lg collapse">
-                                <h5 class="text-dark font-weight-bold h4 mb-4 d-none d-lg-block">Производители</h5>
+                                <h5 class="text-dark font-weight-bold h4 mb-4 d-none d-lg-block">Септики</h5>
                                 <ul class="nav flex-column nav-no-gutters">
                                     {'!pdoMenu' | snippet : [
                                     'parents' => 0,
                                     'outerClass' => 'nav flex-column nav-no-gutters',
                                     'rowClass' => 'nav-item',
-                                    'tpl' => '@INLINE <li {$classes}><a href="{$link}" class="nav-link" {$attributes}>{$menutitle}</a>{$wrapper}</li>'
-                                    'resources' => '19,217,612,326,332,350,417,576,747,56,485']
-                                    }
+                                    'tpl' => '@INLINE <li {$classes}><a href="{$link}" class="nav-link" {$attributes}>{$pagetitle}</a>{$wrapper}</li>'
+                                    'resources' => ('config_menu_products_id' | option)
+                                    ]}
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-5">
                             <a data-toggle="collapse" href="#footerMenu2" aria-expanded="false"
-                               aria-controls="footerMenu2" class="d-lg-none block-toggler my-3 pt-lg-0">Услуги
+                               aria-controls="footerMenu2" class="d-lg-none block-toggler my-3 pt-lg-0">Услуги и оборудование
                                 <span class="block-toggler-icon block-toggler-sm-icon"></span>
                             </a>
                             <div id="footerMenu2" class="expand-lg collapse">
-                                <h5 class="text-dark font-weight-bold h4 mb-4 d-none d-lg-block">Услуги</h5>
+                                <h5 class="text-dark font-weight-bold h4 mb-4 d-none d-lg-block">Услуги и оборудование</h5>
                                 <ul class="nav flex-column nav-no-gutters">
                                     {'!pdoMenu' | snippet : [
                                     'parents' => 0,
                                     'tplInner' => '@INLINE {$wrapper}'
                                     'outerClass' => 'nav flex-column nav-no-gutters',
                                     'rowClass' => 'nav-item',
-                                    'tpl' => '@INLINE <li {$classes}><a href="{$link}" class="nav-link" {$attributes}>{$menutitle}</a></li>{$wrapper}'
-                                    'resources' => '796,276,57,182,55,38,140,440,369,526']
-                                    }
+                                    'tpl' => '@INLINE <li {$classes}><a href="{$link}" class="nav-link" {$attributes}>{$pagetitle}</a></li>{$wrapper}'
+                                    'resources' => ('config_menu_service_id' | option)
+                                    ]}
                                 </ul>
                             </div>
                         </div>
@@ -419,6 +419,26 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+<div id="mounting-form" style="display:none">
+    <div class="row">
+        <div class="col-lg-6 bg-success-2 p-5">
+            {'!mvtForms2' | snippet : ['form'=>'mounting_main']}
+        </div>
+        <div class="col-lg-6 p-5 d-flex flex-column justify-content-center">
+            <div class="d-flex align-items-center">
+                <div class="mr-5">
+                    <img src="img/formphone.png">
+                </div>
+                <div>
+                    <h3 class="h3 text-uppercase text-success">Заказать <br>выезд инженера</h3>
+                </div>
+            </div>
+            <p class="mt-4">По всем интересующим вопросам отправьте нам сообщение и мы свяжемся с Вами</p>
+        </div>
+
     </div>
 </div>
 
