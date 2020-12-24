@@ -396,11 +396,11 @@
                         </ul>
                         <ul class="list-unstyled mb-0 headerbar-main-phones my-4 svg-icon-inline">
                                 <li>
-                                    <a href="{'phone_1' | option | preg_replace:'/[^0-9.+]|/': ''}" class="text-white text-lg font-weight-bold mb-2">{'phone_1'
+                                    <a href="tel:{'phone_1' | option | preg_replace:'/[^0-9.+]|/': ''}" class="text-white text-lg font-weight-bold mb-2">{'phone_1'
                                         | option}</a>
                                 </li>
                                 <li>
-                                    <a href="{'phone_2' | option | preg_replace:'/[^0-9.+]|/': ''}" class="text-white text-lg font-weight-bold mt-2">{'phone_2'
+                                    <a href="tel:{'phone_2' | option | preg_replace:'/[^0-9.+]|/': ''}" class="text-white text-lg font-weight-bold mt-2">{'phone_2'
                                         | option}</a>
                                 </li>
                         </ul>
