@@ -51,8 +51,10 @@
             {foreach $headerbar_main_menu.9.children as $item}
             <div class="col-md-6 col-lg-4">
                 <div class="card shadow-sm card-nav no-gutters">
-                    <div class="card-img-bg" style="background-image: url('{$item.tv_mscategories_image}');"></div>
-                    <div class="card-body">
+                    <a href="{$item.uri}">
+                        <div class="card-img-bg" style="background-image: url('{$item.tv_mscategories_image}');"></div>
+                    </a>
+                        <div class="card-body">
                         <div class="card-title">
                             <a href="{$item.uri}" class="h5">{$item.menutitle ?: $item.pagetitle}</a>
                         </div>

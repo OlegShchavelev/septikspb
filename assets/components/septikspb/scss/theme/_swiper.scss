@@ -224,6 +224,15 @@
       overflow-x: hidden;
       position: relative;
 
+      @include media-breakpoint-down(sm) {
+        max-width: 100%;
+        .card-img {
+          height: 360px;
+          object-fit: cover;
+          object-position: 0% 50%;
+        }
+      }
+
       &.active {
         opacity: 1;
       }

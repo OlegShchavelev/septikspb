@@ -4,7 +4,9 @@
         {foreach $items as $item}
             <div class="swiper-slide">
                 <div class="card">
+                        <a href="{$item.url | url}">
                         <img class="card-img" src="{$item.image}">
+                        </a>
                 </div>
             </div>
         {/foreach}
