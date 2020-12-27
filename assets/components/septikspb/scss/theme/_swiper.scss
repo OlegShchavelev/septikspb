@@ -221,6 +221,8 @@
     .swiper-slide {
       opacity: .75;
       width: 1110px !important;
+      overflow-x: hidden;
+      position: relative;
 
       &.active {
         opacity: 1;

@@ -169,6 +169,7 @@
     'tplWrapper' => 'tpl.seoTabsWrapper.dsmc',
     'tplTab' => 'tpl.seoTabsTab.dsmc',
     'tpl' => 'tpl.seoTabs.dsmc'
+    'ajax' => 1
     ]}
 
     {'!msProductsSection' | snippet : [
