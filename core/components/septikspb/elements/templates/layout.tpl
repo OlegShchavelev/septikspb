@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
     {if 'template' | resource != 33}
@@ -420,6 +421,46 @@
             </div>
         </div>
     </div>
+</div>
+
+<div class="share-button on-up">
+    <a href="{'cc_whatsapp' | option}" class="item">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+    <a href="{'cc_viber' | option}" class="item">
+        <i class="fab fa-viber" aria-hidden="true"></i>
+    </a>
+    <a href="{'сс_telegram' | option}" class="item">
+        <i class="fab fa-telegram-plane" aria-hidden="true"></i>
+    </a>
+    <a onclick="jivo_api.open();" class="item">
+        <svg class="svg-icon svg-icon-md">
+            <use xlink:href="#icon-jivo"></use>
+        </svg>
+    </a>
+    <div class="item open_share">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </div>
+</div>
+
+<div class="back-to-top on-up top d-flex">
+    <i class="fas fa-angle-up"></i>
+</div>
+
+<div class="share-block-absolute">
+    <!-- filter -->
+    <svg>
+        <defs>
+            <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="shadow"/>
+                <feOffset in="shadow" dx="0" dy="0" result="shadow"/>
+                <feColorMatrix in="shadow" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                               result="shadow2"/>
+                <feBlend in="SourceGraphic" in2="shadow2"/>
+            </filter>
+        </defs>
+    </svg>
+    <!-- back-to-top -->
 </div>
 
 <div id="mounting-form" style="display:none">
