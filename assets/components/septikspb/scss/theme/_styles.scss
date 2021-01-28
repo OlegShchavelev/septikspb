@@ -169,25 +169,11 @@ em {
   }
 }
 
-
-
 .filter_form {
   margin-top: 22px;
   margin-bottom: 25px;
 }
 
-.filter_fieldset_wr {}
-
-.filter_fieldset_title {
-  font-size: 14px;
-  color: #8c8c8c;
-  margin-bottom: 14px;
-  white-space: nowrap;
-}
-
-fieldset[id='mse2_ms|price'] .filter_fieldset_title {
-  margin-bottom: 21px;
-}
 
 .filter_fieldset_wr select {
   width: 100%;
@@ -1123,12 +1109,6 @@ fieldset[id='mse2_ms|price'] .filter_fieldset_title {
     font-size: 17px;
     font-weight: 600;
     margin: 0.5em 0;
-  }
-
-  .filter_fieldset_title {
-    font-size: 13px;
-    font-weight: 600;
-    color: #000;
   }
 
   .ui-widget-header {

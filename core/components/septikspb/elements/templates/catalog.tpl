@@ -84,7 +84,6 @@
                         <div class="filters">
                             <form action="{$_modx->resource.id | url}" method="post" id="mse2_filters">
                                 {if 'dsmc.filters' | placeholder != 'Нечего фильтровать'}
-                                <div class="title__main">Фильтр</div>
                                 {'dsmc.filters' | placeholder}
                                 {/if}
                             </form>
