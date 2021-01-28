@@ -26,7 +26,7 @@
                 </div>
             {/if}
         </div>
-        <div class="row pt-4 clear" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+        <div class="row pt-2 pt-lg-4 clear" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
             <div class="col-12 col-xl-4">
                 <div class="gallery card-gallery">
                     <div class="d-flex flex-column justify-content-between h-100 loader">
@@ -246,7 +246,7 @@
             {'!msProductsSection' | snippet : [
             'depth' => 0,
             'wrapperPlaceholders' => [
-            'title' => 'Аналоги станции' ~~ 'pagetitle' | resource
+            'title' => ('parent' | resource) | resource : 'tv_section_showcase_ms_pohojie_title' ?: 'Аналоги станции' ~~ 'pagetitle' | resource
             ],
             'limit' => 4,
             'parents' => 0,
