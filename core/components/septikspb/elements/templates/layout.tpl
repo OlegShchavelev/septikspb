@@ -439,7 +439,7 @@
         </svg>
     </a>
     <div class="item open_share">
-        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        <i class="far fa-comment-alt text-lg" aria-hidden="true"></i>
     </div>
 </div>
 
