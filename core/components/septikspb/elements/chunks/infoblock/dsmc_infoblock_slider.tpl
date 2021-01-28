@@ -2,7 +2,7 @@
     <div class="swiper-container similar-main-carousel">
         <div class="swiper-wrapper">
         {foreach $items as $item}
-            <div class="swiper-slide">
+            <div class="swiper-slide" data-swiper-autoplay="{'cc_main_slider_autoplay_time' | option}">
                 <div class="card">
                         <a href="{$item.url | url}">
                         <img class="card-img" src="{$item.image}">
