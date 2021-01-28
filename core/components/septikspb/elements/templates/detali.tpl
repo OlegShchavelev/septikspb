@@ -246,7 +246,7 @@
             {'!msProductsSection' | snippet : [
             'depth' => 0,
             'wrapperPlaceholders' => [
-            'title' => 'Аналоги станции ' ~ 'pagetitle' | resource
+            'title' => 'Аналоги станции' ~~ 'pagetitle' | resource
             ],
             'limit' => 4,
             'parents' => 0,
@@ -258,7 +258,21 @@
             ]}
     {/if}
 
-
+    {if $_modx->resource.ms_zapchasti.0 ?}
+        {'!msProductsSection' | snippet : [
+        'depth' => 0,
+        'wrapperPlaceholders' => [
+        'title' => 'Комплектующие для' ~~ 'pagetitle' | resource,
+        'section_class' => 'bg-light'
+        ],
+        'limit' => 4,
+        'parents' => 0,
+        'resources' => $_modx->resource.ms_zapchasti.0,
+        'tpl' => 'tpl.msProducts.row.grid.dsmc',
+        'tplWrapper' => 'wrapper.showcase.dsmc',
+        'wrapIfEmpty' => 0,
+        ]}
+    {/if}
 
     {'!mvtForms2' | snippet : ['form'=>'magnet']}
 
@@ -279,7 +293,6 @@
         'tplWrapper' => 'wrapper.showcase.dsmc',
         'wrapIfEmpty' => 0
         ]}
-
 
     <div id="mounting-form" style="display:none">
         <div class="row">
