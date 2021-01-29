@@ -1,0 +1,9 @@
+.msfavorites {
+  &.load {
+   &.voted {
+     svg {
+       fill: $primary;
+     }
+   }
+  }
+}

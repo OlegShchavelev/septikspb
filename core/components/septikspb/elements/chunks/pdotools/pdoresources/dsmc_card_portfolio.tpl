@@ -2,6 +2,7 @@
     <div class="card card-portfolio border-0">
         <div class="card-overlay card-hover-overlay position-relative">
             <div class="card-img">
+                <a href="{$uri}">
                 {if $_pls['small.original'] ?}
                     <img class="card-img-top card-img-height my-0" src="{$_pls['small.original']}">
                 {else}
@@ -9,7 +10,7 @@
                          src="/assets/components/ms2gallery/img/web/ms2_medium.png">
                 {/if}
                 <div class="card-img-overlay">
-                    <a class="" href="{$url}">
+
                         <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor"
                              class="bi bi-plus-circle text-white" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
@@ -17,8 +18,9 @@
                             <path fill-rule="evenodd"
                                   d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
                         </svg>
-                    </a>
+
                 </div>
+                </a>
             </div>
         </div>
         <div class="card-body text-center">

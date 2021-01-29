@@ -892,14 +892,30 @@ em {
 .list_line .service ul li {
   display: flex;
   align-items: center;
+  white-space: nowrap;
 
   &::before {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     content: "\f067";
-    color: #72af4c;
     font-size: 8px;
     margin-right: 4px;
+  }
+}
+
+.good-price {
+  .list_line .service ul li {
+    &::before {
+      color: $success;
+    }
+  }
+}
+
+.equipment-price {
+  .list_line .service ul li {
+    &::before {
+      color: $primary;
+    }
   }
 }
 
@@ -945,8 +961,8 @@ em {
 }
 
 .btn-more {
-  right: 20px;
-  bottom: 20px;
+  right: 10px;
+  bottom: 0;
 
   a {
     text-decoration: none;

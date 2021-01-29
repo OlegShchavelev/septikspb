@@ -4,6 +4,19 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-{'ms_installment' | resource == 1 ? '8' : '12'}">
+                <div class="flags my-2">
+                    {foreach $_modx->resource.ms_promo as $item}
+                        {switch $item}
+                        {case 'Акция'}
+                        {set $bg = 'bg-primary'}
+                        {case 'Хит продаж'}
+                        {set $bg = 'bg-danger'}
+                        {case 'Советуем'}
+                        {set $bg = 'bg-success'}
+                        {/switch}
+                        <span class="badge {$bg} text-white">{$item}</span>
+                    {/foreach}
+                </div>
                 {if 'longtitle' | resource ?}
                     <h1 class="mb-0" itemprop="name">{'longtitle' | resource}</h1>
                 {else}
@@ -96,11 +109,34 @@
             <div class="col-12 col-xl-4 pl-0 pl-xl-5">
                 <div class="card border-gray-200">
                     <div class="card-header bg-transparent border-bottom border-gray-200 text-center">
-                    {if 'available' | resource == 1}
-                        <span class="text-success font-weight-bold stock position-relative">Товар в наличии</span><link itemprop="availability" href="http://schema.org/InStock">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                        {if 'available' | resource == 1}
+                            <span class="text-success font-weight-bold stock position-relative ml-2">Товар в наличии</span>
+                            <link itemprop="availability" href="http://schema.org/InStock">
                         {else}
-                        <span class="stock not-stock">Под заказ от 1 до 5 дней</span>
+                            <span class="stock not-stock ml-2">Под заказ от 1 до 5 дней</span>
                         {/if}
+                            </div>
+                            <div>
+                                <li class="list-inline-item">
+                                    <a href="#" data-click data-data-list="default" class="msfavorites"
+                                       data-data-type="resource"
+                                       data-data-pagetitle="{'pagetitle' | resource}" data-data-key="{'id' | resource}">
+                                        <svg class="svg-icon svg-icon-sm svg-icon-gray-600">
+                                            <use xlink:href="#icon-favorite"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="izbrannoe/">
+                                        <svg class="svg-icon svg-icon-sm svg-icon-gray-600">
+                                            <use xlink:href="#icon-comparison"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </div>
+                        </div>
                     </div>
                     <div class="card-body">
                     <div class="text-primary font-weight-bold mb-2">Цена оборудования</div>

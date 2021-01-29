@@ -9,7 +9,8 @@
     {'!msPCS' | snippet : [
     'up' => 1,
     'mode' => 2,
-    'snippet' => 'mFilter2'
+    'snippet' => 'mFilter2',
+    'prepareSnippet' => 'dsmc.prepareSnippet',
     'paginator' => 'pdoPage',
     'element' => 'msProducts',
     'class' => 'msProduct',

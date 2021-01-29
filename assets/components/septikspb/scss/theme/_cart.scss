@@ -1,0 +1,35 @@
+.cart-header {
+  padding: 1.2rem 2rem;
+  background: $gray-100;
+  font-weight: bold;
+}
+
+
+.cart-footer {
+  padding: 0 2rem;
+  background: $gray-100;
+  .cart-item {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.cart-item {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid $gray-200;
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
+
+.cart-item-img {
+  max-width: 80px;
+}
+
+.cart-title {
+  margin-left: 2rem;
+  a {
+    font-weight: 400;
+  }
+}

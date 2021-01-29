@@ -71,7 +71,8 @@
                 <td class="remove col-md-1 align-middle">
                     <form method="post" class="ms2_form text-md-right">
                         <input type="hidden" name="key" value="{$product.key}">
-                        <button class="btn btn-link text-danger font-weight-bold" type="submit" name="ms2_action" value="cart/remove"><i class="fas fa-trash"></i></button>
+                        <button class="btn btn-link text-danger font-weight-bold" type="submit" name="ms2_action" value="cart/remove">
+                            <i class="fas fa-trash"></i></button>
                     </form>
                 </td>
             </tr>

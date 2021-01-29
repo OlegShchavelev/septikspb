@@ -65,15 +65,15 @@
                         {'!msMiniCart' | snippet : [
                         'tpl' => 'dsmc.msMiniCart'
                         ]}
-                        {*
-                        <li class="list-inline-item mr-3">
-                            <a href="izbrannoe/">
+                        <li class="list-inline-item ml-3">
+                            <a href="{'811' | url}">
                                 <svg class="svg-icon">
                                     <use xlink:href="#icon-favorite"></use>
                                 </svg>
                             </a>
                         </li>
-                        <li class="list-inlin   e-item mr-3">
+                        {*
+                        <li class="list-inline-item">
                             <a href="izbrannoe/">
                                 <svg class="svg-icon">
                                     <use xlink:href="#icon-comparison"></use>
