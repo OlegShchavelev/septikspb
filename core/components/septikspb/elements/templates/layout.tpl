@@ -54,9 +54,26 @@
                 <div class="col-md-10 d-none d-xl-block">
                     <ul class="nav nav-dark">
                         {foreach $headerbar_top_menu as $item}
-                        <li class="nav-item">
-                            <a class="nav-link" href="{$item.uri}">{$item.menutitle ?: $item.pagetitle}</a>
-                        </li>
+                            {if $item['id'] != 229}
+                            <li class="nav-item">
+                                <a class="nav-link" href="{$item.uri}">{$item.menutitle ?: $item.pagetitle}</a>
+                            </li>
+                            {else}
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-click-behavior="link" data-display="static" aria-haspopup="true"
+                                   aria-expanded="true" data-toggle="dropdown" href="{$item.uri}">{$item.menutitle ?: $item.pagetitle}</a>
+                                <ul class="dropdown-menu">
+                                    {foreach $item.children as $children}
+                                        {set $children['level'] = $item['level'] + 1}
+                                        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ItemList">
+                                            <a class="dropdown-item" href="{$children.uri}" class="nav-link" itemprop="url">
+                                                {$children.menutitle ?: $children.pagetitle}
+                                            </a><meta itemprop="name" content="{$children.pagetitle}" />
+                                        </li>
+                                    {/foreach}
+                                </ul>
+                            </li>
+                            {/if}
                         {/foreach}
                     </ul>
                 </div>

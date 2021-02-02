@@ -32,7 +32,6 @@
   .dropdown-menu {
     margin-top: 1rem;
     transition: transform .2s;
-    transform: translateY(30px);
     will-change: transform, opacity;
   }
 
