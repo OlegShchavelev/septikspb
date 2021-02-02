@@ -123,14 +123,14 @@
                         </li>
                     </ul>
                     <div class="headerbar-main-action">
-                        <a href="#" class="btn btn-success btn-lg btn-pills" onclick="jivo_api.open( { start : 'call' } );">
+                        <button class="btn btn-success btn-lg btn-pills" onclick="jivo_api.open( { start : 'call' } );">
                             <span class="mr-2">
                                 <svg class="svg-icon">
                                     <use xlink:href="#icon-phone"></use>
                                 </svg>
                             </span>
                             Заказать звонок
-                        </a>
+                        </button>
                     </div>
                 </div>
 
