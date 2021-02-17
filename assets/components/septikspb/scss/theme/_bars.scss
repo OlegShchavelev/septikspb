@@ -44,14 +44,42 @@
     }
   }
 }
+
 .headerbar-main {
   .headerbar-main-phones {
     a {
       font-size: 1.125rem;
       font-weight: 600;
+
       &:hover {
         text-decoration: none;
       }
     }
   }
 }
+
+/*
+* ===================================================
+*     Bars Slider
+* ===================================================
+*/
+
+@include media-breakpoint-down(md) {
+  .sidebar-filter {
+    display: none;
+  }
+  .modal {
+    .sidebar-filter {
+      display: block;
+    }
+  }
+  .product-grid-header-bg {
+      background-color: $primary;
+    .product-grid-header-toggler {
+      background-color: $success;
+      height: 100%;
+      border-radius: 0;
+    }
+  }
+}
+
