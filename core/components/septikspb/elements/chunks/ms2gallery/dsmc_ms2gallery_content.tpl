@@ -5,7 +5,7 @@
             <div class="card p-1 border-0 rounded-0 w-100">
                 <div class="card-overlay card-hover-overlay position-relative">
                     <div class="card-img">
-                        <img src="{$file.square}" class="card-img-top rounded-0" alt=""/>
+                        <img src="{$file.square}" class="card-img-top rounded-0" alt="{'longtitle' | resource}: описание и характеристики"/>
                     </div>
                     <div class="card-img-overlay">
                         <a class="fancy card-img-overlay-fancy" data-fancybox="gallery" href="{$file.url}">

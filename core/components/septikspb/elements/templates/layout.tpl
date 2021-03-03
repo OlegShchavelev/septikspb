@@ -51,8 +51,8 @@
         </div>
         <div class="container py-3 py-xl-2">
             <div class="row align-items-center">
-                <div class="col-md-10 d-none d-xl-block">
-                    <ul class="nav nav-dark">
+                <div class="col-md-10 d-none d-xl-block" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                    <ul class="nav nav-dark" itemprop="" itemscope="" itemtype="http://schema.org/ItemList">
                         {foreach $headerbar_top_menu as $item}
                             {if $item['id'] != 229}
                             <li class="nav-item">
@@ -108,7 +108,7 @@
             <div class="row">
                 <div class="col-10 col-lg-3 d-flex align-items-center">
                     <a href="{'base_url' | option}" class="headerbar-main-logo">
-                        <img src="{'config_logo' | option}" class="img-fluid">
+                        <img src="{'config_logo' | option}" class="img-fluid" alt="СептикСервис">
                     </a>
                 </div>
                 <div class="col-lg-7 offset-lg-2 d-none d-lg-flex align-items-center justify-content-between">

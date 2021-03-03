@@ -3,7 +3,7 @@
         <div class="swiper-wrapper">
             {foreach $files as $file}
             <div class="swiper-slide">
-                <a href="{$file['url']}" title="Дуб Azores —  (Однополосный)" class="fancy" data-fancybox="gallery">
+                <a href="{$file['url']}" class="fancy" data-fancybox="gallery">
                     <img src="{$file['url']}">
                 </a>
             </div>

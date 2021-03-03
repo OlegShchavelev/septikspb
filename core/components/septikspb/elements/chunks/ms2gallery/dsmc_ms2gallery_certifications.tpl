@@ -13,7 +13,7 @@
                 <a class="fancy" href="{$file.url}" data-fancybox="gallery">
                 <div class=" auto-height">
                     <div class="card card-rounded-hover card-hover-icon-plus bg-light rounded-circle d-flex justify-content-center p-5">
-                        <img class="img-fluid" src="{$file.mini}" alt=""/>
+                        <img class="img-fluid" src="{$file.mini}" alt="Сертификат производителя"/>
                     </div>
                 </div>
                 </a>

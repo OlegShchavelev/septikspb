@@ -4,8 +4,8 @@
             {if $files?}
             {foreach $files as $file}
             <div class="swiper-slide">
-                <a href="{$file['url']}" title="{'pagetitle' | resource}" alt="{'seo_alt' | tv}" class="fancy" data-fancybox="gallery">
-                    <img src="{$file['url']}" itemprop="image">
+                <a href="{$file['url']}" title="{'pagetitle' | resource}"  class="fancy" data-fancybox="gallery">
+                    <img src="{$file['url']}" itemprop="image" alt="{'seo_alt' | tv}">
                 </a>
             </div>
             {/foreach}
@@ -20,7 +20,7 @@
             {if $files?}
             {foreach $files as $file}
             <div class="swiper-slide">
-                <img src="{$file['url']}" itemprop="image">
+                <img src="{$file['url']}" itemprop="image" alt="{'seo_alt' | tv}">
             </div>
             {/foreach}
             {/if}
