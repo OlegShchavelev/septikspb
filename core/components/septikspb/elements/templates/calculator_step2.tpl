@@ -5,7 +5,7 @@
 {block 'content'}
 
 {'!msPCS' | snippet : [
-'parents' => 9,
+'parents' => 0,
 'up' => 1,
 'mode' => 2,
 'snippet' => 'mFilter2'
