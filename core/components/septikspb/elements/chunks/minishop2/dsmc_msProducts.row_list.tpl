@@ -63,13 +63,13 @@
                                             {$ms_price_key != 0 ? 'Цена оборудования' : 'Цена'}
                                         </p>
                                         {if $ms_price_key != 0}
-                                            <div class="mt-2 d-flex flex-column flex-lg-row">
+                                            <div class="mt-2 d-flex">
                                                 <p class="price">
                                                     {$price} {'ms2_frontend_currency' | lexicon}
                                                 </p>
                                                 {if $old_price != 0}
                                                     <p class="old_price"><span
-                                                                class="badge badge-danger ml-0 ml-lg-1 py-1 px-2"><del>{$old_price} {'ms2_frontend_currency' | lexicon}</del></span>
+                                                                class="badge badge-danger ml-3 ml-lg-0 ml-lg-1 py-1 px-2"><del>{$old_price} {'ms2_frontend_currency' | lexicon}</del></span>
                                                     </p>
                                                 {/if}
                                             </div>
