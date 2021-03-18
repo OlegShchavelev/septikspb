@@ -2,7 +2,7 @@
     <input type="hidden" name="{$formID}_resource" value="{'id' | resource}">
     <input type="hidden" name="token" value="{$token}">
     <input type="hidden" name="form" value="{$formID}">
-    <input type="hidden" name="{$formID}_product" id="mvtForms2ProductId" value="">
+    <input type="hidden" name="{$formID}_product" id="mvtForms2ProductId" value="{'id' | resource}">
     <input type="hidden" name="{$formID}_product_count" id="mvtForms2ProductCount" value="1">
     <input type="hidden" name="{$formID}_product_options" id="mvtForms2ProductOptions" value="">
     <div class="form-group">

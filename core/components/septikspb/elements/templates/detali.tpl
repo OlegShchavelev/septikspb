@@ -185,8 +185,12 @@
                     {/if}
                     </div>
                     <div class="card-footer text-center bg-transparent border-top border-gray-200">
-                    <a data-fancybox data-src="#oneclick-form" href="javascript:;"
-                       class="one_click_buy"><span class="link-underline">Купить в 1 клик</span></a>
+                    <a data-fancybox
+                       data-src="#oneclick-form"
+                       href="javascript:;"
+                       class="one_click_buy">
+                        <span class="link-underline">Купить в 1 клик</span>
+                    </a>
                     </div>
                 </div>
             </div>
