@@ -8,7 +8,7 @@
 'parents' => 0,
 'up' => 1,
 'mode' => 2,
-'snippet' => 'mFilter2'
+'snippet' => 'mFilter2',
 'paginator' => 'pdoPage',
 'element' => 'msProducts',
 'depth' => 1,

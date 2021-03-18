@@ -65,7 +65,7 @@
                 <td class="price col-md-2 align-middle">
                     <span class="mr-2 text-nowrap">{$product.price} {'ms2_frontend_currency' | lexicon}</span>
                     {if $product.old_price?}
-                    <span class="old_price text-nowrap text-danger">{$product.old_price} {'ms2_frontend_currency' | lexicon}</span>
+                        <span class="old_price text-nowrap text-sm text-danger"><del>{$product.old_price}</del> {'ms2_frontend_currency' | lexicon}</span>
                     {/if}
                 </td>
                 <td class="remove col-md-1 align-middle">

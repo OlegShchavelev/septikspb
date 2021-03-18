@@ -6,7 +6,10 @@
             {set $dsmc_parent = 9}
         {/if}
 
+        {set $dsmc_parent = 'dsmc_mspcs_where' | placeholder}
+
         {'!msPCS' | snippet : [
+        'parents' => $dsmc_parent ?: 'id' | resource,
         'up' => 1,
         'mode' => 2,
         'snippet' => 'mFilter2',
@@ -24,9 +27,9 @@
         'tplFilter.outer.default' => 'tpl.mFilter2.filter.outer',
         'tplFilter.row.default' => 'dsmc.tpl.mFilter2.filter.checkbox',
         'tplPageWrapper' => '@INLINE
-    <div class="pagination">
-        <ul class="pagination">{$prev}{$pages}{$next}{$last}</ul>
-    </div>
+        <div class="pagination mse2_pagination">
+            <ul class="pagination">{$prev}{$pages}{$next}{$last}</ul>
+        </div>
     '
         ]}
 
