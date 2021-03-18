@@ -1,4 +1,8 @@
-<div class="section py-5">
+<div class="section">
+    {if 'dsmc_wrapper_section_title' | placeholder ?}
+        <h2>{'dsmc_wrapper_section_title' | placeholder}</h2>
+    {/if}
+
     <div class="row no-gutters">
         {foreach $files as $file}
         <div class="col-md-6 col-lg-3">
