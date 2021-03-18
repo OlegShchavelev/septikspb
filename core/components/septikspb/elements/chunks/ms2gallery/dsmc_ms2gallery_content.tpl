@@ -1,4 +1,4 @@
-<div class="section">
+<div class="section pb-4">
     {if 'dsmc_wrapper_section_title' | placeholder ?}
         <h2>{'dsmc_wrapper_section_title' | placeholder}</h2>
     {/if}
