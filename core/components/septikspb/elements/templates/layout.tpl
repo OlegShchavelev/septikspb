@@ -433,7 +433,6 @@
                                 </a>
                             </div>
                     </div>
-                    <div class="sidebar-block-modal-nav-append"></div>
                 </div>
             </div>
         </div>

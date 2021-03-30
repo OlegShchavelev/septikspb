@@ -55,7 +55,8 @@
       .sidebar-block-modal-nav-append {
 
         .sidebar-block-modal-header {
-          margin-bottom: 1rem;
+          margin-top: 2rem;
+          margin-bottom: 2rem;
         }
 
         .navbar-nav-roll {
@@ -126,4 +127,32 @@
   .calc-label-cost, {
     font-weight: 600;
   }
+}
+
+.navbar-nav {
+  .dropdown-wrapper {
+    position: fixed;
+    top: 0px;
+    left: -500px;
+    overflow: hidden;
+    overflow-y: auto;
+    transition: all ease-in-out 0.6s;
+    width: 100%;
+    height: 100vh;
+    background-color: $primary;
+    padding: 2.5rem 1.5rem;
+    z-index: 10;
+  }
+  .dropdown-slide {
+    &.show {
+      > .dropdown-wrapper {
+        left: 0;
+      }
+    }
+  }
+}
+
+.modal .modal-dialog .modal-content .modal-header .close {
+  position: relative;
+  z-index: 20;
 }
