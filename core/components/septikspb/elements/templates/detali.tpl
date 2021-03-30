@@ -286,7 +286,7 @@
             {'!msProductsSection' | snippet : [
             'depth' => 0,
             'wrapperPlaceholders' => [
-            'title' => ('parent' | resource) | resource : 'tv_section_showcase_ms_pohojie_title' ?: 'Аналоги станции' ~~ 'pagetitle' | resource
+            'title' => ('parent' | resource) | resource : 'tv_section_showcase_ms_pohojie_title' ?: 'Аналоги' ~~ 'pagetitle' | resource
             ],
             'limit' => 4,
             'parents' => 0,
