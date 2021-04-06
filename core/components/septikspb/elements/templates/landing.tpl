@@ -150,9 +150,10 @@
     </div>
 </section>
 {'!msProductsSection' | snippet : [
-'snippet' => 'ms2Gallery'
+'snippet' => 'ms2Gallery',
 'tags' => 'дипломы и сертификаты',
 'tpl' => 'dsmc.ms2gallery.certifications',
+'limit' => 0,
 'wrapperPlaceholders' => [
 'title' => 'Наши дипломы и сертификаты'
 ]
