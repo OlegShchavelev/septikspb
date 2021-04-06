@@ -4,9 +4,11 @@
 
         {if $.get['query'] ?}
             {set $dsmc_parent = 9}
+            {else}
+            {set $dsmc_parent = 'dsmc_mspcs_where' | placeholder}
         {/if}
 
-        {set $dsmc_parent = 'dsmc_mspcs_where' | placeholder}
+        
 
         {'!msPCS' | snippet : [
         'parents' => $dsmc_parent ?: 'id' | resource,

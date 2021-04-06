@@ -550,13 +550,11 @@ $(function () {
         $('feGaussianBlur').attr('stdDeviation', 0);
     }
 
-    $('.dropdown-slide-right').click(function (e) {
+    $('.dropdown-slide-right, .btn-mvtform-mobile').click(function (e) {
         e.preventDefault();
-        console.log('Клик');
         $(this).closest('.dropdown-slide').addClass('show');
     });
     $('.nav-toggler-back').click(function (e) {
         $(this).closest('.dropdown-slide').removeClass('show');
     });
-
 });

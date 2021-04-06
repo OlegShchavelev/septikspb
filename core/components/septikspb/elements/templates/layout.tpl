@@ -83,7 +83,7 @@
                         'tpl' => 'dsmc.msMiniCart'
                         ]}
                         <li class="list-inline-item ml-3">
-                            <a href="{'811' | url}">
+                            <a href="{'811' | url}" title="Избранное">
                                 <svg class="svg-icon">
                                     <use xlink:href="#icon-favorite"></use>
                                 </svg>
@@ -422,8 +422,9 @@
                                         | option}</a>
                                 </li>
                         </ul>
-                        <div class="headerbar-main-action mx-4">
-                                <a href="#" class="btn btn-success btn-lg btn-pills btn-block">
+                        <div class="headerbar-main-action mx-4 my-4">
+                            <div class="dropdown-slide">
+                                <a href="#" class="btn btn-success btn-lg btn-pills btn-block btn-mvtform-mobile">
                                 <span class="mr-2">
                                     <svg class="svg-icon">
                                         <use xlink:href="#icon-phone"></use>
@@ -431,7 +432,21 @@
                                 </span>
                                     Заказать звонок
                                 </a>
+                                <div class="dropdown-wrapper slide-left">
+                                    <div class="sidebar-block-modal-header d-flex justify-content-between align-items-center bg-success position-relative">
+                                        <div class="headerbar-top-toggler">
+                                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi nav-toggler-back bi-chevron-left text-xl font-weight-bold text-white" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="icon-top-mobilebar position-absolute">
+                                            <i class="fas fa-headset display-4 text-white font-weight-bold"></i>
+                                        </div>
+                                    </div>
+                                    {'!mvtForms2' | snippet : ['form'=>'mobile']}
+                                </div>
                             </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -439,14 +454,14 @@
     </div>
 </div>
 
-<div class="share-button on-up">
-    <a href="{'cc_whatsapp' | option}" class="item">
+<!--noindex--><div class="share-button on-up">
+    <a href="{'cc_whatsapp' | option}" class="item" title="Вотсап">
         <i class="fab fa-whatsapp" aria-hidden="true"></i>
     </a>
-    <a href="{'cc_viber' | option}" class="item">
+    <a href="{'cc_viber' | option}" class="item" title="Вайбер">
         <i class="fab fa-viber" aria-hidden="true"></i>
     </a>
-    <a href="{'сс_telegram' | option}" class="item">
+    <a href="{'сс_telegram' | option}" class="item" title="Телеграм">
         <i class="fab fa-telegram-plane" aria-hidden="true"></i>
     </a>
     <a onclick="jivo_api.open();" class="item">
@@ -457,7 +472,7 @@
     <div class="item open_share">
         <i class="far fa-comment-alt text-lg" aria-hidden="true"></i>
     </div>
-</div>
+</div><!--/noindex-->
 
 <div class="back-to-top on-up top d-flex">
     <i class="fas fa-angle-up"></i>
@@ -487,7 +502,7 @@
         <div class="col-lg-6 p-5 d-flex flex-column justify-content-center">
             <div class="d-flex align-items-center">
                 <div class="mr-5">
-                    <img src="img/formphone.png">
+                    <img src="img/formphone.png" alt="форма заявки">
                 </div>
                 <div>
                     <h3 class="h3 text-uppercase text-success">Заказать <br>выезд инженера</h3>
@@ -528,6 +543,7 @@
 
     injectSvgSprite('{'assets_url' | option}components/septikspb/dist/icons/svg-sprite.svg');
 </script>
+
 <script src="{'assets_url' | option}components/septikspb/dist/vendor/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
 <!-- Bootstrap Select-->
 <script src="{'assets_url' | option}components/septikspb/dist/vendor/bootstrap-select/js/bootstrap-select.min.js"></script>

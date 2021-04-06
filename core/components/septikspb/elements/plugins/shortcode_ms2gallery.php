@@ -17,9 +17,14 @@ if (!function_exists(getShortCode)){
         preg_match_all('/\['.$name.'](.+?|)\[\/'.$name.']/', $output, $rows);
 
         $scriptProperties = [
-            'snippet' => 'ms2Gallery',
-            'tpl' => 'dsmc.ms2Gallery.content',
-            'showLog' => '0',
+            'gallery' => [
+                'snippet' => 'ms2Gallery',
+                'tpl' => 'dsmc.ms2Gallery.content',
+                'showLog' => '0'
+                ],
+            'file' => [
+                'tpl' => 'dsmc.FileAttach',
+            ]
         ];
 
         function makeArrayShortCode ($tags) {
@@ -31,11 +36,9 @@ if (!function_exists(getShortCode)){
 
         foreach ($rows[1] as $i => $row) {
             $elements[] = makeArrayShortCode($row);
-            $contentProperties[] = array_merge($scriptProperties, $elements[$i]);
+            $contentProperties[] = array_merge($scriptProperties[$name], $elements[$i]);
             $output = str_replace($rows[0][$i], $modx->runSnippet('msProductsSection', $contentProperties[$i]), $output);
         }
-
-        print_r($elements);
     }
 }
 

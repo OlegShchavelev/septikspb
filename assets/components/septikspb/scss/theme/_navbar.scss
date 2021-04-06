@@ -55,8 +55,7 @@
       .sidebar-block-modal-nav-append {
 
         .sidebar-block-modal-header {
-          margin-top: 2rem;
-          margin-bottom: 2rem;
+          margin-top: 4.5rem;
         }
 
         .navbar-nav-roll {
@@ -129,7 +128,7 @@
   }
 }
 
-.navbar-nav {
+.navbar-nav, .headerbar-main-action {
   .dropdown-wrapper {
     position: fixed;
     top: 0px;
@@ -140,8 +139,28 @@
     width: 100%;
     height: 100vh;
     background-color: $primary;
-    padding: 2.5rem 1.5rem;
     z-index: 10;
+    .nav {
+      padding: 1.5rem;
+    }
+    .icon-top-mobilebar {
+      width: 75px;
+      height: 75px;
+      position: absolute;
+      left: 42%;
+      background-color: $success;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .headerbar-top-toggler {
+      width: 53px;
+      height: 53px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
   .dropdown-slide {
     &.show {
@@ -153,6 +172,5 @@
 }
 
 .modal .modal-dialog .modal-content .modal-header .close {
-  position: relative;
-  z-index: 20;
+  z-index: 20 !important;
 }

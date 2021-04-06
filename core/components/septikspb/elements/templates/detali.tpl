@@ -342,7 +342,7 @@
             <div class="col-lg-6 p-5 d-flex flex-column justify-content-center">
                 <div class="d-flex align-items-center">
                     <div class="mr-5">
-                        <img src="img/formphone.png">
+                        <img src="img/formphone.png" alt="форма заявки">
                     </div>
                     <div>
                         <h3 class="h3 text-uppercase text-primary">Заказ <br> на монтаж</h3>
@@ -361,7 +361,7 @@
             <div class="col-lg-6 p-5 d-flex flex-column justify-content-center">
                 <div class="d-flex align-items-center">
                     <div class="mr-5">
-                        <img src="img/formphone.png">
+                        <img src="img/formphone.png" alt="форма заявки">
                     </div>
                     <div>
                         <h3 class="h3 text-uppercase text-primary">Купить <br>в 1 клик</h3>

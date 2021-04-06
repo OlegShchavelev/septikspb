@@ -59,7 +59,7 @@
             </div>
             <div class="col-md-12 col-sm-12 col-xs-12 footer_copyright">
                 <!--<div>© 2010-[[!+nothing123:default=`now`:strtotime:date=`%Y`]] Copyright</div>-->
-                <div>Информация, размещенная на сайте, не является публичной офертой. <a href="{'340' | url}" rel="nofollow">Политика конфиденциальности</a></div>
+                <div>Информация, размещенная на сайте, не является публичной офертой. <!--noindex--><a href="{'340' | url}" title="политика конфиденциальности">Политика конфиденциальности</a><!--/noindex--></div>
             </div>
         </div>
     </div>
