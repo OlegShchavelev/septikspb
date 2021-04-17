@@ -208,20 +208,20 @@
     {'!seoTabs' | snippet: [
     'tplWrapper' => 'tpl.seoTabsWrapper.dsmc',
     'tplTab' => 'tpl.seoTabsTab.dsmc',
-    'tpl' => 'tpl.seoTabs.dsmc'
+    'tpl' => 'tpl.seoTabs.dsmc',
     'ajax' => 1
     ]}
 
     {'!msProductsSection' | snippet : [
-    'snippet' => 'ms2Gallery'
-    'tags' => 'дипломы и сертификаты',
+    'snippet' => 'ms2Gallery',
     'parents' => 0,
+    'limit' => 0,
+    'tags' => 'дипломы и сертификаты',
     'resources' => 'parent' | resource,
     'tpl' => 'dsmc.ms2gallery.certifications',
     'wrapperPlaceholders' => [
     'title' => 'Cертификаты производителя' ~~ '<span class="text-success">' ~ ('vendor.name' | resource) ~ '</span>'
-    ],
-    ]}
+    ]]}
 
     {'!msProductsSection' | snippet : [
     'includeOriginal' => 1,
