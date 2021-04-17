@@ -7,9 +7,7 @@
             {else}
             {set $dsmc_parent = 'dsmc_mspcs_where' | placeholder}
         {/if}
-
         
-
         {'!msPCS' | snippet : [
         'parents' => $dsmc_parent ?: 'id' | resource,
         'up' => 1,
@@ -25,6 +23,7 @@
         'sortdir' => 'ASC',
         'suggestions' => 1,
         'toPlaceholders' => 'dsmc.',
+        'minQuery' => 2,
         'tpl' => 'tpl.msProducts.row.list.dsmc',
         'tplFilter.outer.default' => 'tpl.mFilter2.filter.outer',
         'tplFilter.row.default' => 'dsmc.tpl.mFilter2.filter.checkbox',
