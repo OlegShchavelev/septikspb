@@ -1,4 +1,4 @@
-<div class="section pb-4">
+<div class="section">
     <div class="swiper-container similar-main-carousel">
         <div class="swiper-wrapper">
         {foreach $items as $item}
@@ -11,5 +11,6 @@
             </div>
         {/foreach}
         </div>
+        <div class="swiper-pagination position-relative mt-4 mb-3"></div>
     </div>
 </div>

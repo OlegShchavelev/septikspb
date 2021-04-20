@@ -34,7 +34,10 @@ $(function () {
                 loop: true,
                 loopedSlides: 5,
             }
-        }
+        },
+        pagination: {
+            el: '.swiper-pagination',
+        },
     });
     // SwiperCarusel
 
