@@ -1,7 +1,7 @@
-<div class="section py-6">
+<div class="section {'id' | resource == 1 ? 'py-6' : 'py-4'}">
     <div class="container">
-        <div class="section-title text-center">
-            <h2 class="h1">{$title}</h2>
+        <div class="section-title {'id' | resource == 1 ? 'text-center' : 'text-left'}">
+            <h2 class="{'id' | resource == 1 ? 'h1' : 'h2'}">{$title}</h2>
             {if $content ?}
             <div class="lead">
                 <p class="intro-title">
@@ -29,6 +29,7 @@
                 </div>
                 {/foreach}
             </div>
+            <div class="swiper-pagination position-relative mt-4 mb-3"></div>
             <div class="swiper-outside-nav align-with-products">
                 <div id="similarPrev" class="swiper-button-prev"></div>
                 <div id="similarNext" class="swiper-button-next"></div>

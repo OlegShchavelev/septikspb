@@ -6,9 +6,9 @@
  * @return array
  */
 
-if (!function_exists(getShortCodeGallery)){
+if (!function_exists(getShortCodeInfoBlock)){
 
-    function getShortCodeGallery($name) {
+    function getShortCodeInfoBlock($name) {
 
         global $modx;
         global $scriptProperties;
@@ -17,31 +17,27 @@ if (!function_exists(getShortCodeGallery)){
         preg_match_all('/\['.$name.'](.+?|)\[\/'.$name.']/', $output, $rows);
 
         $scriptProperties = [
-            'gallery' => [
-                'snippet' => 'ms2Gallery',
-                'tpl' => 'dsmc.ms2Gallery.content',
-                'showLog' => '0'
-            ]
+           'infoblock' => [
+               'sortby' => 'menuindex'
+           ]
         ];
 
-        function makeArrayShortCodeGallery($tags) {
+        function makeArrayShortCodeInfoBlock ($tags) {
             $tags = preg_split('/(?<!\/)\s(?!\/)\b|\/\s|=\/|=/' , $tags , -1, PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY);
-
             $row = array_chunk($tags, 2);
             return array_combine(array_column($row, 0), array_column($row, 1));
         }
 
         foreach ($rows[1] as $i => $row) {
-            $elements[] = makeArrayShortCodeGallery($row);
+            $elements[] = makeArrayShortCodeInfoBlock($row);
             $contentProperties[] = array_merge($scriptProperties[$name], $elements[$i]);
-            $output = str_replace($rows[0][$i], $modx->runSnippet('msProductsSection', $contentProperties[$i]), $output);
+            $output = str_replace($rows[0][$i], $modx->runSnippet('infoBlock', $contentProperties[$i]), $output);
         }
     }
 }
 
 switch ($modx->event->name) {
-
     case 'OnWebPagePrerender':
-        getShortCodeGallery('gallery');
+        getShortCodeInfoBlock('infoblock');
         break;
 }

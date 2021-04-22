@@ -282,6 +282,23 @@
         </div>
     </section>
 
+    {if $_modx->resource.ms_soputstvujushhie.0 ?}
+            {'!msProductsSection' | snippet : [
+            'depth' => 0,
+            'wrapperPlaceholders' => [
+            'title' => 'Сопутствующие товары',
+            'section_class' => 'border-top'
+            ],
+            'limit' => 4,
+            'parents' => 0,
+            'resources' => $_modx->resource.ms_soputstvujushhie.0,
+            'sortby' => 'RAND()',
+            'tpl' => 'tpl.msProducts.row.grid.dsmc',
+            'tplWrapper' => 'wrapper.showcase.dsmc',
+            'wrapIfEmpty' => 0,
+            ]}
+    {/if}
+
     {if $_modx->resource.ms_pohojie.0 ?}
             {'!msProductsSection' | snippet : [
             'depth' => 0,

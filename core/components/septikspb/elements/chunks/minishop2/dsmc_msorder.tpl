@@ -54,7 +54,7 @@
     <div class="row">
         <div class="col-12 col-md-6" id="deliveries">
             <h4>{'ms2_frontend_deliveries' | lexicon}:</h4>
-            <div class="form-group row pl-3">
+            <div class="form-group row pl-3 flex-column">
                     {foreach $deliveries as $delivery index=$index}
                     {set $checked = !($order.delivery in keys $deliveries) && $index == 0 || $delivery.id == $order.delivery}
                     <div class="custom-control custom-radio my-1">
@@ -62,7 +62,7 @@
                                type="radio" class="custom-control-input"
                                data-payments="{$delivery.payments | json_encode}" {$checked ? 'checked' : ''}>
                         <label for="delivery_{$delivery.id}"
-                               class="custom-control-label">{$delivery.name}</label>
+                               class="custom-control-label"></label>
                         {if $delivery.logo?}
                         <img src="{$delivery.logo}" alt="{$delivery.name}" title="{$delivery.name}"/>
                         {else}

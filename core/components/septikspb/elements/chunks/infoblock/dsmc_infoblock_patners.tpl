@@ -1,9 +1,9 @@
 <section class="section py-6 border-top">
     <div class="container">
         <div class="section-title">
-            <h3 class="h2">
+            <h2 class="h3">
                 <span class="text-success">{$title}
-            </h3>
+            </h2>
         </div>
         <div class="swiper-container similar-logo-carousel py-4">
             <div class="swiper-wrapper">
