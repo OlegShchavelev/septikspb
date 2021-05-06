@@ -305,7 +305,7 @@
             'wrapperPlaceholders' => [
             'title' => ('parent' | resource) | resource : 'tv_section_showcase_ms_pohojie_title' ?: 'Аналоги' ~~ 'pagetitle' | resource
             ],
-            'limit' => 4,
+            'limit' => 8,
             'parents' => 0,
             'resources' => $_modx->resource.ms_pohojie.0,
             'sortby' => 'RAND()',

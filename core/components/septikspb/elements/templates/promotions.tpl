@@ -33,7 +33,9 @@
                 {'!pdoResources' | snippet : [
                 'tpl' => 'dsmc.row.stock_card',
                 'includeTVs' => 'image',
-                'tvPrefix' => ''
+                'tvPrefix' => '',
+                'depth' => '0',
+                'limit' => '15',
                 ]}
             </div>
         </div>
