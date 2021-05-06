@@ -465,9 +465,7 @@
         <i class="fab fa-telegram-plane" aria-hidden="true"></i>
     </a>
     <a onclick="jivo_api.open();" class="item">
-        <svg class="svg-icon svg-icon-md">
-            <use xlink:href="#icon-jivo"></use>
-        </svg>
+        <i class="far fa-comment-alt text-lg" aria-hidden="true"></i>
     </a>
     <div class="item open_share">
         <i class="far fa-comment-alt text-lg" aria-hidden="true"></i>
