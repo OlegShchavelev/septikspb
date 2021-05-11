@@ -1,4 +1,4 @@
-{extends 'template:Базовый шаблон'}
+    {extends 'template:Базовый шаблон'}
 
 {block 'breadcrumb'}
 {/block}

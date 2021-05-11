@@ -114,29 +114,29 @@ a {
           color: $success;
         }
       }
-    }
+    } /*
+      ul {
+        list-style: none;
 
-    ul {
-      list-style: none;
+        li {
+          position: relative;
 
-      li {
-        position: relative;
-
-        &:before {
-          content: ' ';
-          display: block;
-          width: 12px;
-          height: 1px;
-          border-bottom: 1px solid $success;
-          position: absolute;
-          top: 50%;
-          left: -1.5rem;
-          margin-top: 1px;
-          -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+          &:before {
+            content: ' ';
+            display: block;
+            width: 12px;
+            height: 1px;
+            border-bottom: 1px solid $success;
+            position: absolute;
+            top: 50%;
+            left: -1.5rem;
+            margin-top: 1px;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+          }
         }
       }
-    }
+      */
   }
 }
 

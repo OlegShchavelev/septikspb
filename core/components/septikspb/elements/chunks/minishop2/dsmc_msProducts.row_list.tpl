@@ -116,13 +116,6 @@
                                         </svg>
                                     </a>
                                 </li>
-                                <li class="list-inline-item">
-                                    <a href="izbrannoe/">
-                                        <svg class="svg-icon svg-icon-sm svg-icon-gray-600">
-                                            <use xlink:href="#icon-comparison"></use>
-                                        </svg>
-                                    </a>
-                                </li>
                             </ul>
                             <div class="d-flex justify-content-end position-absolute btn-more">
                                 <a class="btn btn-success btn-radius btn-hover-primary" href="{$id | url}"><i

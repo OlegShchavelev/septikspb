@@ -424,6 +424,14 @@
                         </ul>
                         <div class="headerbar-main-action mx-4 my-4">
                             <div class="dropdown-slide">
+                                <a href="{'659' | url}" class="btn btn-success btn-lg btn-pills btn-block">
+                                <span class="mr-2">
+                                    <svg class="svg-icon">
+                                        <use xlink:href="#icon-calculator"></use>
+                                    </svg>
+                                </span>
+                                    Подобрать септик
+                                </a>
                                 <a href="#" class="btn btn-success btn-lg btn-pills btn-block btn-mvtform-mobile">
                                 <span class="mr-2">
                                     <svg class="svg-icon">
