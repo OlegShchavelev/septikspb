@@ -86,7 +86,9 @@
 
                 <div class="t21_prod_info_props">
                     {if ($capabilities || $bonus) ?}
+                        {if $capabilities ?}
                         <div class="text-lg text-primary font-weight-bold mb-2">Возможности:</div>
+                        {/if}
                         <ul class="list-group list-box icon-list-box">
                             {$capabilities}
                         </ul>
