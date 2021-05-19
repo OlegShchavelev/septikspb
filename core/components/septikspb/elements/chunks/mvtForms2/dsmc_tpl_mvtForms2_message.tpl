@@ -93,7 +93,7 @@
                                 <h3 style="{$style.h}{$style.h3}">{$form} интернет-магазин <b>{'site_name' | option | ucfirst}</b></h3>
                                 <br>
                                 <p>Здравствуйтe.</p>
-                                <p><b>{$fields['Имя']}</b>, обратился(ась) к Вам за консультацией. Перозвоните ему, клиент обратил внимание на страницу <a href="{$site_url}/{$fields['id'] | resource: 'uri' }">"{$fields['id'] | resource: 'pagetitle' }"</a> услуга <b>{$fields['sla']}</b></p>
+                                <p><b>{$fields['Имя']}</b>, обратился(ась) к Вам за консультацией. Свяжитесь с ним, клиент обратил внимание на страницу <a href="{$site_url}/{$fields['id'] | resource: 'uri' }">"{$fields['id'] | resource: 'pagetitle' }"</a> услуга <b>{$fields['sla']}</b></p>
                                 <br>
                                 {if $fields['msid'] ?}
                                 <h4>Оборудование:</h4>
