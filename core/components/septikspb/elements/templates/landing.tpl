@@ -54,7 +54,7 @@
     </div>
 </section>
 {'!ms2Gallery' | snippet : [
-'tags' => 'наша работа'
+'tags' => 'наша работа',
 'tpl' => 'dsmc.ms2gallery.work'
 ]}
 <section class="section section-masonry bg-light py-6">

@@ -43,9 +43,9 @@
                 {else}
                     <h1>
                         {if 'id' | resource ? != 801}
-                        {'longtitle' | resource ?: 'pagetitle' | resource}
+                        {'pagetitle' | resource ?: 'longtitle' | resource}
                         {else}
-                            {'longtitle' | resource ?: 'pagetitle' | resource}: <span class="text-success">{$.get['query']}</span>
+                            {'pagetitle' | resource ?: 'longtitle' | resource}: <span class="text-success">{$.get['query']}</span>
                         {/if}
                     </h1>
                 {/if}

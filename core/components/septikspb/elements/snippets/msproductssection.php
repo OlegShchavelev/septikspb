@@ -22,5 +22,16 @@ if ($section_title) {
     $modx->setPlaceholder('dsmc_wrapper_section_title', $section_title);
 }
 
+if ($sc_template) {
+    switch ($sc_template) {
+        case 'standart':
+            $scriptProperties['tpl'] = 'dsmc.ms2Gallery.content';
+        break;
+        case 'out_work':
+            $scriptProperties['tpl'] = 'dsmc.ms2Gallery.work.content';
+            break;
+    }
+}
+
 $modx->setPlaceholders($wrapperPlaceholders,'dsmc_wrapper_');
 return $modx->runSnippet($snippet , $scriptProperties);

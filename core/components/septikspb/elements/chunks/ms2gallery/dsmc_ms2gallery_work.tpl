@@ -2,7 +2,7 @@
     <div class="container">
 
         <div class="section-title">
-            <h2>Наша работа</h2>
+            <h2>Наши работы</h2>
         </div>
 
         <div class="row no-gutters">

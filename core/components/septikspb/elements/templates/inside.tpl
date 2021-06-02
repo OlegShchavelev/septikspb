@@ -14,7 +14,14 @@
                 <h1>{$_modx->resource.pagetitle}</h1>
             {/if}
             <div class="text-content">
-                {$_modx->resource.content}
+                {'content' | resource}
+                {if $_modx->user.id > 0}
+                    {'!ms2Gallery' | snippet : [
+                    'resources' => 575,
+                    'tags' => 'наша работа',
+                    'tpl' => 'dsmc.ms2gallery.work.content'
+                    ]}
+                {/if}
             </div>
         </div>
     </div>
