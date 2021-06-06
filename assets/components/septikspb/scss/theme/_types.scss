@@ -332,3 +332,7 @@ $value in $theme-colors {
 .link-underline {
   border-bottom: 1px dashed $primary;
 }
+
+.bg-gradient-hero-primary {
+  background: linear-gradient(180deg, #5197BF 0%, #77C3EF 100%);
+}

@@ -53,6 +53,32 @@
   }
 }
 
+.icon-shape {
+  width: 4rem;
+  height: 4rem;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  &.icon-shape-triangle {
+    position: relative;
+    border-radius: 20px !important;
+    &:after {
+      width: 0;
+      height: 0;
+      border-right: 30px solid transparent;
+      border-top: 30px solid #3b8fbd;
+      position: absolute;
+      top: 0;
+      right: -15px;
+      content: '';
+    }
+  }
+}
+
+.icon-shape-primary {
+  background-color: #3B8FBD;
+}
 .svg-icon-inline {
   position: relative;
   padding-left: 2.75rem;

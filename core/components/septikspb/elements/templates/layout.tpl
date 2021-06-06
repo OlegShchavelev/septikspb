@@ -199,6 +199,8 @@
     </div>
 </header>
 
+{block 'hero'}
+{/block}
 {block 'breadcrumb'}
 <nav aria-label="breadcrumb" class="bg-light mb-4 d-flex align-items-center" itemprop="breadcrumb">
     <div class="container">
@@ -546,7 +548,6 @@
             document.body.insertBefore(div, document.body.childNodes[0]);
         }
     }
-
     injectSvgSprite('{'assets_url' | option}components/septikspb/dist/icons/svg-sprite.svg');
 </script>
 

@@ -29,7 +29,6 @@
   &.section-dark {
     .text-content {
       color: $white;
-
       ol,
       ul,
       p {
@@ -134,6 +133,38 @@
       > .container {
         position: relative;
         z-index: 3;
+      }
+    }
+  }
+}
+
+.section-hero {
+  @include media-breakpoint-down(xs) {
+    overflow-x: clip;
+  }
+  .img-hero-absolute {
+    bottom: 0;
+    left: calc(50% - 2rem);
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+    @include media-breakpoint-down(xs) {
+      top: 100px;
+      left: calc(50% - 2.75rem);
+    }
+  }
+  .section-hero-bg {
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 230px;
+    }
+  }
+  .svg-icon {
+    width: 1.875rem;
+    height: 1.875rem;
+  }
+  .card {
+    .card-title {
+      &:hover {
+        color: $white !important;
       }
     }
   }
