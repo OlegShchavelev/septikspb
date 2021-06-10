@@ -198,7 +198,6 @@
         </div>
     </div>
 </header>
-
 {block 'hero'}
 {/block}
 {block 'breadcrumb'}
@@ -212,7 +211,6 @@
     </div>
 </nav>
 {/block}
-
 {block 'content'}
 
 <section class="section section-hero py-4 border-bottom">

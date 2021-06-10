@@ -168,12 +168,16 @@
                         <input type="hidden" name="options" value="[]">
                     </form>
 
+
                     {if 'ms_price_key' | resource != 0}
+                        {*
+                        {2 | dsmcGetResourceDepthId}
+                        *}
                         <div class="font-weight-bolder text-success">Цена под ключ</div>
                         <div class="t21_product_maininfo_price2_wr d-flex align-items-center">
                             <div class="text-xl text-dark font-weight-bold">{'ms_price_key' | resource | price} {'ms2_frontend_currency' | lexicon}</div>
                             <a href="javascript:return" data-toggle="popover" title="Условия монтажа"
-                               data-content="{'price_key' | option}" data-html="true" class="ml-3 btn btn-light text-dark btn-icon-only rounded-circle"><i class="fas fa-question"></i></a>
+                               data-content="{*{'price_key' | option}*}{(2 | dsmcGetResourceDepthId) | resource : 'tv_taxonomy_tooltips'}" data-html="true" class="ml-3 btn btn-light text-dark btn-icon-only rounded-circle"><i class="fas fa-question"></i></a>
                         </div>
                         <a data-fancybox data-src="#mounting-form" href="javascript:;"
                            class="btn btn-success btn-success btn-block btn-lg btn-icon-label my-3">

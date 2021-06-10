@@ -36,6 +36,12 @@ switch ($modx->event->name) {
 
         });
 
+        $fenom->addModifier('dsmcGetResourceDepthId' , function ($input) use ($modx) {
+            $getResourceId = $modx->resource->get('id');
+            $getParentsId = array_reverse($modx->getParentIds($getResourceId, 10, array('context' => 'web')));
+            return $getParentsId[$input];
+        });
+
         break;
 
 }
