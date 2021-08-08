@@ -51,8 +51,8 @@
         </div>
         <div class="container py-3 py-xl-2">
             <div class="row align-items-center">
-                <div class="col-md-10 d-none d-xl-block" itemscope itemtype="http://schema.org/SiteNavigationElement">
-                    <ul class="nav nav-dark" itemprop="" itemscope="" itemtype="http://schema.org/ItemList">
+                <div class="col-md-10 d-none d-xl-block">
+                    <ul class="nav nav-dark">
                         {foreach $headerbar_top_menu as $item}
                             {if $item['id'] != 229}
                             <li class="nav-item">
@@ -65,10 +65,10 @@
                                 <ul class="dropdown-menu">
                                     {foreach $item.children as $children}
                                         {set $children['level'] = $item['level'] + 1}
-                                        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ItemList">
-                                            <a class="dropdown-item" href="{$children.uri}" class="nav-link" itemprop="url">
+                                        <li>
+                                            <a class="dropdown-item" href="{$children.uri}" class="nav-link">
                                                 {$children.menutitle ?: $children.pagetitle}
-                                            </a><meta itemprop="name" content="{$children.pagetitle}" />
+                                            </a>
                                         </li>
                                     {/foreach}
                                 </ul>
@@ -89,15 +89,13 @@
                                 </svg>
                             </a>
                         </li>
-                        {*
                         <li class="list-inline-item">
-                            <a href="izbrannoe/">
+                            <a href="{'1121' | url}">
                                 <svg class="svg-icon">
                                     <use xlink:href="#icon-comparison"></use>
                                 </svg>
                             </a>
                         </li>
-                        *}
                     </ul>
                 </div>
             </div>
@@ -153,23 +151,23 @@
     ]
     ]}
 
-    <div class="navbar navbar-sm navbar-light navbar-expand-xl d-none d-xl-flex" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <div class="navbar navbar-sm navbar-light navbar-expand-xl d-none d-xl-flex">
         <div class="container">
-            <ul class="navbar-nav justify-content-around w-100" itemprop="" itemscope="" itemtype="http://schema.org/ItemList">
+            <ul class="navbar-nav justify-content-around w-100">
                 {foreach $headerbar_main_menu.9.children as $item first=$first last=$last}
                 {set $item['last'] = $last}
                 {if $item['children'] ?}
-                <li class="nav-item dropdown" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ItemList">
+                <li class="nav-item dropdown">
                     <a data-toggle="dropdown" data-click-behavior="link" data-display="static" aria-haspopup="true"
                        aria-expanded="true" class="nav-link dropdown-toggle"
-                       href="{$item['uri']}" itemprop="url">{$item['menutilte'] ?: $item['pagetitle']}</a><meta itemprop="name" content="{$item['menutilte'] ?: $item['pagetitle']}" />
-                    <ul class="dropdown-menu {if $last ?} dropdown-menu-right{/if}" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ItemList">
+                       href="{$item['uri']}">{$item['menutilte'] ?: $item['pagetitle']}</a>
+                    <ul class="dropdown-menu {if $last ?} dropdown-menu-right{/if}">
                         {foreach $item.children as $children}
                         {set $children['level'] = $item['level'] + 1}
-                        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ItemList">
-                            <a class="dropdown-item" href="{$children.uri}" class="nav-link" itemprop="url">
+                        <li>
+                            <a class="dropdown-item" href="{$children.uri}" class="nav-link">
                                 {$children.pagetitle}
-                            </a><meta itemprop="name" content="{$children.pagetitle}" />
+                            </a>
                         </li>
                         {/foreach}
                         {if $item.id == 274}

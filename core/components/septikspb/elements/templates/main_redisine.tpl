@@ -15,6 +15,9 @@
         </div>
         <div class="text-content line-height-lg-3 col-12 col-lg-10 mx-auto">
             <p>
+                Автономная канализация — это локальное очистное сооружение, 
+                используемое в частных домах, загородных коттеджах и банях, 
+                где нет централизованной канализации. 
                 СептикСервис – команда опытных инженеров из Санкт-Петербурга,
                 которая занимается проектированием автономных канализаций,
                 установкой <a href="{'274' | url}" class="badge-text-lg badge-icon"><i class="fas fa-archive"></i>cтанций
@@ -142,4 +145,12 @@
         </div>
     </div>
 </section>
+<!--<section class="section py-6">
+    <div class="container">
+      <div class="row">
+<div style="width:1200px;height:800px;overflow:hidden;position:relative;"><iframe style="width:100%;height:100%;border:1px solid #e6e6e6;border-radius:8px;box-sizing:border-box" src="https://yandex.ru/maps-reviews-widget/192553163623?comments"></iframe><a href="https://yandex.ru/maps/org/septikservis/192553163623/" target="_blank" style="box-sizing:border-box;text-decoration:none;color:#b3b3b3;font-size:10px;font-family:YS Text,sans-serif;padding:0 20px;position:absolute;bottom:8px;width:100%;text-align:center;left:0">СептикСервис на карте Санкт‑Петербурга — Яндекс.Карты</a></div>
+        </div>
+    </div>
+</section>-->
+
 {/block}

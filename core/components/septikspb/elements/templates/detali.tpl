@@ -39,7 +39,7 @@
                 </div>
             {/if}
         </div>
-        <div class="row pt-2 pt-lg-4 clear" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+        <div class="row pt-2 pt-lg-4 clear">
             <div class="col-12 col-xl-4">
                 <div class="gallery card-gallery">
                     <div class="d-flex flex-column justify-content-between h-100 loader">
@@ -132,15 +132,16 @@
                                 </li>
                                 <li class="list-inline-item">
                                     <a href="izbrannoe/">
-                                        <svg class="svg-icon svg-icon-sm svg-icon-gray-600">
-                                            <use xlink:href="#icon-comparison"></use>
-                                        </svg>
+                                        {'!addComparison' | snippet : [
+                                        'list_id' => 1121,
+                                        'tpl' => 'dsmc.Comparison.add'
+                                        ]}
                                     </a>
                                 </li>
                             </div>
                         </div>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
                     <div class="text-primary font-weight-bold mb-2">Цена оборудования</div>
                     <div class="d-flex justify-content-between">
                         <div class="text-xl text-dark font-weight-bold"
@@ -150,6 +151,11 @@
                             <div class="text-md text-danger font-weight-bold"><del>{$_pls['old_price']} {'ms2_frontend_currency' | lexicon}</del></div>
                         {/if}
                     </div>
+                                
+                    <link itemprop="availability" href="https://schema.org/InStock" />
+                    <meta itemprop="priceValidUntil" content="2050-12-31">
+                    <link itemprop="url" href="https://www.septikspb.com/product/{'alias' | resource}">
+            
                     <form method="post" class="ms2_form my-3">
                         <button class="btn btn-primary btn-block btn-lg btn-icon-label" type="submit" name="ms2_action"
                                 value="cart/add">
@@ -161,7 +167,6 @@
                             <span class="btn-inner-text">
                             В корзину
                             </span>
-
                         </button>
                         <input type="hidden" name="id" value="{'id' | resource}">
                         <input type="hidden" name="count" value="1">
@@ -190,10 +195,12 @@
                         </a>
                     {/if}
                     </div>
+                    <meta itemprop="brand" content="{'vendor.name' | placeholder}" />
+                    <meta itemprop="sku" content="{'id' | resource}" />
                     <div class="card-footer text-center bg-transparent border-top border-gray-200">
                     <a data-fancybox
                        data-src="#oneclick-form"
-                       href="javascript:;"
+                       hre  f="javascript:;"
                        class="one_click_buy">
                         <span class="link-underline">Купить в 1 клик</span>
                     </a>

@@ -17,7 +17,6 @@
         'paginator' => 'pdoPage',
         'element' => 'msProducts',
         'class' => 'msProduct',
-        'parents' => $dsmc_parent ?: 'id' | resource,
         'limit' => 35,
         'sortby' => 'price',
         'sortdir' => 'ASC',
