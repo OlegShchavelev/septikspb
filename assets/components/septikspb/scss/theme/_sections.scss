@@ -1,6 +1,13 @@
 .section {
   margin: 0 !important;
 
+  .section-header, .section-footer {
+    .section-text {
+      font-size: 0.8125rem;
+      color: $secondary;
+    }
+  }
+
   .section-title,
   .section-bottom {
     .lead {

@@ -17,11 +17,10 @@
                         <span class="badge {$bg} text-white">{$item}</span>
                     {/foreach}
                 </div>
-                {if 'longtitle' | resource ?}
-                    <h1 class="mb-0" itemprop="name">{'longtitle' | resource}</h1>
-                {else}
-                    <h1 class="mb-0" itemprop="name">{'pagetitle' | resource}</h1>
-                {/if}
+                <div class="page-title d-flex justify-content-between align-items-start align-items-lg-center">
+                <h1 class="mb-0" itemprop="name">{'longtitle' | resource ?: 'pagetitle' | resource}</h1>
+                    <div class="ya-share2" data-curtain data-shape="round" data-limit="0" data-more-button-type="short" data-services="messenger,vkontakte,facebook,odnoklassniki,telegram,viber,whatsapp"></div>
+                </div>
             </div>
             {if 'ms_installment' | resource == 1}
                 <div class="col-lg-4">

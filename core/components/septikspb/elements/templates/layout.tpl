@@ -547,6 +547,7 @@
     injectSvgSprite('{'assets_url' | option}components/septikspb/dist/icons/svg-sprite.svg');
 </script>
 
+<script src="https://yastatic.net/share2/share.js"></script>
 <script src="{'assets_url' | option}components/septikspb/dist/vendor/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
 <!-- Bootstrap Select-->
 <script src="{'assets_url' | option}components/septikspb/dist/vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
