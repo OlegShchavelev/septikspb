@@ -21,7 +21,7 @@
 {set $dsmc_list = $fields}
 {set $dsmc_cost = $fields}
 
-{unset $dsmc_list['id'] $dsmc_list['msid'] $dsmc_list['Стоимость доставки'] $dsmc_list['Итоговая сумма'] $dsmc_list['Оборудование'] $dsmc_list['Трубы'] $dsmc_list['Земельные работы'] $dsmc_list['Монтаж'] $dsmc_list['sla']}
+{unset $dsmc_list['id'] $dsmc_list['Client ID'] $dsmc_list['msid'] $dsmc_list['Стоимость доставки'] $dsmc_list['Итоговая сумма'] $dsmc_list['Оборудование'] $dsmc_list['Трубы'] $dsmc_list['Земельные работы'] $dsmc_list['Монтаж'] $dsmc_list['sla']}
 {unset $dsmc_cost['Имя'] $dsmc_cost['Телефон'] $dsmc_cost['id'] $dsmc_cost['msid'] $dsmc_cost['sla'] $dsmc_cost['Адрес']}
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -93,7 +93,7 @@
                                 <h3 style="{$style.h}{$style.h3}">{$form} интернет-магазин <b>{'site_name' | option | ucfirst}</b></h3>
                                 <br>
                                 <p>Здравствуйтe.</p>
-                                <p><b>{$fields['Имя']}</b>, обратился(ась) к Вам за консультацией. Свяжитесь с ним, клиент обратил внимание на страницу <a href="{$site_url}/{$fields['id'] | resource: 'uri' }">"{$fields['id'] | resource: 'pagetitle' }"</a> услуга <b>{$fields['sla']}</b></p>
+                                <p><b>{$fields['Имя']} (Client ID: {$fields['Client ID']})</b>, обратился(ась) к Вам за консультацией. Свяжитесь с ним, клиент обратил внимание на страницу <a href="{$site_url}/{$fields['id'] | resource: 'uri' }">"{$fields['id'] | resource: 'pagetitle' }"</a> услуга <b>{$fields['sla']}</b></p>
                                 <br>
                                 {if $fields['msid'] ?}
                                 <h4>Оборудование:</h4>
