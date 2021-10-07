@@ -4,8 +4,9 @@
 {/block}
 
 {block 'content'}
-    {'!infoBlock' | snippet : [
-    'id' => 2
+    {'!PageBlocks' | snippet : [
+    'cid' => 2,
+    'sortby' => ['rank' => 'ASC']
     ]}
     <section class="section bg-light text-center py-6 border-0" itemprop="mainContentOfPage">
         <div class="container">
@@ -179,19 +180,7 @@
         </div>
     </section>
     *}
-    {if $_modx->user.id > 0}
-            {'!pdoResources' | snippet: [
-            'frontend_css' => '',
-            'class' => 'pageBlock',
-            'loadModels' => 'pageBlocks',
-            'sortby' => 'rank',
-            'sortdir' => 'asc',
-            'limit' => 1,
-            'tpl' => 'dsmcPageBlock.faq',
-            'where' => [
-            'id' => 1,
-            'active' => 1
-                ]
-            ]}
-    {/if}
+    {'!PageBlocks' | snippet: [
+    'cid' => 1
+    ]}
 {/block}

@@ -2,21 +2,21 @@
     <div class="container">
         <div class="section-header">
             <div class="section-title text-center mb-5">
-                <h2 class="h1">{$values.title}</h2>
+                <h2 class="h1">{$title}</h2>
             </div>
-            {if $values.headtext ?}
+            {if $headtext ?}
             <div class="section-text mb-5 text-center">
-               {$values.headtext}
+               {$headtext}
             </div>
             {/if}
         </div>
         <div class="section-body mb-6">
-            <div class="accordion" id="{$values.alias}">
-                {foreach $values.items as $key => $item}
+            <div class="accordion" id="{$alias}">
+                {foreach $items as $key => $item}
                 <div class="card shadow-sm bg-white">
                     <div class="card-header bg-white" id="headingOne">
                             <a class="card-toggler d-flex align-items-center justify-content-between" type="button" data-toggle="collapse"
-                                    data-target="#{$values.alias}_{$key}" aria-expanded="{$item.collapse == 1 ? 'true' : 'false'}" aria-controls="{$values.alias}_{$key}">
+                                    data-target="#{$alias}_{$key}" aria-expanded="{$item.collapse == 1 ? 'true' : 'false'}" aria-controls="{$alias}_{$key}">
                                 {$item.question}
                                 <span class="card-toggler-icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
@@ -25,8 +25,8 @@
                                 </span>
                             </a>
                     </div>
-                    <div id="{$values.alias}_{$key}" class="collapse{$item.collapse == 1 ? ' show' : ''}" aria-labelledby="headingOne"
-                         data-parent="#{$values.alias}">
+                    <div id="{$alias}_{$key}" class="collapse{$item.collapse == 1 ? ' show' : ''}" aria-labelledby="headingOne"
+                         data-parent="#{$alias}">
                         <div class="card-body">
                             {$item.answer}
                         </div>
@@ -36,9 +36,9 @@
             </div>
         </div>
         <div class="section-footer">
-            {if $values.foottext}
+            {if $foottext}
             <div class="section-text text-center">
-                {$values.foottext}
+                {$foottext}
             </div>
             {/if}
         </div>
