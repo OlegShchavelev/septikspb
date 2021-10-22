@@ -5,7 +5,7 @@
 {block 'content'}
 
 {'!mFilter2' | snippet : [
-'parents' => 9,
+'parents' => 0,
 'paginator' => 'pdoPage',
 'element' => 'msProducts',
 'depth' => 1,
@@ -32,6 +32,7 @@
 ',
 'sortdir' => 'ASC',
 'suggestions' => 0,
+'showLog' => 1,
 'toPlaceholders' => 'dsmc.',
 'filterOptions' => '{"autoLoad":0}'
 'tpl' => 'tpl.msProducts.row.list.dsmc',
