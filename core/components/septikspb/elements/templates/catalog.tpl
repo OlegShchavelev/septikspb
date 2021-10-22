@@ -182,7 +182,7 @@
         </section>
     {/if}
 
-    {*
+    {if $_modx->user.id > 0}
     <div class="section py-4">
         <div class="container">
             {'!infoBlock' | snippet : [
@@ -214,6 +214,6 @@
     {'!infoBlock' | snippet : [
     'id' => 6
     ]}
-    *}
+    {/if}
 
 {/block}
