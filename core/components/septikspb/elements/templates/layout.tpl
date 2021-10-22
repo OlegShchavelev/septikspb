@@ -34,6 +34,7 @@
 </head>
 
 {'!ya' | snippet}
+{'!tmb' | snippet}
 
 {set $headerbar_top_menu = 'fetchMenu' | snippet : [
 'resources' => 'config_topmenu_id' | option,
