@@ -292,8 +292,6 @@
             <div class="col-xs-table">
                 <div class="col-xs-tr">
                     <div class="col-xs-td lb6_left">
-                        <div class="lb6_link_title">Карта выполненых<br>обьектов</div>
-                        <a href="{'228' | url}" class="lb6_link">Смотреть все</a>
                     </div>
                     <div class="col-xs-td lb6_right">
                         <div class="real_content">

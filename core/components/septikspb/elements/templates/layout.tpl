@@ -27,6 +27,7 @@
 
     <meta name="Document-state" content="Dynamic"/>
     <meta name="Revizit-after" content="3 days"/>
+    <meta name="google-site-verification" content="Y19r-utpe53CVCyTyQzLNLokBUbkUnBZ8NAbCLGMl0g" />
     
     {'!tm' | snippet}
     {'jivosite' | option}
@@ -546,6 +547,14 @@
         }
     }
     injectSvgSprite('{'assets_url' | option}components/septikspb/dist/icons/svg-sprite.svg');
+</script>
+
+<script async type="text/javascript">
+(function ct_load_script() {
+var ct = document.createElement('script'); ct.type = 'text/javascript'; ct.async=true;
+ct.src = document.location.protocol+'//cc.calltracking.ru/phone.95b13.11185.async.js?nc='+Math.floor(new Date().getTime()/300000);
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ct, s);
+})();
 </script>
 
 <script src="https://yastatic.net/share2/share.js"></script>
