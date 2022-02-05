@@ -146,6 +146,7 @@
             </div>
         </div>
     </section>
+
     {'!infoBlock' | snippet : [
     'id' => 8
     ]}
