@@ -152,15 +152,6 @@
 
     {set $headerbar_main_menu = 'fetchMenu' | snippet : [
     'parents' => 9,
-    'includeTVs' => 'tv_mscategories_image',
-    'prepareTVs' => '',
-    'sortby' => [
-    'menuindex' => 'ASC'
-    ]
-    ]}
-
-    {set $headerbar_main_menu_magamenu = 'fetchMenuMegaMenu' | snippet : [
-    'parents' => 9,
     'includeTVs' => 'tv_mscategories_image, tv_megamenu_icon',
     'prepareTVs' => '',
     'sortby' => [
@@ -168,127 +159,85 @@
     ]
     ]}
 
-    {if $_modx->user.id > 0}
-        <div class="navbar navbar-sm navbar-light navbar-expand-xl d-none d-xl-flex">
-            <div class="container">
-                <ul class="navbar-nav justify-content-around w-100">
-                    {foreach $headerbar_main_menu_magamenu.9.children as $item first=$first last=$last}
-                        {set $item['last'] = $last}
-                        {if $item['children'] ?}
-                            {if $item.enablesupermenu == 1}
-                                <li class="nav-item dropdown position-static">
-                                    <a data-toggle="dropdown" data-click-behavior="link" data-display="static"
-                                       aria-haspopup="true"
-                                       aria-expanded="true" class="nav-link dropdown-toggle"
-                                       href="{$item['uri']}">{$item['menutilte'] ?: $item['pagetitle']}</a>
-                                    <div data-translate-x="-50%" class="dropdown-menu megamenu px-4 px-lg-5 py-lg-5">
-                                        <div class="container">
-                                            <div class="row no-gutters p-4 px-md-5 p-xl-0 w-100">
+    <div class="navbar navbar-sm navbar-light navbar-expand-xl d-none d-xl-flex">
+        <div class="container">
+            <ul class="navbar-nav justify-content-around w-100">
+                {foreach $headerbar_main_menu.9.children as $item first=$first last=$last}
+                    {set $item['last'] = $last}
+                    {if $item['children'] ?}
+                        {if $item.enablesupermenu == 1}
+                            <li class="nav-item dropdown position-static">
+                                <a data-toggle="dropdown" data-click-behavior="link" data-display="static"
+                                   aria-haspopup="true"
+                                   aria-expanded="true" class="nav-link dropdown-toggle"
+                                   href="{$item['uri']}">{$item['menutilte'] ?: $item['pagetitle']}</a>
+                                <div data-translate-x="-50%" class="dropdown-menu megamenu px-4 px-lg-5 py-lg-5">
+                                    <div class="container">
+                                        <div class="row no-gutters p-4 px-md-5 p-xl-0 w-100">
 
-                                                {foreach $item.children as $children}
-                                                    {if $children.published == 0}
-                                                        {set $magamenu_item[] = $children}
-                                                    {/if}
-                                                {/foreach}
-
-                                                <div class="col-lg-3">
-                                                    {foreach array_slice($magamenu_item, 0, ('cc_megamenu_slice' | option)) as $megamenu_item}
-                                                        <div class="megamenu-card">
-                                                            {if $megamenu_item.tv_megamenu_icon && ('cc_megamenu_icon' | option) == 1}
+                                            <div class="col-lg-3">
+                                                {foreach array_slice($item.children, 0, ('cc_megamenu_slice' | option)) as $megamenu_item}
+                                                    <div class="megamenu-card">
+                                                        {if $megamenu_item.tv_megamenu_icon && ('cc_megamenu_icon' | option) == 1}
                                                             <div class="megamenu-icon">
                                                                 <svg class="svg-icon">
                                                                     <use xlink:href="#icon-{$megamenu_item.tv_megamenu_icon}"></use>
                                                                 </svg>
                                                             </div>
-                                                            {/if}
-                                                            <div class="megamenu-title h5">
-                                                                {$megamenu_item.menutitle ?: $megamenu_item.pagetitle}
+                                                        {/if}
+                                                        <div class="megamenu-title h5">
+                                                            {$megamenu_item.menutitle ?: $megamenu_item.pagetitle}
+                                                        </div>
+                                                        <ul class="megamenu-nav">
+                                                            {foreach $megamenu_item.children as $megamenu_children}
+                                                                <li class="nav-item">
+                                                                    <a href="{$megamenu_children.uri}"
+                                                                       class="nav-link">{$megamenu_children.menutitle ?: $megamenu_children.pagetitle}</a>
+                                                                </li>
+                                                            {/foreach}
+                                                        </ul>
+                                                    </div>
+                                                {/foreach}
+                                            </div>
+                                            <div class="col-lg-9">
+                                                <div class="row">
+                                                    {foreach array_slice($item.children, ('cc_megamenu_slice' | option)) as $megamenu_item}
+                                                        <div class="col-lg-6">
+                                                            <div class="megamenu-card">
+                                                                {if $megamenu_item.tv_megamenu_icon && ('cc_megamenu_icon' | option) == 1}
+                                                                    <div class="megamenu-icon">
+                                                                        <svg class="svg-icon">
+                                                                            <use xlink:href="#icon-{$megamenu_item.tv_megamenu_icon}"></use>
+                                                                        </svg>
+                                                                    </div>
+                                                                {/if}
+                                                                <div class="megamenu-title h5">
+                                                                    {if $megamenu_item.searchable == 1}
+                                                                        <a href="{$megamenu_item.uri}">
+                                                                            {$megamenu_item.menutitle ?: $megamenu_item.pagetitle}
+                                                                        </a>
+                                                                    {else}
+                                                                        {$megamenu_item.menutitle ?: $megamenu_item.pagetitle}
+                                                                    {/if}
+                                                                </div>
+                                                                <ul class="megamenu-nav megamenu-nav-pills">
+                                                                    {foreach $megamenu_item.children as $megamenu_children}
+                                                                        <li class="nav-item">
+                                                                            <a href="{$megamenu_children.uri}"
+                                                                               class="nav-link">{$megamenu_children.menutitle ?: $megamenu_children.pagetitle}</a>
+                                                                        </li>
+                                                                    {/foreach}
+                                                                </ul>
                                                             </div>
-                                                            <ul class="megamenu-nav">
-                                                                {foreach $megamenu_item.children as $megamenu_children}
-                                                                    <li class="nav-item">
-                                                                        <a href="{$megamenu_children.uri}"
-                                                                           class="nav-link">{$megamenu_children.menutitle ?: $megamenu_children.pagetitle}</a>
-                                                                    </li>
-                                                                {/foreach}
-                                                            </ul>
                                                         </div>
                                                     {/foreach}
-                                                </div>
-                                                <div class="col-lg-9">
-                                                    <div class="row">
-                                                        {foreach array_slice($magamenu_item, ('cc_megamenu_slice' | option)) as $megamenu_item}
-                                                            <div class="col-lg-6">
-                                                                <div class="megamenu-card">
-                                                                    {if $megamenu_item.tv_megamenu_icon && ('cc_megamenu_icon' | option) == 1}
-                                                                        <div class="megamenu-icon">
-                                                                            <svg class="svg-icon">
-                                                                                <use xlink:href="#icon-{$megamenu_item.tv_megamenu_icon}"></use>
-                                                                            </svg>
-                                                                        </div>
-                                                                    {/if}
-                                                                    <div class="megamenu-title h5">
-                                                                        {if $megamenu_item.searchable == 1}
-                                                                            <a href="{$megamenu_item.uri}">
-                                                                                {$megamenu_item.menutitle ?: $megamenu_item.pagetitle}
-                                                                            </a>
-                                                                        {else}
-                                                                            {$megamenu_item.menutitle ?: $megamenu_item.pagetitle}
-                                                                        {/if}
-                                                                    </div>
-                                                                    <ul class="megamenu-nav megamenu-nav-pills">
-                                                                        {foreach $megamenu_item.children as $megamenu_children}
-                                                                            <li class="nav-item">
-                                                                                <a href="{$megamenu_children.uri}"
-                                                                                   class="nav-link">{$megamenu_children.menutitle ?: $megamenu_children.pagetitle}</a>
-                                                                            </li>
-                                                                        {/foreach}
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        {/foreach}
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </li>
-                            {else}
-                                <li class="nav-item dropdown">
-                                    <a data-toggle="dropdown" data-click-behavior="link" data-display="static"
-                                       aria-haspopup="true"
-                                       aria-expanded="true" class="nav-link dropdown-toggle"
-                                       href="{$item['uri']}">{$item['menutilte'] ?: $item['pagetitle']}</a>
-                                    <ul class="dropdown-menu {if $last ?} dropdown-menu-right{/if}">
-                                        {foreach $item.children as $children}
-                                            {set $children['level'] = $item['level'] + 1}
-                                            <li>
-                                                <a class="dropdown-item" href="{$children.uri}" class="nav-link">
-                                                    {$children.pagetitle}
-                                                </a>
-                                            </li>
-                                        {/foreach}
-                                    </ul>
-                                </li>
-                            {/if}
-                        {else}
-                            <li class="nav-item">
-                                <a href="{$item.uri}" class="nav-link">
-                                    {$item.menutitle ?: $item.pagetitle}
-                                </a>
+                                </div>
                             </li>
-                        {/if}
-                    {/foreach}
-                </ul>
-            </div>
-        </div>
-    {else}
-        <div class="navbar navbar-sm navbar-light navbar-expand-xl d-none d-xl-flex">
-            <div class="container">
-                <ul class="navbar-nav justify-content-around w-100">
-                    {foreach $headerbar_main_menu.9.children as $item first=$first last=$last}
-                        {set $item['last'] = $last}
-                        {if $item['children'] ?}
+                        {else}
                             <li class="nav-item dropdown">
                                 <a data-toggle="dropdown" data-click-behavior="link" data-display="static"
                                    aria-haspopup="true"
@@ -303,33 +252,20 @@
                                             </a>
                                         </li>
                                     {/foreach}
-                                    {if $item.id == 274}
-                                        <a href="{'659' | url}"
-                                           class="btn btn-success btn-success btn-block btn-lg btn-icon-label mt-3">
-                            <span class="btn-inner-icon">
-                               <svg class="svg-icon">
-                                    <use xlink:href="#icon-calculator"></use>
-                                </svg>
-                            </span>
-                                            <span class="btn-inner-text">
-                            Подобрать септик
-                            </span>
-                                        </a>
-                                    {/if}
                                 </ul>
                             </li>
-                        {else}
-                            <li class="nav-item">
-                                <a href="{$item.uri}" class="nav-link">
-                                    {$item.menutitle ?: $item.pagetitle}
-                                </a>
-                            </li>
                         {/if}
-                    {/foreach}
-                </ul>
-            </div>
+                    {else}
+                        <li class="nav-item">
+                            <a href="{$item.uri}" class="nav-link">
+                                {$item.menutitle ?: $item.pagetitle}
+                            </a>
+                        </li>
+                    {/if}
+                {/foreach}
+            </ul>
         </div>
-    {/if}
+    </div>
 </header>
 {block 'hero'}
 {/block}
@@ -341,7 +277,7 @@
             'showHome' => 1,
             'exclude' => 9,
             'where' => [
-                'searchable' => 1
+            'searchable' => 1
             ]
             ]}
         </div>
