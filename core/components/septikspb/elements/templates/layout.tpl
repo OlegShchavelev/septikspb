@@ -2,11 +2,11 @@
 <html>
 <head>
     {if 'template' | resource != 33}
-    <title>{'longtitle' | resource ?: 'dsmc_title' | placeholder}</title>
-    <meta name="description" content="{'meta-description' | tv ?: 'dsmc_description' | placeholder}"/>
+        <title>{'longtitle' | resource ?: 'dsmc_title' | placeholder}</title>
+        <meta name="description" content="{'meta-description' | tv ?: 'dsmc_description' | placeholder}"/>
     {else}
-    <title>{'st.title' | placeholder}</title>
-    <meta name="description" content="{'st.description' | placeholder}"/>
+        <title>{'st.title' | placeholder}</title>
+        <meta name="description" content="{'st.description' | placeholder}"/>
     {/if}
 
     <base href="{'base_url' | option}">
@@ -21,14 +21,16 @@
           integrity="sha384-REHJTs1r2ErKBuJB0fCK99gCYsVjwxHrSU0N7I1zl9vZbggVJXRMsv/sLlOAGb4M" crossorigin="anonymous">
     <link rel="stylesheet" href="{'assets_url' | option}components/septikspb/dist/fonts/stylesheet.css">
     <link rel="stylesheet" href="{'assets_url' | option}components/septikspb/dist/vendor/swiper/css/swiper.min.css">
-    <link rel="stylesheet" href="{'assets_url' | option}components/septikspb/dist/vendor/@fancyapps/fancybox/jquery.fancybox.min.css" id="theme-stylesheet">
+    <link rel="stylesheet"
+          href="{'assets_url' | option}components/septikspb/dist/vendor/@fancyapps/fancybox/jquery.fancybox.min.css"
+          id="theme-stylesheet">
     <link rel="stylesheet" href="{'assets_url' | option}components/septikspb/dist/css/style.default.min.css"
           id="theme-stylesheet">
 
     <meta name="Document-state" content="Dynamic"/>
     <meta name="Revizit-after" content="3 days"/>
-    <meta name="google-site-verification" content="Y19r-utpe53CVCyTyQzLNLokBUbkUnBZ8NAbCLGMl0g" />
-    
+    <meta name="google-site-verification" content="Y19r-utpe53CVCyTyQzLNLokBUbkUnBZ8NAbCLGMl0g"/>
+
     {'!tm' | snippet}
     {'jivosite' | option}
 
@@ -57,24 +59,26 @@
                     <ul class="nav nav-dark">
                         {foreach $headerbar_top_menu as $item}
                             {if $item['id'] != 229}
-                            <li class="nav-item">
-                                <a class="nav-link" href="{$item.uri}">{$item.menutitle ?: $item.pagetitle}</a>
-                            </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{$item.uri}">{$item.menutitle ?: $item.pagetitle}</a>
+                                </li>
                             {else}
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-click-behavior="link" data-display="static" aria-haspopup="true"
-                                   aria-expanded="true" data-toggle="dropdown" href="{$item.uri}">{$item.menutitle ?: $item.pagetitle}</a>
-                                <ul class="dropdown-menu">
-                                    {foreach $item.children as $children}
-                                        {set $children['level'] = $item['level'] + 1}
-                                        <li>
-                                            <a class="dropdown-item" href="{$children.uri}" class="nav-link">
-                                                {$children.menutitle ?: $children.pagetitle}
-                                            </a>
-                                        </li>
-                                    {/foreach}
-                                </ul>
-                            </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-click-behavior="link" data-display="static"
+                                       aria-haspopup="true"
+                                       aria-expanded="true" data-toggle="dropdown"
+                                       href="{$item.uri}">{$item.menutitle ?: $item.pagetitle}</a>
+                                    <ul class="dropdown-menu">
+                                        {foreach $item.children as $children}
+                                            {set $children['level'] = $item['level'] + 1}
+                                            <li>
+                                                <a class="dropdown-item" href="{$children.uri}" class="nav-link">
+                                                    {$children.menutitle ?: $children.pagetitle}
+                                                </a>
+                                            </li>
+                                        {/foreach}
+                                    </ul>
+                                </li>
                             {/if}
                         {/foreach}
                     </ul>
@@ -114,11 +118,13 @@
                 <div class="col-lg-7 offset-lg-2 d-none d-lg-flex align-items-center justify-content-between">
                     <ul class="list-unstyled list-inline mb-0 ml-4 headerbar-main-phones">
                         <li class="list-inline-item mr-3">
-                            <a href="tel:{'phone_1' | option | preg_replace:'/[^0-9.+]|/': ''}" class="text-dark">{'phone_1'
+                            <a href="tel:{'phone_1' | option | preg_replace:'/[^0-9.+]|/': ''}"
+                               class="text-dark">{'phone_1'
                                 | option}</a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="tel:{'phone_2' | option | preg_replace:'/[^0-9.+]|/': ''}" class="text-dark">{'phone_2'
+                            <a href="tel:{'phone_2' | option | preg_replace:'/[^0-9.+]|/': ''}"
+                               class="text-dark">{'phone_2'
                                 | option}</a>
                         </li>
                     </ul>
@@ -153,79 +159,206 @@
     ]
     ]}
 
-    <div class="navbar navbar-sm navbar-light navbar-expand-xl d-none d-xl-flex">
-        <div class="container">
-            <ul class="navbar-nav justify-content-around w-100">
-                {foreach $headerbar_main_menu.9.children as $item first=$first last=$last}
-                {set $item['last'] = $last}
-                {if $item['children'] ?}
-                <li class="nav-item dropdown">
-                    <a data-toggle="dropdown" data-click-behavior="link" data-display="static" aria-haspopup="true"
-                       aria-expanded="true" class="nav-link dropdown-toggle"
-                       href="{$item['uri']}">{$item['menutilte'] ?: $item['pagetitle']}</a>
-                    <ul class="dropdown-menu {if $last ?} dropdown-menu-right{/if}">
-                        {foreach $item.children as $children}
-                        {set $children['level'] = $item['level'] + 1}
-                        <li>
-                            <a class="dropdown-item" href="{$children.uri}" class="nav-link">
-                                {$children.pagetitle}
-                            </a>
-                        </li>
-                        {/foreach}
-                        {if $item.id == 274}
-                        <a href="{'659' | url}" class="btn btn-success btn-success btn-block btn-lg btn-icon-label mt-3">
+    {set $headerbar_main_menu_magamenu = 'fetchMenuMegaMenu' | snippet : [
+    'parents' => 9,
+    'includeTVs' => 'tv_mscategories_image, tv_megamenu_icon',
+    'prepareTVs' => '',
+    'sortby' => [
+    'menuindex' => 'ASC'
+    ]
+    ]}
+
+    {if $_modx->user.id > 0}
+        <div class="navbar navbar-sm navbar-light navbar-expand-xl d-none d-xl-flex">
+            <div class="container">
+                <ul class="navbar-nav justify-content-around w-100">
+                    {foreach $headerbar_main_menu_magamenu.9.children as $item first=$first last=$last}
+                        {set $item['last'] = $last}
+                        {if $item['children'] ?}
+                            {if $item.enablesupermenu == 1}
+                                <li class="nav-item dropdown position-static">
+                                    <a data-toggle="dropdown" data-click-behavior="link" data-display="static"
+                                       aria-haspopup="true"
+                                       aria-expanded="true" class="nav-link dropdown-toggle"
+                                       href="{$item['uri']}">{$item['menutilte'] ?: $item['pagetitle']}</a>
+                                    <div data-translate-x="-50%" class="dropdown-menu megamenu px-4 px-lg-5 py-lg-5">
+                                        <div class="container">
+                                            <div class="row no-gutters p-4 px-md-5 p-xl-0 w-100">
+
+                                                {foreach $item.children as $children}
+                                                    {if $children.published == 0}
+                                                        {set $magamenu_item[] = $children}
+                                                    {/if}
+                                                {/foreach}
+
+                                                <div class="col-lg-3">
+                                                    {foreach array_slice($magamenu_item, 0, ('cc_megamenu_slice' | option)) as $megamenu_item}
+                                                        <div class="megamenu-card">
+                                                            {if $megamenu_item.tv_megamenu_icon && ('cc_megamenu_icon' | option) == 1}
+                                                            <div class="megamenu-icon">
+                                                                <svg class="svg-icon">
+                                                                    <use xlink:href="#icon-{$megamenu_item.tv_megamenu_icon}"></use>
+                                                                </svg>
+                                                            </div>
+                                                            {/if}
+                                                            <div class="megamenu-title h5">
+                                                                {$megamenu_item.menutitle ?: $megamenu_item.pagetitle}
+                                                            </div>
+                                                            <ul class="megamenu-nav">
+                                                                {foreach $megamenu_item.children as $megamenu_children}
+                                                                    <li class="nav-item">
+                                                                        <a href="{$megamenu_children.uri}"
+                                                                           class="nav-link">{$megamenu_children.menutitle ?: $megamenu_children.pagetitle}</a>
+                                                                    </li>
+                                                                {/foreach}
+                                                            </ul>
+                                                        </div>
+                                                    {/foreach}
+                                                </div>
+                                                <div class="col-lg-9">
+                                                    <div class="row">
+                                                        {foreach array_slice($magamenu_item, ('cc_megamenu_slice' | option)) as $megamenu_item}
+                                                            <div class="col-lg-6">
+                                                                <div class="megamenu-card">
+                                                                    {if $megamenu_item.tv_megamenu_icon && ('cc_megamenu_icon' | option) == 1}
+                                                                        <div class="megamenu-icon">
+                                                                            <svg class="svg-icon">
+                                                                                <use xlink:href="#icon-{$megamenu_item.tv_megamenu_icon}"></use>
+                                                                            </svg>
+                                                                        </div>
+                                                                    {/if}
+                                                                    <div class="megamenu-title h5">
+                                                                        {if $megamenu_item.searchable == 1}
+                                                                            <a href="{$megamenu_item.uri}">
+                                                                                {$megamenu_item.menutitle ?: $megamenu_item.pagetitle}
+                                                                            </a>
+                                                                        {else}
+                                                                            {$megamenu_item.menutitle ?: $megamenu_item.pagetitle}
+                                                                        {/if}
+                                                                    </div>
+                                                                    <ul class="megamenu-nav megamenu-nav-pills">
+                                                                        {foreach $megamenu_item.children as $megamenu_children}
+                                                                            <li class="nav-item">
+                                                                                <a href="{$megamenu_children.uri}"
+                                                                                   class="nav-link">{$megamenu_children.menutitle ?: $megamenu_children.pagetitle}</a>
+                                                                            </li>
+                                                                        {/foreach}
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        {/foreach}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            {else}
+                                <li class="nav-item dropdown">
+                                    <a data-toggle="dropdown" data-click-behavior="link" data-display="static"
+                                       aria-haspopup="true"
+                                       aria-expanded="true" class="nav-link dropdown-toggle"
+                                       href="{$item['uri']}">{$item['menutilte'] ?: $item['pagetitle']}</a>
+                                    <ul class="dropdown-menu {if $last ?} dropdown-menu-right{/if}">
+                                        {foreach $item.children as $children}
+                                            {set $children['level'] = $item['level'] + 1}
+                                            <li>
+                                                <a class="dropdown-item" href="{$children.uri}" class="nav-link">
+                                                    {$children.pagetitle}
+                                                </a>
+                                            </li>
+                                        {/foreach}
+                                    </ul>
+                                </li>
+                            {/if}
+                        {else}
+                            <li class="nav-item">
+                                <a href="{$item.uri}" class="nav-link">
+                                    {$item.menutitle ?: $item.pagetitle}
+                                </a>
+                            </li>
+                        {/if}
+                    {/foreach}
+                </ul>
+            </div>
+        </div>
+    {else}
+        <div class="navbar navbar-sm navbar-light navbar-expand-xl d-none d-xl-flex">
+            <div class="container">
+                <ul class="navbar-nav justify-content-around w-100">
+                    {foreach $headerbar_main_menu.9.children as $item first=$first last=$last}
+                        {set $item['last'] = $last}
+                        {if $item['children'] ?}
+                            <li class="nav-item dropdown">
+                                <a data-toggle="dropdown" data-click-behavior="link" data-display="static"
+                                   aria-haspopup="true"
+                                   aria-expanded="true" class="nav-link dropdown-toggle"
+                                   href="{$item['uri']}">{$item['menutilte'] ?: $item['pagetitle']}</a>
+                                <ul class="dropdown-menu {if $last ?} dropdown-menu-right{/if}">
+                                    {foreach $item.children as $children}
+                                        {set $children['level'] = $item['level'] + 1}
+                                        <li>
+                                            <a class="dropdown-item" href="{$children.uri}" class="nav-link">
+                                                {$children.pagetitle}
+                                            </a>
+                                        </li>
+                                    {/foreach}
+                                    {if $item.id == 274}
+                                        <a href="{'659' | url}"
+                                           class="btn btn-success btn-success btn-block btn-lg btn-icon-label mt-3">
                             <span class="btn-inner-icon">
                                <svg class="svg-icon">
                                     <use xlink:href="#icon-calculator"></use>
                                 </svg>
                             </span>
-                            <span class="btn-inner-text">
+                                            <span class="btn-inner-text">
                             Подобрать септик
                             </span>
-                        </a>
+                                        </a>
+                                    {/if}
+                                </ul>
+                            </li>
+                        {else}
+                            <li class="nav-item">
+                                <a href="{$item.uri}" class="nav-link">
+                                    {$item.menutitle ?: $item.pagetitle}
+                                </a>
+                            </li>
                         {/if}
-                    </ul>
-                </li>
-                {else}
-                <li class="nav-item">
-                    <a href="{$item.uri}" class="nav-link">
-                        {$item.menutitle ?: $item.pagetitle}
-                    </a>
-                </li>
-                {/if}
-                {/foreach}
-            </ul>
+                    {/foreach}
+                </ul>
+            </div>
         </div>
-    </div>
+    {/if}
 </header>
 {block 'hero'}
 {/block}
 {block 'breadcrumb'}
-<nav aria-label="breadcrumb" class="bg-light mb-4 d-flex align-items-center" itemprop="breadcrumb">
-    <div class="container">
-        {'!pdoCrumbs' | snippet : [
-        'showCurrent' => 1,
-        'showHome' => 1,
-        'exclude' => 9
-        ]}
-    </div>
-</nav>
+    <nav aria-label="breadcrumb" class="bg-light mb-4 d-flex align-items-center" itemprop="breadcrumb">
+        <div class="container">
+            {'!pdoCrumbs' | snippet : [
+            'showCurrent' => 1,
+            'showHome' => 1,
+            'exclude' => 9,
+            'where' => [
+                'searchable' => 1
+            ]
+            ]}
+        </div>
+    </nav>
 {/block}
 {block 'content'}
-
-<section class="section section-hero py-4 border-bottom">
-    <div class="container">
-        <h1 class="mb-4">{'pagetitle' | resource}</h1>
-    </div>
-</section>
-
-<section class="py-5">
-    <div class="container">
+    <section class="section section-hero py-4 border-bottom">
+        <div class="container">
+            <h1 class="mb-4">{'pagetitle' | resource}</h1>
+        </div>
+    </section>
+    <section class="py-5">
+        <div class="container">
 
 
-    </div>
-</section>
-
+        </div>
+    </section>
 {/block}
 
 {set $footer_vendor = 'fetchMenu' | snippet : [
@@ -245,11 +378,11 @@
 ]}
 
 {block 'form_button'}
-{if 'id' | resource == 183}
-{'!mvtForms2' | snippet : ['form'=>'engineer']}
-{else}
-{'!mvtForms2' | snippet : ['form'=>'magnet']}
-{/if}
+    {if 'id' | resource == 183}
+        {'!mvtForms2' | snippet : ['form'=>'engineer']}
+    {else}
+        {'!mvtForms2' | snippet : ['form'=>'magnet']}
+    {/if}
 {/block}
 
 <footer itemscope itemtype="http://schema.org/Organization">
@@ -278,11 +411,13 @@
                         </div>
                         <div class="col-lg-5">
                             <a data-toggle="collapse" href="#footerMenu2" aria-expanded="false"
-                               aria-controls="footerMenu2" class="d-lg-none block-toggler my-3 pt-lg-0">Услуги и оборудование
+                               aria-controls="footerMenu2" class="d-lg-none block-toggler my-3 pt-lg-0">Услуги и
+                                оборудование
                                 <span class="block-toggler-icon block-toggler-sm-icon"></span>
                             </a>
                             <div id="footerMenu2" class="expand-lg collapse">
-                                <h5 class="text-dark font-weight-bold h4 mb-4 d-none d-lg-block">Услуги и оборудование</h5>
+                                <h5 class="text-dark font-weight-bold h4 mb-4 d-none d-lg-block">Услуги и
+                                    оборудование</h5>
                                 <ul class="nav flex-column nav-no-gutters">
                                     {'!pdoMenu' | snippet : [
                                     'parents' => 0,
@@ -304,11 +439,13 @@
                     <div class="text-sm my-4">
                         {'config_footer_copy' | option}
                     </div>
-                    <div class="text-lg font-weight-bold my-4" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                      <span itemprop="streetAddress">{'config_address' | option}</span>
+                    <div class="text-lg font-weight-bold my-4" itemprop="address" itemscope
+                         itemtype="http://schema.org/PostalAddress">
+                        <span itemprop="streetAddress">{'config_address' | option}</span>
                     </div>
                     <div class="text-lg font-weight-bold my-4 d-flex flex-column" itemprop="telephone">
-                        <a href="tel:{'config_phone' | option | preg_replace:'/[^0-9.+]|/': ''}" class="text-dark">{'config_phone'
+                        <a href="tel:{'config_phone' | option | preg_replace:'/[^0-9.+]|/': ''}"
+                           class="text-dark">{'config_phone'
                             | option}
                         </a>
                         <a href="tel:{'config_additional_phone' | option | preg_replace:'/[^0-9.+]|/': ''}"
@@ -369,23 +506,26 @@
 ]}
 
 {if 'template' | resource == 41}
-<nav class="dsmc-calc-nav navbar navbar-expand-lg navbar-light bg-success-2 text-white py-2 d-none">
-    <div class="container">
-        <div class="calc-title font-weight-semibold col-12 col-md-5 col-lg-6">Юнилос Астра 5</div>
-        <div class="calc-cost font-weight-semibold col-12 col-md-4 col-lg-3">
-            <span class="calc-label-cost mr-1">под ключ:</span>
-            <span class="calc-final-cost font-weight-bold">0</span>
-            <span class="font-weight-bold text-uppercase">р</span>
-            <span data-toggle="tooltip" data-placement="bottom" data-html="true" class="btn btn-round btn-tooltip ml-2" title="<b>Ваша сумма оборудования</b></br> из данных по параметрам калькулятора">?</span>
+    <nav class="dsmc-calc-nav navbar navbar-expand-lg navbar-light bg-success-2 text-white py-2 d-none">
+        <div class="container">
+            <div class="calc-title font-weight-semibold col-12 col-md-5 col-lg-6">Юнилос Астра 5</div>
+            <div class="calc-cost font-weight-semibold col-12 col-md-4 col-lg-3">
+                <span class="calc-label-cost mr-1">под ключ:</span>
+                <span class="calc-final-cost font-weight-bold">0</span>
+                <span class="font-weight-bold text-uppercase">р</span>
+                <span data-toggle="tooltip" data-placement="bottom" data-html="true"
+                      class="btn btn-round btn-tooltip ml-2"
+                      title="<b>Ваша сумма оборудования</b></br> из данных по параметрам калькулятора">?</span>
+            </div>
+            <div class="dsmc_calc order col-12 col-md-3 col-lg-3 d-flex justify-content-center justify-content-md-end">
+                <a class="btn btn-success btn-sm text-decoration-none d-flex my-2 my-md-0"
+                   href="#dsmc-calc-order-section" role="button">
+                    <i class="icon-truck-alt mr-1 mr-md-2"></i>
+                    Расчет доставки
+                </a>
+            </div>
         </div>
-        <div class="dsmc_calc order col-12 col-md-3 col-lg-3 d-flex justify-content-center justify-content-md-end">
-            <a class="btn btn-success btn-sm text-decoration-none d-flex my-2 my-md-0" href="#dsmc-calc-order-section" role="button">
-                <i class="icon-truck-alt mr-1 mr-md-2"></i>
-                Расчет доставки
-            </a>
-        </div>
-    </div>
-</nav>
+    </nav>
 {/if}
 
 <div id="sidebarContent" tabindex="-1" role="dialog" class="modal fade modal-left modal-navigations">
@@ -408,19 +548,21 @@
                     <div class="sidebar-block-modal-nav-main mt-4">
                         <ul class="navbar-nav">
                             {foreach $menu as $item}
-                            {set $item.level = 1}
-                            {$_modx->getChunk('dsmc.Tools.mobile_menu' , ['item' => $item])}
+                                {set $item.level = 1}
+                                {$_modx->getChunk('dsmc.Tools.mobile_menu' , ['item' => $item])}
                             {/foreach}
                         </ul>
                         <ul class="list-unstyled mb-0 headerbar-main-phones my-4 svg-icon-inline">
-                                <li>
-                                    <a href="tel:{'phone_1' | option | preg_replace:'/[^0-9.+]|/': ''}" class="text-white text-lg font-weight-bold mb-2">{'phone_1'
-                                        | option}</a>
-                                </li>
-                                <li>
-                                    <a href="tel:{'phone_2' | option | preg_replace:'/[^0-9.+]|/': ''}" class="text-white text-lg font-weight-bold mt-2">{'phone_2'
-                                        | option}</a>
-                                </li>
+                            <li>
+                                <a href="tel:{'phone_1' | option | preg_replace:'/[^0-9.+]|/': ''}"
+                                   class="text-white text-lg font-weight-bold mb-2">{'phone_1'
+                                    | option}</a>
+                            </li>
+                            <li>
+                                <a href="tel:{'phone_2' | option | preg_replace:'/[^0-9.+]|/': ''}"
+                                   class="text-white text-lg font-weight-bold mt-2">{'phone_2'
+                                    | option}</a>
+                            </li>
                         </ul>
                         <div class="headerbar-main-action mx-4 my-4">
                             <div class="dropdown-slide">
@@ -443,8 +585,11 @@
                                 <div class="dropdown-wrapper slide-left">
                                     <div class="sidebar-block-modal-header d-flex justify-content-between align-items-center bg-success position-relative">
                                         <div class="headerbar-top-toggler">
-                                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi nav-toggler-back bi-chevron-left text-xl font-weight-bold text-white" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                                            <svg width="1em" height="1em" viewBox="0 0 16 16"
+                                                 class="bi nav-toggler-back bi-chevron-left text-xl font-weight-bold text-white"
+                                                 fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd"
+                                                      d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
                                             </svg>
                                         </div>
                                         <div class="icon-top-mobilebar position-absolute">
@@ -462,7 +607,8 @@
     </div>
 </div>
 
-<!--noindex--><div class="share-button on-up">
+<!--noindex-->
+<div class="share-button on-up">
     <a href="{'cc_whatsapp' | option}" class="item" title="Вотсап">
         <i class="fab fa-whatsapp" aria-hidden="true"></i>
     </a>
@@ -546,15 +692,19 @@
             document.body.insertBefore(div, document.body.childNodes[0]);
         }
     }
+
     injectSvgSprite('{'assets_url' | option}components/septikspb/dist/icons/svg-sprite.svg');
 </script>
 
 <script async type="text/javascript">
-(function ct_load_script() {
-var ct = document.createElement('script'); ct.type = 'text/javascript'; ct.async=true;
-ct.src = document.location.protocol+'//cc.calltracking.ru/phone.95b13.11185.async.js?nc='+Math.floor(new Date().getTime()/300000);
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ct, s);
-})();
+    (function ct_load_script() {
+        var ct = document.createElement('script');
+        ct.type = 'text/javascript';
+        ct.async = true;
+        ct.src = document.location.protocol + '//cc.calltracking.ru/phone.95b13.11185.async.js?nc=' + Math.floor(new Date().getTime() / 300000);
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ct, s);
+    })();
 </script>
 
 <script src="https://yastatic.net/share2/share.js"></script>
@@ -566,7 +716,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ct
 <!-- Main Theme files-->
 {$_modx->regClientScript('assets/components/septikspb/dist/js/theme.js')}
 {if 'template' | resource == 41}
-{$_modx->regClientScript("/js/calc.js")}
+    {$_modx->regClientScript("/js/calc.js")}
 {/if}
 </body>
 </html>
