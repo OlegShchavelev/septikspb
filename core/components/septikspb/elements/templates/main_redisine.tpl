@@ -66,13 +66,23 @@
                                 </div>
                                 <div class="card-text">
                                     <ul class="nav flex-column">
-                                        {foreach $item.children as $children}
-                                            <li class="nav-item">
-                                                <a href="{$children.uri}" class="nav-link">
-                                                    {$children.menutitle ?: $children.pagetitle}
-                                                </a>
-                                            </li>
-                                        {/foreach}
+                                        {if $item.enablesupermenu == 1}
+                                            {foreach $headerbar_main_menu.9.children.274.children.1335.children as $supermenu_item}
+                                                <li class="nav-item">
+                                                    <a href="{$supermenu_item.uri}" class="nav-link">
+                                                        {$supermenu_item.menutitle ?: $supermenu_item.pagetitle}
+                                                    </a>
+                                                </li>
+                                            {/foreach}
+                                            {else}
+                                            {foreach $item.children as $children}
+                                                <li class="nav-item">
+                                                    <a href="{$children.uri}" class="nav-link">
+                                                        {$children.menutitle ?: $children.pagetitle}
+                                                    </a>
+                                                </li>
+                                            {/foreach}
+                                        {/if}
                                     </ul>
                                 </div>
                             </div>
