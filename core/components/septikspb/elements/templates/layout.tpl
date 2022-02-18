@@ -10,6 +10,8 @@
     {/if}
 
     <base href="{'base_url' | option}">
+    
+    <link rel="canonical" href="{'id' | resource | url : ['scheme' => 'full']}"/>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>

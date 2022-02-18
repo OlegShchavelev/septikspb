@@ -37,7 +37,7 @@
             ]}
         </div>
         <div class="section-footer d-flex justify-content-center py-5">
-            <a href="{'223' | url}" class="btn btn-lg btn-success">Смотреть все</a>
+            <a href="{'228' | url}" rel="nofollow" class="btn btn-lg btn-success">Смотреть все</a>
         </div>
     </div>
 </section>
