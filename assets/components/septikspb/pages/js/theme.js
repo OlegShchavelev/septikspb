@@ -1121,4 +1121,10 @@ $(function () {
     $('.nav-toggler-back').click(function (e) {
         $(this).closest('.dropdown-slide').removeClass('show');
     });
+
+    document.querySelectorAll('.menu-arrow').forEach(n => {
+        n.addEventListener('click', (event) => {
+            event.preventDefault();
+        })
+    })
 });

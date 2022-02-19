@@ -42,6 +42,18 @@ switch ($modx->event->name) {
             return $getParentsId[$input];
         });
 
+        $fenom->addModifier('dsmc_sidenav_class_active', function ($input, $resource) use ($modx) {
+
+            if ($input != $resource) {
+                $parents = $modx->getParentIds($input);
+                $output = in_array($resource, $parents);
+            } else {
+                $output = true;
+            }
+
+            return $output;
+        });
+
         break;
 
 }

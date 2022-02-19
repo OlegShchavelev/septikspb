@@ -4,10 +4,10 @@
 
         {if $.get['query'] ?}
             {set $dsmc_parent = 9}
-            {else}
+        {else}
             {set $dsmc_parent = 'dsmc_mspcs_where' | placeholder}
         {/if}
-        
+
         {'!msPCS' | snippet : [
         'parents' => $dsmc_parent ?: 'id' | resource,
         'up' => 1,
@@ -42,9 +42,10 @@
                 {else}
                     <h1>
                         {if 'id' | resource ? != 801}
-                        {'pagetitle' | resource ?: 'longtitle' | resource}
+                            {'pagetitle' | resource ?: 'longtitle' | resource}
                         {else}
-                            {'pagetitle' | resource ?: 'longtitle' | resource}: <span class="text-success">{$.get['query']}</span>
+                            {'pagetitle' | resource ?: 'longtitle' | resource}:
+                            <span class="text-success">{$.get['query']}</span>
                         {/if}
                     </h1>
                 {/if}
@@ -68,28 +69,47 @@
                                 </a>
                             </div>
 
-                            {'!pdoMenu' | snippet : [
-                            'parents' => 9,
-                            'level' => 3,
-                            'outerClass' => 'nav flex-column border-bottom-dashed pb-3 d-none d-lg-block w-100 left_menu',
-                            'innerClass' => 'nav'
-                            'rowClass' => 'nav-item'
-                            'hereClass' => 'active active-item'
-                            'tplInner' => 'wrapper.leftbar.submenu.dsmc'
-                            'levelClass' => 'level'
-                            'tpl' => 'tpl.leftbar.dsmc'
-                            'tplInnerRow' => 'tpl.leftbar.innerrow.dsmc'
-                            'tplParentRow' => 'tpl.leftbar.tplParentRow.dsmc'
-                            'tplParentRowActive' => 'tpl.leftbar.tplParentRowActive.dsmc'
-                            'where' => [
-                            'template:IN' => [3,18,1,27,29,32],
-                            'AND:parent:NOT IN' => [229]
-                            ]
-                            ]}
+                            {if $headerbar_main_menu.9.children ?}
+                                <div class="navbar-catalog">
+                                    <ul class="side-nav">
+                                        {foreach $headerbar_main_menu.9.children as $item}
+                                            {if $item.children ?}
+                                                <li class="side-nav-item">
+                                                    <a href="{$item.uri}"
+                                                       class="side-nav-link{('id' | resource | dsmc_sidenav_class_active : $item.id) ? ' active' : ''}">{$item.menutitle ?: $item.pagetitle}
+                                                        <span class="menu-arrow{('id' | resource | dsmc_sidenav_class_active : $item.id) ? ' collapsed' : ''}"
+                                                              data-toggle="collapse"
+                                                              data-target="#{$item.alias}_{$item.id}"
+                                                              aria-expanded="{('id' | resource | dsmc_sidenav_class_active : $item.id) ? 'true' : 'false'}"
+                                                              aria-controls="{$item.alias}_{$item.id}">
+                                                            <i class="fas fa-angle-right"></i>
+                                                        </span>
+                                                    </a>
+                                                    <ul id="{$item.alias}_{$item.id}"
+                                                        class="dropdown-side-nav collapse{('id' | resource | dsmc_sidenav_class_active : $item.id) ? ' show' : ''}">
+                                                        {foreach $item.children as $children}
+                                                            {set $children.level = 2}
+                                                            {$_modx->getChunk('dsmc.pdoMenu.sidenav.row', [
+                                                            'item' => $children
+                                                            ])}
+                                                        {/foreach}
+                                                    </ul>
+                                                </li>
+                                            {else}
+                                                <li class="side-nav-item">
+                                                    <a href="{$item.uri}"
+                                                       class="side-nav-link">{$item.menutitle ?: $item.pagetitle}</a>
+                                                </li>
+                                            {/if}
+                                        {/foreach}
+                                    </ul>
+                                </div>
+                            {/if}
 
 
                             {if 'template' | resource == 32}
-                                <div class="filters sidebar-filter" id="navbarFilter" data-sidebar-menu="sidebar-filter">
+                                <div class="filters sidebar-filter" id="navbarFilter"
+                                     data-sidebar-menu="sidebar-filter">
                                     <form action="{$_modx->resource.id | url}" method="post" id="mse2_filters">
                                         {if 'dsmc.filters' | placeholder != 'Нечего фильтровать'}
                                             {'dsmc.filters' | placeholder}
@@ -97,12 +117,14 @@
                                     </form>
                                 </div>
                                 <!-- Modal -->
-                                <div id="sidebarFilrer" tabindex="-1" role="dialog" class="modal fade modal-left" aria-hidden="true">
+                                <div id="sidebarFilrer" tabindex="-1" role="dialog" class="modal fade modal-left"
+                                     aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <h5 class="modal-title my-2" id="sidebarFilrerLabel">Фильтры</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>
                                             </div>
@@ -144,7 +166,8 @@
 
                     <header class="product-grid-header p-0 d-flex justify-content-xl-end justify-content-between">
                         <div class="d-flex align-items-center justify-content-between justify-content-lg-end col-12 product-grid-header-bg px-0">
-                            <button type="button" class="btn product-grid-header-toggler d-block d-lg-none" data-toggle="modal"
+                            <button type="button" class="btn product-grid-header-toggler d-block d-lg-none"
+                                    data-toggle="modal"
                                     data-target="#sidebarFilrer">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                      class="bi bi-funnel" viewBox="0 0 16 16">
@@ -183,37 +206,42 @@
     {/if}
 
     {if $_modx->user.id > 0}
-    <div class="section py-4">
-        <div class="container">
-            {'!infoBlock' | snippet : [
-            'id' => 7
-            ]}
-        </div>
-    </div>
-
-
-    <section class="section section-skew py-6 bg-light">
-        <div class="section-skew-layer section-skew-layer-mobile-right bg-primary skew-layer-from-right" data-skew-layer="" data-skew-layer-value="90%" data-skew-layer-from="right" style="right: 65%; transition: right 300ms ease 0s;"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-7 offset-5">
-                    <h2 class="h1 mb-4">Качество и надежность</h2>
-                    <p>
-                        СептикСервис – это более 1500 выполненных проектов по всему Северо-Западу. Наши клиенты живут в Ленинградской, Псковской, Новгородской областях, а также в республике Карелия.
-                        Мы предлагаем <span class="font-weight-bold text-dark">загородные септики под ключ от 80 000 рублей!</span>
-                    </p>
-                    <hr>
-                    <p class="text-sm">Стоимость позиций указана с учётом доставки и установки. Это – ещё один положительный фактор сотрудничества. Работа под ключ – гарантия их бесперебойной службы. Монтаж, обслуживание, ремонт выполняются нами. Мы отлично знаем реализуемое оборудование. Это обеспечит наиболее высокое качество. Сделать заказ можно по телефону +7 (812) 922-32-05 или электронной почте info@septikspb.com. Доставка осуществляется по Ленинградской, Псковской, Новгородской областям, Карелии.
-                    </p>
-                    <a href="{'228' | url}" class="btn btn-lg btn-success mt-4">Подробнее о наших проектах</a>
-                </div>
+        <div class="section py-4">
+            <div class="container">
+                {'!infoBlock' | snippet : [
+                'id' => 7
+                ]}
             </div>
         </div>
-    </section>
-
-    {'!infoBlock' | snippet : [
-    'id' => 6
-    ]}
+        <section class="section section-skew py-6 bg-light">
+            <div class="section-skew-layer section-skew-layer-mobile-right bg-primary skew-layer-from-right"
+                 data-skew-layer="" data-skew-layer-value="90%" data-skew-layer-from="right"
+                 style="right: 65%; transition: right 300ms ease 0s;"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-7 offset-5">
+                        <h2 class="h1 mb-4">Качество и надежность</h2>
+                        <p>
+                            СептикСервис – это более 1500 выполненных проектов по всему Северо-Западу. Наши клиенты
+                            живут в Ленинградской, Псковской, Новгородской областях, а также в республике Карелия.
+                            Мы предлагаем <span class="font-weight-bold text-dark">загородные септики под ключ от 80 000 рублей!</span>
+                        </p>
+                        <hr>
+                        <p class="text-sm">Стоимость позиций указана с учётом доставки и установки. Это – ещё один
+                            положительный фактор сотрудничества. Работа под ключ – гарантия их бесперебойной службы.
+                            Монтаж, обслуживание, ремонт выполняются нами. Мы отлично знаем реализуемое оборудование.
+                            Это обеспечит наиболее высокое качество. Сделать заказ можно по телефону +7 (812) 922-32-05
+                            или электронной почте info@septikspb.com. Доставка осуществляется по Ленинградской,
+                            Псковской, Новгородской областям, Карелии.
+                        </p>
+                        <a href="{'228' | url}" class="btn btn-lg btn-success mt-4">Подробнее о наших проектах</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {'!infoBlock' | snippet : [
+        'id' => 6
+        ]}
     {/if}
 
 {/block}
