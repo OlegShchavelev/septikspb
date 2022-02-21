@@ -106,7 +106,6 @@
                                 </div>
                             {/if}
 
-
                             {if 'template' | resource == 32}
                                 <div class="filters sidebar-filter" id="navbarFilter"
                                      data-sidebar-menu="sidebar-filter">

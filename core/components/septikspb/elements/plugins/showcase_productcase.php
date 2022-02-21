@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @var modX $modx
  * @var $prepareContent

@@ -44,7 +44,7 @@
                                                 Цена «под ключ»
                                             </p>
                                             <div class="list_line pl-2 mt-2">
-                                                <p class="price success">
+                                                <p class="price success mb-2">
                                                     {$ms_price_key | price} {'ms2_frontend_currency' | lexicon}
                                                 </p>
 
@@ -64,7 +64,7 @@
                                         </p>
                                         {if $ms_price_key != 0}
                                             <div class="mt-2 d-flex justify-content-between justify-content-lg-start">
-                                                <p class="price">
+                                                <p class="price mb-2">
                                                     {$price} {'ms2_frontend_currency' | lexicon}
                                                 </p>
                                                 {if $old_price != 0}
