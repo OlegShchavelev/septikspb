@@ -41,23 +41,5 @@
         </div>
     {/if}
 
-    {'!pdoMenu' | snippet : [
-    'parents' => 9,
-    'level' => 3,
-    'outerClass' => 'nav flex-column border-bottom-dashed pb-3 d-none d-lg-block w-100 left_menu',
-    'innerClass' => 'nav'
-    'rowClass' => 'nav-item'
-    'hereClass' => 'active active-item'
-    'tplInner' => 'wrapper.leftbar.submenu.dsmc'
-    'levelClass' => 'level'
-    'tpl' => 'tpl.leftbar.dsmc'
-    'tplInnerRow' => 'tpl.leftbar.innerrow.dsmc'
-    'tplParentRow' => 'tpl.leftbar.tplParentRow.dsmc'
-    'tplParentRowActive' => 'tpl.leftbar.tplParentRowActive.dsmc'
-    'where' => [
-    'template:IN' => [3,18,1,27,29,32],
-    'AND:parent:NOT IN' => [229]
-    ]
-    ]}
 </div>
 
