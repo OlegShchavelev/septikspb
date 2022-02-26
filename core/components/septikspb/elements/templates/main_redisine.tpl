@@ -196,9 +196,7 @@
     ]
     }
 
-    {if $_modx->user.id > 0}
-        {'!PageBlocks' | snippet : [
-        'cid' => 3
-        ]}
-    {/if}
+    {'!PageBlocks' | snippet : [
+    'cid' => 3
+    ]}
 {/block}
