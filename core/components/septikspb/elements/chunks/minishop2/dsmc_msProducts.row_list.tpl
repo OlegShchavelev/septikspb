@@ -116,6 +116,14 @@
                                         </svg>
                                     </a>
                                 </li>
+                                {'!addComparison' | snippet : [
+                                'list_id' => 1121,
+                                'tpl' => 'dsmc.Comparison.add',
+                                'minItems' => 2,
+                                'maxItems' => 4,
+                                'list' => 'default',
+                                'id' => $id
+                                ]}
                             </ul>
                             <div class="d-flex justify-content-end position-absolute btn-more">
                                 <a class="btn btn-success btn-radius btn-hover-primary" href="{$id | url}"><i

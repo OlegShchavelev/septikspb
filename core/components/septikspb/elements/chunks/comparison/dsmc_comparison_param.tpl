@@ -1,3 +1,3 @@
 <td class="comparison-param">
-    <strong>[[+param]]</strong>
+    <span class="font-semibold">{$param}</span>
 </td>

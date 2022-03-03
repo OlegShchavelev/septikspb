@@ -1,0 +1,87 @@
+a.comparison-link {
+  text-decoration: none;
+  border-bottom-style: dotted;
+  border-bottom-width: 1px;
+  &.link-underline {
+    border-bottom: 1px dashed $primary !important;
+  }
+
+  &:hover {
+    border-bottom-style: solid;
+  }
+
+  &.active {
+    border-bottom: none;
+    background: #efefef;
+    color: black;
+  }
+}
+
+.comparison {
+  .comparison-add {
+    display: inline-block;
+  }
+
+  .comparison-remove, .comparison-go, .comparison-total {
+    display: none;
+  }
+
+  &.added {
+    .comparison-add {
+      display: none;
+    }
+
+    .comparison-remove {
+      display: inline-block;
+    }
+
+    &.can_compare {
+      .comparison-go, .comparison-total {
+        display: inline-block;
+      }
+    }
+  }
+
+  .loading {
+    opacity: .7;
+    cursor: default;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.comparison-table {
+
+  .comparison-head {
+    padding-bottom: 1em;
+    position: relative;
+    img {
+      min-height: 90px;
+    }
+  }
+
+  .comparison-remove {
+    display: inline-block;
+    font-weight: normal;
+    background: #ffffff;
+    position: absolute;
+    margin-top: .5em;
+    padding: 0 .2em;
+    font-size: .8em;
+    color: #333;
+    top: .5rem;
+    left: .5rem;
+  }
+
+  .comparison-corner {
+    text-align: center;
+    vertical-align: bottom;
+    padding-bottom: 1em;
+  }
+
+  .same {
+    display: none;
+  }
+}

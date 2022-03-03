@@ -97,13 +97,9 @@
                                 </svg>
                             </a>
                         </li>
-                        <li class="list-inline-item">
-                            <a href="{'1121' | url}">
-                                <svg class="svg-icon">
-                                    <use xlink:href="#icon-comparison"></use>
-                                </svg>
-                            </a>
-                        </li>
+                        {'!getComparison' | snippet : [
+                            'tpl' => 'dsmc.Comparison.get'
+                        ]}
                     </ul>
                 </div>
             </div>

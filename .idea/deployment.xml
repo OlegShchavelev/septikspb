@@ -1,34 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="septicspb">
+  <component name="PublishConfigData" autoUpload="Always" serverName="septikspb-ssh-prod">
     <serverData>
-      <paths name="dev_septik">
+      <paths name="septikspb-ssh-prod">
         <serverdata>
           <mappings>
             <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
           </mappings>
-          <excludedPaths>
-            <excludedPath path="/assets/components/septikspb/node_modules" />
-          </excludedPaths>
-        </serverdata>
-      </paths>
-      <paths name="septicspb">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
-          </mappings>
-          <excludedPaths>
-            <excludedPath path="/assets/img" />
-            <excludedPath path="/assets/images" />
-            <excludedPath path="/assets/gallery" />
-            <excludedPath path="/assets/cache_image" />
-            <excludedPath path="/core/cache" />
-            <excludedPath path="/optimized_contents" />
-            <excludedPath path="/rostok" />
-            <excludedPath path="/upload" />
-            <excludedPath path="/userimg" />
-            <excludedPath path="/img" />
-          </excludedPaths>
         </serverdata>
       </paths>
     </serverData>

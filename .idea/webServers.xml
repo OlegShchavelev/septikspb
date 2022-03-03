@@ -2,17 +2,10 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="a5c95614-682c-4460-8230-ca599461bd25" name="septicspb" url="http://septikspb.com">
-        <fileTransfer rootFolder="/public_html" host="141.8.194.42" port="21">
+      <webServer id="9b79c058-1956-48b2-b46e-b1afba35b77a" name="septikspb-ssh-prod" url="">
+        <fileTransfer rootFolder="/home/a0243521/domains/septikspb.com/public_html" accessType="SFTP" host="141.8.194.42" port="22" sshConfigId="6243ef3e-1e91-41f3-aca6-20a2b2f3dca1" sshConfig="a0243521@141.8.194.42:22 password">
           <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
-          </advancedOptions>
-        </fileTransfer>
-      </webServer>
-      <webServer id="e57e4fe6-590d-4a2e-ab33-b2a8633e8b81" name="dev_septik" url="https://www.septik.dsmc.pw/">
-        <fileTransfer rootFolder="/var/www/detali/data/www/septik.dsmc.pw" accessType="SFTP" host="95.214.63.164" port="22" sshConfigId="56bc1511-e91f-4428-a0a3-915f06d25f63" sshConfig="detali@95.214.63.164:22 password">
-          <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
         </fileTransfer>
       </webServer>
